@@ -52,5 +52,10 @@ Route::middleware('user-access')->group(function () {
     Route::get('district/list/{state_id}', [StateDistrictController::class, 'districts_under_states'])->name('district.list');
     //Article
     Route::get('admin/article/add', [ArticleController::class, 'add_article'])->name('article.add');
+    Route::post('admin/article/submit', [ArticleController::class, 'submit_article'])->name('article.submit');
     Route::get('admin/article/category/add', [ArticleCategoryController::class, 'add'])->name('article.category.add');
+    Route::get('admin/article/category/list', [ArticleCategoryController::class, 'category_list'])->name('article.category.list');
+    Route::get('admin/article/list', [ArticleController::class, 'list_article'])->name('article.list');
+    Route::get('admin/article/edit/{id}', [ArticleController::class, 'edit_article'])->name('article.edit');
+    Route::post('admin/article/update', [ArticleController::class, 'update_article'])->name('article.update');
 });

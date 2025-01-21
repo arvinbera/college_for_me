@@ -101,10 +101,10 @@
                         <div class="dropdown-menu-columns">
                             <div class="dropdown-menu-column">
 
-                                <a class="dropdown-item" href="{{ route('admin.logout') }}">
-                                    Articles
+                                <a class="dropdown-item" href="{{ route('article.list') }}">
+                                    Article List
                                 </a>
-                                <a class="dropdown-item" href="{{ route('admin.logout') }}">
+                                <a class="dropdown-item" href="{{ route('article.category.list') }}">
                                     Article Categories
                                 </a>
                             </div>

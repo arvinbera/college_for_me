@@ -1,7 +1,7 @@
 <div class="col mx-auto d-flex flex-column">
-    <form wire:submit.prevent="submit_college_info" class="card">
+    <form wire:submit.prevent="add_category" class="card">
         <div class="card-body">
-            <h2 class="mb-4">Article Info</h2>
+            <h2 class="mb-4">Article Category Info</h2>
 
             <h3 class="card-title mt-4">Article</h3>
             <div class="row g-3">

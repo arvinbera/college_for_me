@@ -4,7 +4,7 @@
     
 @endpush
 @push('css')
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
@@ -22,7 +22,7 @@
                 <div class="col-md-9 mx-auto">
 
                     <div class="col mx-auto d-flex flex-column">
-                        <form method="post" action="{{ route('article.submit') }}" class="card"
+                        <form method="post" action="{{ route('article.update') }}" class="card"
                             enctype="multipart/form-data">
                             @csrf
                             <div class="card-body">
@@ -32,7 +32,8 @@
                                 <div class="row g-3">
                                     <div class="col-md">
                                         <div class="form-label">Article Name</div>
-                                        <input type="text" class="form-control" name="article_name">
+                                        <input type="text" class="form-control" name="article_name" value="{{ $article_details?->title }}">
+                                        <input type="hidden" name="article_id" id="" value="{{$article_details?->id }}" >
                                     </div>
                                 </div>
                                 <div class="row g-3">
@@ -45,7 +46,7 @@
                                     <div class="col-md">
                                         <div class="form-label">Meta Description</div>
                                         <textarea class="form-control" name="meta_description" id="" cols="30" rows="5"
-                                            name="meta_description"></textarea>
+                                            name="meta_description">{{$article_details?->meta_description}}</textarea>
                                     </div>
                                 </div>
                                 <div class="row g-3">
@@ -55,7 +56,9 @@
                                             name="article_category_id">
                                             <option value="">Select Category</option>
                                             @foreach ($article_categories as $category)
-                                                <option value="{{ $category->id }}">{{ $category->title }}</option>
+                                                <option value="{{ $category->id }}" @if ($article_details?->article_category_id == $category->id)
+                                                        selected
+                                                @endif>{{ $category->title }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -65,6 +68,7 @@
                                         <label for="articleDescription" class="font-weight-bold">Article Description</label>
                                         <textarea type="text" id="summernote2" name="article_description" class="form-control" placeholder="Article Description"
                                             required>
+                                            {{$article_details?->article_description}}
                                         </textarea>
                                     </div>
 
@@ -112,7 +116,7 @@
                             <div class="card-footer bg-transparent mt-auto">
                                 <div class="btn-list justify-content-end">
 
-                                    <button class="btn btn-primary">Add
+                                    <button class="btn btn-primary">Update
                                         Article</button>
                                 </div>
                             </div>
