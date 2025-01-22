@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\StateDistrictController;
+use App\Http\Controllers\FeesStructureController;
+use App\Models\FeesStructure;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -54,8 +56,16 @@ Route::middleware('user-access')->group(function () {
     Route::get('admin/article/add', [ArticleController::class, 'add_article'])->name('article.add');
     Route::post('admin/article/submit', [ArticleController::class, 'submit_article'])->name('article.submit');
     Route::get('admin/article/category/add', [ArticleCategoryController::class, 'add'])->name('article.category.add');
+
+
+    // fees structure
+    Route::get('admin/fees_structure/list',[FeesStructureController::class, 'index'])->name('admin.fees_structure');
+    Route::get('admin/fees_structure/add',[FeesStructureController::class, 'add'])->name('admin.fees_structure.add');
+    Route::post('admin/fees_structure/store',[FeesStructureController::class, 'store'])->name('admin.fees_structure.store');
+
     Route::get('admin/article/category/list', [ArticleCategoryController::class, 'category_list'])->name('article.category.list');
     Route::get('admin/article/list', [ArticleController::class, 'list_article'])->name('article.list');
     Route::get('admin/article/edit/{id}', [ArticleController::class, 'edit_article'])->name('article.edit');
     Route::post('admin/article/update', [ArticleController::class, 'update_article'])->name('article.update');
+
 });
