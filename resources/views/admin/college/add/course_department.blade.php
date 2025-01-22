@@ -29,10 +29,10 @@
                                                         class="list-group-item list-group-item-action d-flex align-items-center">College
                                                         Address</a>
                                                     <a href="{{ route('college.course_department') }}"
-                                                        class="list-group-item list-group-item-action d-flex align-items-center">College
+                                                        class="list-group-item list-group-item-action d-flex align-items-center active">College
                                                         Courses</a>
                                                     <a href="{{ route('college.gallery') }}"
-                                                        class="list-group-item list-group-item-action d-flex align-items-center active">College
+                                                        class="list-group-item list-group-item-action d-flex align-items-center ">College
                                                         Gallery</a>
                                                     <a href="{{ route('college.faculty') }}"
                                                         class="list-group-item list-group-item-action d-flex align-items-center">Faculty</a>

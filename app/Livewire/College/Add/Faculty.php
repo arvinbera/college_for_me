@@ -2,6 +2,7 @@
 
 namespace App\Livewire\College\Add;
 
+use App\Models\College;
 use App\Models\CollegeFaculty;
 use App\Models\Department;
 use Illuminate\Support\Facades\Session;
@@ -9,11 +10,22 @@ use Livewire\Component;
 
 class Faculty extends Component
 {
-    public $departments, $designation, $department_id, $faculty_name, $faculty_designation, $college_id;
+    public $departments, $selectedOption, $designation, $department_id, $faculty_name, $faculty_designation, $college_id, $colleges;
 
     public function mount()
     {
         $this->departments = Department::all();
+        $this->colleges = College::all();
+    }
+
+    public function updatedSelectedOption($id)
+    {
+        if (isset($id)) {
+
+            return redirect()->route('college.faculty.list.edit', $id);
+        } else {
+            return redirect()->back();
+        }
     }
     public function render()
     {
