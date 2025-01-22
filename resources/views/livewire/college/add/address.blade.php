@@ -4,7 +4,20 @@
             <h2 class="mb-4">College Info</h2>
             @if (session()->has('college_id'))
                 {{ session()->get('college_id') }}
+            @else
+                <div class="row g-3">
+                    <div class="col-md">
+                        <div class="form-label">Select College</div>
+                        <select class="form-control" wire:model.live="selectedOption">
+                            <option value="">Select College</option>
+                            @foreach ($colleges as $college)
+                                <option value="{{ $college->id }}">{{ $college->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
             @endif
+            @if (session()->has('college_id'))
             <h3 class="card-title mt-4">College Profile</h3>
             <div class="row g-3">
                 <div class="col-md">
@@ -64,15 +77,6 @@
                 </div>
             </div>
 
-            {{-- <div>
-                                                        <label class="form-check form-switch form-switch-lg">
-                                                            <input class="form-check-input" type="checkbox">
-                                                            <span class="form-check-label form-check-label-on">You're currently
-                                                                visible</span>
-                                                            <span class="form-check-label form-check-label-off">You're
-                                                                currently invisible</span>
-                                                        </label>
-                                                    </div> --}}
         </div>
         <div class="card-footer bg-transparent mt-auto">
             <div class="btn-list justify-content-end">
@@ -80,5 +84,6 @@
                 <button class="btn btn-primary">Add College Address</button>
             </div>
         </div>
+    @endif
     </form>
 </div>

@@ -12,8 +12,9 @@
                 <div class="col">
                     <div class="page-wrapper">
                         <!-- Page header -->
-
-                        <!-- Page body -->
+                      
+                        <!-- Page body -->.
+                        
                         <div class="page-body">
                             <div class="container-xl">
                                 <div class="card">

@@ -1,0 +1,18 @@
+meta {
+  name: College Admin Login
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://127.0.0.1:8000/api/collegeadmin/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email":"arvin.bera@college.com",
+    "password":"123456"
+  }
+}

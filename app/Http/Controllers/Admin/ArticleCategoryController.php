@@ -11,4 +11,9 @@ class ArticleCategoryController extends Controller
     {
         return view('admin.article.category.add');
     }
+
+    public function category_list()
+    {
+        return view('admin.article.category.list');
+    }
 }

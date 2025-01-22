@@ -18,5 +18,7 @@ class Add extends Component
         $entity = new ArticleCategory();
         $entity->title = $this->category_name;
         $entity->save();
+        flash('Category added successfully.');
+        $this->reset('category_name');
     }
 }

@@ -13,8 +13,7 @@ class Listing extends Component
     protected string $paginationTheme = 'bootstrap';
     public function render()
     {
-        // $this->departments = Department::paginate(4);
-        // return view('livewire.department.listing');
+
         return view('livewire.department.listing', ['departments' => Department::paginate(4)]);
     }
 }

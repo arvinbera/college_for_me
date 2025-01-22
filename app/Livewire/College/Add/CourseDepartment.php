@@ -2,6 +2,7 @@
 
 namespace App\Livewire\College\Add;
 
+use App\Models\College;
 use App\Models\CollegeCourseDepartment;
 use App\Models\Course;
 use App\Models\Department;
@@ -10,15 +11,26 @@ use Livewire\Component;
 
 class CourseDepartment extends Component
 {
-    public $courses, $departments, $department_id, $course_id, $college_id;
+    public $courses, $departments, $department_id, $course_id, $college_id, $colleges, $selectedOption;
     public function mount()
     {
         $this->departments = Department::all();
         $this->courses = Course::all();
+        $this->colleges = College::all();
     }
     public function render()
     {
         return view('livewire.college.add.course-department');
+    }
+
+    public function updatedSelectedOption($id)
+    {
+        if (isset($id)) {
+
+            return redirect()->route('college.course.edit', $id);
+        } else {
+            return redirect()->back();
+        }
     }
 
     public function submit_course_department()
