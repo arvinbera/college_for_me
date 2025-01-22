@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\StateDistrictController;
+use App\Http\Controllers\FeesStructureController;
+use App\Models\FeesStructure;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -53,4 +55,9 @@ Route::middleware('user-access')->group(function () {
     //Article
     Route::get('admin/article/add', [ArticleController::class, 'add_article'])->name('article.add');
     Route::get('admin/article/category/add', [ArticleCategoryController::class, 'add'])->name('article.category.add');
+
+    // fees structure
+    Route::get('admin/fees_structure/list',[FeesStructureController::class, 'index'])->name('admin.fees_structure');
+    Route::get('admin/fees_structure/add',[FeesStructureController::class, 'add'])->name('admin.fees_structure.add');
+    Route::post('admin/fees_structure/store',[FeesStructureController::class, 'store'])->name('admin.fees_structure.store');
 });

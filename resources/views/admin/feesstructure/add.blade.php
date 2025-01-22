@@ -1,43 +1,16 @@
-<div class="col-12 col-md-9 d-flex flex-column">
-    <form wire:submit.prevent="submit_course_department" class="card">
-        <div class="card-body">
-            <h2 class="mb-4">College Info</h2>
+@extends('layouts.admin.app')
 
-            <h3 class="card-title mt-4">College Profile</h3>
+@push('js')
+@endpush
+@push('css')
+@endpush
 
-            <div class="row g-3">
-                <div class="col-md">
-                    <div class="form-label">Select Course</div>
-                    <select name="" id="" class="form-control" wire:model="course_id">
-                        <option value="">Select Course</option>
-                        @foreach ($courses as $course)
-                            <option value="{{ $course->id }}">{{ $course->course_name }}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
-            <div class="row g-3">
-                <div class="col-md">
-                    <div class="form-label">Select Department</div>
-                    <select name="" id="" class="form-control" wire:model="department_id">
-                        <option value="">Select Department</option>
-                        @foreach ($departments as $department)
-                            <option value="{{ $department->id }}">{{ $department->department_name }}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="card-footer bg-transparent mt-auto">
-            <div class="btn-list justify-content-end">
-
-                <button class="btn btn-primary">Add course
-                    department</button>
-            </div>
-        </div>
-    </form>
-
-    <form class="card" action="{{route('admin.fees_structure.store')}}" method="post">
+@section('content')
+<div class="page-wrapper">
+    <div class="page-body">
+        <div class="container-xl">
+            <div class="col-md-6">
+                <form class="card" action="{{route('admin.fees_structure.store')}}" method="post">
                     @csrf
                     <div class="card-body">
                         <h3 class="card-title">Add Fees Structure</h3>
@@ -81,4 +54,12 @@
                         <button type="submit" class="btn btn-primary">Add Fees</button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- <div class="col-12" style="margin-top:75px;">
+                                                                                                                           
+                                                                                                                        </div> -->
+@endsection
