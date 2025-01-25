@@ -4,6 +4,7 @@ namespace App\Livewire\College\Add;
 
 use App\Models\College;
 use App\Models\CollegeCourseDepartment;
+use App\Models\CollegeCourseFeeEligibility;
 use App\Models\Course;
 use App\Models\Department;
 use Illuminate\Support\Facades\Session;
@@ -12,6 +13,7 @@ use Livewire\Component;
 class CourseDepartment extends Component
 {
     public $courses, $departments, $department_id, $course_id, $college_id, $colleges, $selectedOption;
+    public $eligibility, $fees;
     public function mount()
     {
         $this->departments = Department::all();
@@ -39,7 +41,12 @@ class CourseDepartment extends Component
         $entity->department_id = $this->department_id;
         $entity->course_id = $this->course_id;
         $entity->college_id = Session::get('college_id');
+        $entity->eligibility = $this->eligibility;
         $entity->save();
+        $fees = new CollegeCourseFeeEligibility();
+        $fees->college_course_fee_id = $entity->id;
+        $fees->fees = $this->fees;
+        $fees->save();
         flash('Course department added successfully!');
         $this->resetInputFields();
     }
@@ -49,5 +56,7 @@ class CourseDepartment extends Component
 
         $this->department_id = '';
         $this->course_id = '';
+        $this->eligibility = '';
+        $this->fees = '';
     }
 }

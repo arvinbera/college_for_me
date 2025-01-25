@@ -42,6 +42,18 @@
                     </select>
                 </div>
             </div>
+            <div class="row g-3 mt-1">
+                <div class="col-md">
+                    <label for=""><strong>Eligibility Criteria</strong></label>
+                   <input type="text" wire:model="eligibility" id="" class="form-control" placeholder="Enter Eligibility Criteria"> 
+                </div>
+            </div>
+            <div class="row g-3 mt-1">
+                <div class="col-md">
+                    <label for=""><strong>Fees</strong></label>
+                   <input type="text" wire:model="fees" id="" class="form-control" placeholder="Enter Eligibility Criteria"> 
+                </div>
+            </div>
         </div>
         <div class="card-footer bg-transparent mt-auto">
             <div class="btn-list justify-content-end">

@@ -23,12 +23,12 @@
                                                 <h4 class="subheader">College settings</h4>
                                             <div class="list-group list-group-transparent">
                                                 <a href="{{ route('college.info.edit', $college_id) }}"
-                                                    class="list-group-item list-group-item-action d-flex align-items-center">College
+                                                    class="list-group-item list-group-item-action d-flex align-items-center ">College
                                                     Info</a>
                                                 <a href="{{ route('college.address.edit', $college_id) }}"
                                                     class="list-group-item list-group-item-action d-flex align-items-center">College
                                                     Address</a>
-                                                <a href="{{ route('college.course.fees.eligibility.list.edit', $college_id) }}"
+                                                <a href="{{ route('college.course.edit', $college_id) }}"
                                                     class="list-group-item list-group-item-action d-flex align-items-center active">College
                                                     Courses</a>
                                                 <a href="{{ route('college.gallery.edit', $college_id) }}"
@@ -41,7 +41,7 @@
 
                                             </div>
                                         </div>
-                                        @livewire('college.edit.course', ['id' => $college_id])
+                                        @livewire('college.edit.courseeligibilityfeesedit', ['course_fees_id' => $course_fees_id, 'college_id' => $college_id])
                                     </div>
                                 </div>
                             </div>

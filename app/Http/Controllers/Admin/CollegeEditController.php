@@ -22,6 +22,16 @@ class CollegeEditController extends Controller
         return view('admin.college.edit.course', compact('college_id'));
     }
 
+    public function college_course_fees_eligibility_list($college_id)
+    {
+        return view('admin.college.edit.courseeligibility', compact('college_id'));
+    }
+
+    public function college_course_fees_eligibility_edit($course_fees_id, $college_id)
+    {
+        return view('admin.college.edit.coursefeeseligibility', compact('course_fees_id', 'college_id'));
+    }
+
     public function college_faculty_list($college_id)
     {
         return view('admin.college.edit.faculty.list', compact('college_id'));
