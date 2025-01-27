@@ -31,10 +31,7 @@
                                             </div>
                                             <div class="col">
                                                 <div class="font-weight-medium">
-                                                    132 Sales
-                                                </div>
-                                                <div class="text-secondary">
-                                                    12 waiting payments
+                                                    {{$college_count}} Colleges
                                                 </div>
                                             </div>
                                         </div>
@@ -62,10 +59,7 @@
                                             </div>
                                             <div class="col">
                                                 <div class="font-weight-medium">
-                                                    78 Orders
-                                                </div>
-                                                <div class="text-secondary">
-                                                    32 shipped
+                                                    80 Leads
                                                 </div>
                                             </div>
                                         </div>
@@ -91,10 +85,7 @@
                                             </div>
                                             <div class="col">
                                                 <div class="font-weight-medium">
-                                                    623 Shares
-                                                </div>
-                                                <div class="text-secondary">
-                                                    16 today
+                                                    10 Admissions
                                                 </div>
                                             </div>
                                         </div>
@@ -120,10 +111,7 @@
                                             </div>
                                             <div class="col">
                                                 <div class="font-weight-medium">
-                                                    132 Likes
-                                                </div>
-                                                <div class="text-secondary">
-                                                    21 today
+                                                    2 Mou Colleges
                                                 </div>
                                             </div>
                                         </div>

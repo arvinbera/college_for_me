@@ -39,9 +39,9 @@
                                             
                                             </div>
 
-                                            </div>
                                         </div>
-                                        @livewire('college.edit.course', ['id' => $college_id])
+                                    </div>
+                                    <div class="col-md-9"> @livewire('college.edit.couresfacility', ['id' => $college_id])</div>
                                     </div>
                                 </div>
                             </div>
