@@ -43,7 +43,7 @@
 
                                             </div>
                                         </div>
-                                        @livewire('college.add.faculty')
+                                        @livewire('college.add.placements')
                                     </div>
                                 </div>
                             </div>

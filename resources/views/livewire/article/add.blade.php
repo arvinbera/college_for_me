@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
     <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+    
     <div class="col mx-auto d-flex flex-column">
         <form wire:submit.prevent="submit_article" class="card">
             <div class="card-body">
@@ -48,7 +49,7 @@
                     <div class="col-md">
                         <label for="articleDescription" class="font-weight-bold">Article Description</label>
                         <textarea id="articleDescription" wire:model="article_description">
-                </textarea>
+                       </textarea>
                     </div>
 
                 </div>

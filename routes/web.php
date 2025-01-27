@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\StateDistrictController;
 use App\Http\Controllers\FeesStructureController;
+use App\Http\Controllers\PlacementController;
 use App\Models\FeesStructure;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +42,7 @@ Route::middleware('user-access')->group(function () {
     Route::get('admin/college/faculty/add', [CollegeController::class, 'faculty'])->name('college.faculty');
     Route::get('admin/college/course/department/add', [CollegeController::class, 'course_department'])->name('college.course_department');
     Route::get('admin/college/gallery/add', [CollegeController::class, 'gallery'])->name('college.gallery');
+    Route::get('admin/college/placement/add',[CollegeController::class,'placement'])->name('college.placement');
     //college edit information
     Route::get('admin/college/info/edit/{college_id}', [CollegeEditController::class, 'college_info_edit'])->name('college.info.edit');
     Route::get('admin/college/address/edit/{college_id}', [CollegeEditController::class, 'college_address_edit'])->name('college.address.edit');
@@ -48,15 +50,23 @@ Route::middleware('user-access')->group(function () {
     Route::get('admin/college/faculty/list/{college_id}', [CollegeEditController::class, 'college_faculty_list'])->name('college.faculty.list.edit');
     Route::get('admin/college/faculty/edit/{college_id}', [CollegeEditController::class, 'college_faculty_edit'])->name('college.faculty.edit');
     Route::get('admin/college/gallery/edit/{college_id}', [CollegeEditController::class, 'college_gallery_edit'])->name('college.gallery.edit');
+
+    Route::get('admin/college/placement/edit/{college_id}', [CollegeEditController::class, 'college_placement_edit'])->name('college.placement.edit');
+    // placement
+    Route::get('admin/placement/list',[PlacementController::class,'index'])->name('placement.list');
+    Route::get('admin/placement/add',[PlacementController::class, 'add'])->name('placement.add');
+    Route::post('admin/placement/store',[PlacementController::class, 'store'])->name('placement.store');
+    Route::get('admin/placement/edit/{id}',[PlacementController::class,'edit'])->name('placement.edit');
+    Route::post('admin/placement/update/{id}',[PlacementController::class, 'update'])->name('placement.update');
+
+
+
     Route::get('admin/college/coursefeeseligibility/list/{college_id}', [CollegeEditController::class, 'college_course_fees_eligibility_list'])->name('college.course.fees.eligibility.list.edit');
     Route::get('admin/college/coursefeeseligibility/edit/{course_fees_id}/{college_id}', [CollegeEditController::class, 'college_course_fees_eligibility_edit'])->name('college.course.fees.eligibility.edit');
+
     //list
     Route::get('admin/college/list', [CollegeListController::class, 'list'])->name('college.list');
     Route::get('district/list/{state_id}', [StateDistrictController::class, 'districts_under_states'])->name('district.list');
-    //Article
-    Route::get('admin/article/add', [ArticleController::class, 'add_article'])->name('article.add');
-    Route::post('admin/article/submit', [ArticleController::class, 'submit_article'])->name('article.submit');
-    Route::get('admin/article/category/add', [ArticleCategoryController::class, 'add'])->name('article.category.add');
 
 
     // fees structure
@@ -64,6 +74,10 @@ Route::middleware('user-access')->group(function () {
     Route::get('admin/fees_structure/add',[FeesStructureController::class, 'add'])->name('admin.fees_structure.add');
     Route::post('admin/fees_structure/store',[FeesStructureController::class, 'store'])->name('admin.fees_structure.store');
 
+    //Article
+    Route::get('admin/article/add', [ArticleController::class, 'add_article'])->name('article.add');
+    Route::post('admin/article/submit', [ArticleController::class, 'submit_article'])->name('article.submit');
+    Route::get('admin/article/category/add', [ArticleCategoryController::class, 'add'])->name('article.category.add');
     Route::get('admin/article/category/list', [ArticleCategoryController::class, 'category_list'])->name('article.category.list');
     Route::get('admin/article/list', [ArticleController::class, 'list_article'])->name('article.list');
     Route::get('admin/article/edit/{id}', [ArticleController::class, 'edit_article'])->name('article.edit');
