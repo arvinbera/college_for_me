@@ -47,7 +47,6 @@
     <script src="{{ asset('assets/js/tabler.min.js?1692870487') }}" defer></script>
     <script src="{{ asset('assets/js/demo.min.js?1692870487') }}" defer></script>
     @stack('js')
-
 </body>
 
 </html>

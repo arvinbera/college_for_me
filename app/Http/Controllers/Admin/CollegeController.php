@@ -31,4 +31,9 @@ class CollegeController extends Controller
     {
         return view('admin.college.add.gallery');
     }
+
+    public function placement()
+    {
+        return view('admin.college.add.placement');
+    }
 }

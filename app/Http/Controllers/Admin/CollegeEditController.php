@@ -46,4 +46,9 @@ class CollegeEditController extends Controller
     {
         return view('admin.college.edit.gallery', compact('college_id'));
     }
+
+    public function college_placement_edit($college_id)
+    {
+        return view('admin.college.edit.placements', compact('college_id'));
+    }
 }
