@@ -1,0 +1,113 @@
+# Labels for backend files
+backend:
+- changed-files:
+  - any-glob-to-any-file: 
+    - 'app/**'
+    - 'database/**'
+    - 'routes/**'
+    - 'config/**'
+    - 'bootstrap/**'
+
+# Labels for frontend files
+frontend:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'resources/views/**'
+    - 'public/**'
+    - 'resources/js/**'
+    - 'resources/css/**'
+
+# Labels for tests
+tests:
+- changed-files:
+  - any-glob-to-any-file: 'tests/**'
+
+# Labels for documentation updates
+documentation:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'docs/**'
+    - '**/*.md'
+
+# Labels for CI/CD or GitHub workflows
+ci/cd:
+- changed-files:
+  - any-glob-to-any-file: '.github/workflows/**'
+
+# Labels for composer and package management
+dependencies:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'composer.json'
+    - 'composer.lock'
+    - 'package.json'
+    - 'package-lock.json'
+    - 'pnpm-lock.yaml'
+migrations:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'database/migrations/**'
+seeders:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'database/seeders/**'
+env:
+- changed-files:
+  - any-glob-to-any-file:
+    - '.env'
+    - '.env.example'
+storage:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'storage/**'
+    - 'public/storage/**'
+config:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'config/**'
+    - '.env'
+    - '.env.example'
+routes:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'routes/**'
+controllers:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'app/Http/Controllers/**'
+models:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'app/Models/**'
+views:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'resources/views/**'
+views-components:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'resources/views/components/**'
+views-layouts:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'resources/views/layouts/**'
+views-pages:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'resources/views/pages/**'
+views-partials:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'resources/views/partials/**'
+views-sections:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'resources/views/sections/**'
+javascript:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'resources/js/**'
+css:
+- changed-files:
+  - any-glob-to-any-file:
+    - 'resources/css/**'
