@@ -5,6 +5,7 @@ use App\Http\Controllers\apicontroller\CollegeContactController;
 use App\Http\Controllers\apicontroller\CollegeGalleryController;
 use App\Http\Controllers\apicontroller\CollegeinfoController;
 use App\Http\Controllers\apicontroller\FacultyController;
+use App\Http\Controllers\apicontroller\CourseController;
 use App\Http\Controllers\apicontroller\PlacementController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\CollegeAdmin\AuthenticationController;
@@ -27,7 +28,7 @@ Route::post('college-admin/contact/update/{id}',[CollegeContactController::class
 
 // college gallary
 Route::get('college-admin/gallery/edit/{id}',[CollegeGalleryController::class,'edit']);
-Route::get('college-admin/gallery/update/{id}',[CollegeGalleryController::class,'update']);
+Route::post('college-admin/gallery/update/{id}',[CollegeGalleryController::class,'update']);
 
 // college faculty
 Route::get('college-admin/faculty/list',[FacultyController::class,'index']);
@@ -41,6 +42,10 @@ Route::post('college-admin/placement/update/{id}',[PlacementController::class, '
 // college article
 Route::get('college-admin/article/list',[ArticleController::class, 'index']);
 
+// college course
+Route::get('college-admin/course/edit/{id}',[CourseController::class, 'edit']);
+Route::post('college-admin/course/update/{id}',[CourseController::class, 'update']);
+Route::get('college-admin/course/list',[CourseController::class, 'index']);
 
 Route::middleware('auth:sanctum')->group(function(){
     Route::post('collegeadmin/logout',[AuthenticationController::class, 'api_logout']);
