@@ -5,9 +5,13 @@ meta {
 }
 
 post {
-  url: http://127.0.0.1:8000/api/collegeadmin/login
+  url: http://127.0.0.1:8000/api/collegeadmin/logout
   body: multipartForm
-  auth: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: 7|JiVPySjnbvJVSUWTyzbkfFRuxrT9pWnmlZK45pzm53dd86d6
 }
 
 body:multipart-form {
