@@ -4,8 +4,14 @@ meta {
   seq: 3
 }
 
-get {
+post {
   url: http://127.0.0.1:8000/api/college-admin/course/update/1
-  body: none
+  body: multipartForm
   auth: none
+}
+
+body:multipart-form {
+  course_name: m. tech
+  course_duration: 2
+  : 
 }
