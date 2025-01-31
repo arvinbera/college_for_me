@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class UserAuth
+class LeadAuth
 {
     /**
      * Handle an incoming request.
@@ -16,7 +16,7 @@ class UserAuth
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (isset(Auth::user()->role) && (Auth::user()->role == 1)) {
+        if (isset(Auth::user()->role) && (Auth::user()->role == 4)) {
             return $next($request);
         }
         return redirect()->route('admin.login');
