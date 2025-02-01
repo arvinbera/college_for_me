@@ -17,7 +17,7 @@
                             Settings
                         </div>
                         <h2 class="page-title">
-                            Leads
+                            Counselors
                         </h2>
                     </div>
                     <!-- Page title actions -->
@@ -86,6 +86,7 @@
                                                     <td>{{ $counselor->email }}</td>
                                                     <td>
                                                         <a href="#" class="btn btn-sm btn-outline-primary">View</a>
+                                                        <a href="{{route('counselor.edit', $counselor->id)}}" class="btn btn-sm btn-outline-primary">Edit</a>
                                                     </td>
                                                 </tr>
                                             @endforeach

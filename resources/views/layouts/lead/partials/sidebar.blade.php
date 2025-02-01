@@ -70,6 +70,13 @@
                                 </a>
                                 
                             </div>
+                            <div class="dropdown-menu-column">
+
+                                <a class="dropdown-item" href="{{route('lead.assign.counselor')}}">
+                                    Assign Leads
+                                </a>
+                                
+                            </div>
                         </div>
                     </div>
                 </li>
