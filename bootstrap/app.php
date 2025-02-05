@@ -14,6 +14,9 @@ return Application::configure(basePath: dirname(__DIR__))
         Route::middleware('web')
             ->prefix('lead')
             ->group(base_path('routes/lead.php'));
+        Route::middleware('web')
+            ->prefix('counselor')
+            ->group(base_path('routes/counselor.php'));
     }
     )
     ->withMiddleware(function (Middleware $middleware) {
@@ -23,6 +26,10 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
 
     $middleware->alias(['user-access' => \App\Http\Middleware\UserAuth::class]);
+    })
+    ->withMiddleware(function (Middleware $middleware) {
+
+        $middleware->alias(['counselor-access' => \App\Http\Middleware\CounselorAuth::class]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
