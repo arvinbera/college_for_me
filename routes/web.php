@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\StateDistrictController;
+use App\Http\Controllers\BillController;
 use App\Http\Controllers\FeesStructureController;
 use App\Http\Controllers\PlacementController;
 use App\Models\FeesStructure;
@@ -58,8 +59,12 @@ Route::middleware('user-access')->group(function () {
     Route::post('admin/placement/store',[PlacementController::class, 'store'])->name('placement.store');
     Route::get('admin/placement/edit/{id}',[PlacementController::class,'edit'])->name('placement.edit');
     Route::post('admin/placement/update/{id}',[PlacementController::class, 'update'])->name('placement.update');
-
-
+    
+    // bill controller
+    Route::get('admin/lead_model/list',[BillController::class, 'lead_model_list'])->name('list.lead.model');
+    Route::get('admin/lead_model/add',[BillController::class, 'lead_model_add'])->name('add.lead.model');
+    Route::post('admin/lead_model/store',[BillController::class, 'store'])->name('store.lead.model');
+    // bill controller
 
     Route::get('admin/college/coursefeeseligibility/list/{college_id}', [CollegeEditController::class, 'college_course_fees_eligibility_list'])->name('college.course.fees.eligibility.list.edit');
     Route::get('admin/college/coursefeeseligibility/edit/{course_fees_id}/{college_id}', [CollegeEditController::class, 'college_course_fees_eligibility_edit'])->name('college.course.fees.eligibility.edit');
