@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\apicontroller;
 
+use App\Http\Controllers\ApiResponseCntroller;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use App\Models\CollegeContact;
@@ -14,21 +15,26 @@ class CollegeContactController extends Controller
         $college_contact = CollegeContact::find($id);
         if ($college_contact)
         {
-            return response()->json([
-                'success' => true,
-                'data' => $college_contact,
-                'statusCode'=> 200,
-                'message'=> 'Records fetch successfully',
-            ], 200);
+            return ApiResponseCntroller::response_success(data: $college_contact, message: 'Records fetch successfully', status: 200);
+            // return response()->json([
+            //     'success' => true,
+            //     'data' => $college_contact,
+            //     'statusCode'=> 200,
+            //     'message'=> 'Records fetch successfully',
+            // ], 200);
         } else {
-            return response()->json([
-                'success' => false,
-                'error'=>[
-                  'message'=> 'NO such records found !',
-                ],
-                'statusCode' => 404,
-            ], 404);
+
+            return ApiResponseCntroller::response_error(message: 'No such records founds', status: 404);
+            // return response()->json([
+            //     'success' => false,
+            //     'error'=>[
+            //       'message'=> 'No such records founds',
+            //     ],
+            //     'statusCode' => 404,
+            // ], 404);
         }
+            
+        
     }
 
     public function update(Request $request,int $id)
@@ -43,10 +49,12 @@ class CollegeContactController extends Controller
             'email'=> 'required'
         ]);
         if ($validator->fails()){
-            return response()->json([
-                'success'=> false,
-                'error'=> $validator->messages(),
-            ], 404);
+
+           return ApiResponseCntroller::response_error(message: 'Validation Error', errors: $validator->errors(), status: 404);
+            // return response()->json([
+            //     'success'=> false,
+            //     'error'=> $validator->messages(),
+            // ], 404);
         } else {
             $college_contact = CollegeContact::find($id);
 
@@ -60,19 +68,22 @@ class CollegeContactController extends Controller
                     'city' => $request->city,
                     'email' => $request->email,
                 ]);
-                return response()->json([
-                    'success' => true,
-                    'message'=> "Data updated successfully",
-                    'statusCode' => 202
-                ], 202);
+
+                return ApiResponseCntroller::response_success(data: $college_contact, message: 'Data updated successfully !', status: 202);
+                // return response()->json([
+                //     'success' => true,
+                //     'message'=> "Data updated successfully",
+                //     'statusCode' => 202
+                // ], 202);
             } else {
-                return response()->json([
-                    'success' => false,
-                    'error'=>[
-                      'message'=> 'No such record found'
-                    ],
-                    'statusCode' => 404,
-                ], 404);
+                return ApiResponseCntroller::response_error(message: 'No such records founds', status: 404);
+                // return response()->json([
+                //     'success' => false,
+                //     'error'=>[
+                //       'message'=> 'No such record found'
+                //     ],
+                //     'statusCode' => 404,
+                // ], 404);
             }
         }
     }
