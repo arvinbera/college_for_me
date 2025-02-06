@@ -67,4 +67,50 @@ class CounselorLeadController extends Controller
         flash('Successfully sent to colleges');
         return redirect()->back();
     }
+
+    public function counselor_interested_leads()
+    {
+        $counselor_leads = CounselorLead::with('lead')
+        ->whereHas('lead', function ($q) {
+            $q->where('status', 1);
+        })
+            ->where('is_active', 1)
+            ->where('counselor_id', Auth::user()->id)
+            ->paginate(5);
+        return view('counselor.lead.interested', compact('counselor_leads'));
+    }
+
+    public function counselor_not_interested_leads()
+    {
+        $counselor_leads = CounselorLead::with('lead')
+        ->whereHas('lead', function ($q) {
+            $q->where('status', 2);
+        })
+            ->where('is_active', 1)
+            ->where('counselor_id', Auth::user()->id)
+            ->paginate(5);
+        return view('counselor.lead.notinterested', compact('counselor_leads'));
+    }
+    public function counselor_admitted_leads()
+    {
+        $counselor_leads = CounselorLead::with('lead')
+        ->whereHas('lead', function ($q) {
+            $q->where('status', 2);
+        })
+            ->where('is_active', 1)
+            ->where('counselor_id', Auth::user()->id)
+            ->paginate(5);
+        return view('counselor.lead.admitted', compact('counselor_leads'));
+    }
+    public function counselor_no_response_leads()
+    {
+        $counselor_leads = CounselorLead::with('lead')
+        ->whereHas('lead', function ($q) {
+            $q->where('status', 3);
+        })
+            ->where('is_active', 1)
+            ->where('counselor_id', Auth::user()->id)
+            ->paginate(5);
+        return view('counselor.lead.admitted', compact('counselor_leads'));
+    }
 }

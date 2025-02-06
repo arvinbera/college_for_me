@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="sidebar-menu">
             <ul class="navbar-nav pt-lg-3">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{route('counselor.dashboard')}}">
                         <span class="nav-link-icon d-md-none d-lg-inline-block">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -54,6 +54,34 @@
 
                                 <a class="dropdown-item" href="{{route('counselor.leads')}}">
                                     View All Leads
+                                </a>
+                                
+                            </div>
+                            <div class="dropdown-menu-column">
+
+                                <a class="dropdown-item" href="{{route('counselor.interested.leads')}}">
+                                    Interested Leads
+                                </a>
+                                
+                            </div>
+                            <div class="dropdown-menu-column">
+
+                                <a class="dropdown-item" href="{{route('counselor.not.interested.leads')}}">
+                                    Not Interested Leads
+                                </a>
+                                
+                            </div>
+                            <div class="dropdown-menu-column">
+
+                                <a class="dropdown-item" href="{{route('counselor.not.response.leads')}}">
+                                    Not Response Leads
+                                </a>
+                                
+                            </div>
+                            <div class="dropdown-menu-column">
+
+                                <a class="dropdown-item" href="{{route('counselor.admitted.leads')}}">
+                                    Admitted Leads
                                 </a>
                                 
                             </div>

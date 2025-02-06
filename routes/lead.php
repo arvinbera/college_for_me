@@ -11,6 +11,10 @@ Route::middleware('lead-access')->group(function () {
     //Lead Manage
     Route::get('lead/add', [LeadController::class, 'lead_add'])->name('lead.add');
     Route::get('lead/list', [LeadController::class, 'lead_list'])->name('lead.list');
+    Route::get('lead/interested/leads', [LeadController::class, 'interested_leads'])->name('lead.interested.leads');
+    Route::get('lead/notinterested/leads', [LeadController::class, 'not_interested_leads'])->name('lead.not.interested.leads');
+    Route::get('lead/noresponse/leads', [LeadController::class, 'no_response_leads'])->name('lead.not.response.leads');
+    Route::get('lead/admission/leads', [LeadController::class, 'admission_leads'])->name('lead.admission.leads');
     Route::get('lead/edit/{lead_id}', [LeadController::class, 'lead_edit'])->name('lead.edit');
     Route::get('lead/details/{lead_id}', [LeadController::class, 'lead_details'])->name('lead.details');
     Route::get('lead/bulk', [LeadController::class, 'bulk_upload'])->name('lead.bulk');

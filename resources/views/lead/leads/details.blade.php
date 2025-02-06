@@ -101,6 +101,64 @@
                             </div>
                         </div>
                     </div>
+                    <br>
+                      <div>
+
+                            <div class="card">
+
+                                <div class="card-body">
+                                    <div class="card-title d-flex justify-content-between gap-2">
+                                        <div>
+                                            Remarks
+                                        </div>
+                                        @if ($lead_details->status == 1)
+                                            <div class="col-auto align-self-center">
+                                                <span class="badge badge-outline text-green">Interested</span>
+                                            </div>
+                                        @elseif ($lead_details->status == 2)
+                                            <div class="col-auto align-self-center">
+                                                <span class="badge badge-outline text-red">Not Interested</span>
+                                            </div>
+                                        @elseif ($lead_details->status == 3)
+                                            <div class="col-auto align-self-center">
+                                                <span class="badge badge-outline text-yellow">No Response</span>
+                                            </div>
+                                        @elseif ($lead_details->status == 4)
+                                            <div class="col-auto align-self-center">
+                                                <span class="badge badge-outline text-green">Admitted</span>
+                                            </div>
+                                        @elseif ($lead_details->status == 5)
+                                            <div class="col-auto align-self-center">
+                                                <span class="badge badge-outline text-green">Admitted Through CFM</span>
+                                            </div>
+                                        @endif
+                                    </div>
+                                
+                                    <div class="divide-y">
+                                        @foreach ($lead_remarks as $remark)
+                                            <div>
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <span class="avatar avatar-1"
+                                                            style="background-image: url(./static/avatars/002m.jpg)"></span>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="text-truncate">
+                                                            {{ $remark->remarks }}
+                                                        </div>
+                                                        <div class="text-secondary">24 hours ago</div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                    {{ $lead_remarks->links('pagination::bootstrap-5') }}
+
+                                </div>
+
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>

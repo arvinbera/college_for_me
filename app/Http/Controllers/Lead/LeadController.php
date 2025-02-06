@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Lead;
 use App\Http\Controllers\Controller;
 use App\Imports\LeadImport;
 use App\Models\AllLead;
+use App\Models\Leadfollowup;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -60,7 +61,8 @@ class LeadController extends Controller
     public function lead_details($lead_id)
     {
         $lead_details = AllLead::where('id', $lead_id)->first();
-        return view('lead.leads.details', compact('lead_details'));
+        $lead_remarks = Leadfollowup::where('lead_id', $lead_id)->paginate(10);
+        return view('lead.leads.details', compact('lead_details', 'lead_remarks'));
     }
 
     public function lead_update(Request $request)
@@ -76,4 +78,28 @@ class LeadController extends Controller
         flash('Lead Updated Successfully');
         return redirect()->back();
     }
+
+    public function interested_leads()
+    {
+        $interested_leads = AllLead::where('status', 1)->paginate(10);
+        return view('lead.leads.interested', compact('interested_leads'));
+    }
+    public function not_interested_leads()
+    {
+        $not_interested_leads = AllLead::where('status', 2)->paginate(10);
+        return view('lead.leads.notinterested', compact('not_interested_leads'));
+    }
+
+    public function no_response_leads()
+    {
+        $no_response_leads = AllLead::where('status', 3)->paginate(10);
+        return view('lead.leads.noresponse', compact('no_response_leads'));
+    }
+
+    public function admission_leads()
+    {
+        $admitted_leads = AllLead::where('status', 4)->paginate(10);
+        return view('lead.leads.admission', compact('admitted_leads'));
+    }
+
 }

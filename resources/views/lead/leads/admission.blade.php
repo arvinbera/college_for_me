@@ -81,18 +81,12 @@
                                             </tr>
                                         </thead>
                                         <tbody class="table-tbody">
-                                            @foreach ($leads as $lead)
+                                            @foreach ($admitted_leads as $lead)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $lead->name }}</td>
                                                     <td>{{ $lead->phone }}</td>
-                                                    <td>
-                                                        @if(isset($lead->counselor[0]->counselor->name))
-                                                        {{ $lead->counselor[0]->counselor->name }}
-                                                        @else
-                                                         Not Assigned
-                                                        @endif
-                                                    </td>
+                                                    <td>{{ $lead->counselor[0]->counselor->name }}</td>
                                                     <td>{{ $lead->lead_source }}</td>
                                                     <td>
                                                         <a href="{{ route('lead.edit', $lead->id) }}" class="btn btn-sm btn-outline-primary">Edit</a>
@@ -103,7 +97,7 @@
                                         </tbody>
 
                                     </table>
-                                    {{$leads->links('pagination::bootstrap-5')}}
+                                    {{$admitted_leads->links('pagination::bootstrap-5')}}
                                 </div>
                             </div>
                         </div>

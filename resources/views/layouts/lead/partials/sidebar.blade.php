@@ -77,6 +77,35 @@
                                 </a>
                                 
                             </div>
+                            <div class="dropdown-menu-column">
+
+                                <a class="dropdown-item" href="{{route('lead.interested.leads')}}">
+                                    Interested Leads
+                                </a>
+                                
+                            </div>
+                            <div class="dropdown-menu-column">
+
+                                <a class="dropdown-item" href="{{route('lead.not.interested.leads')}}">
+                                    Not Interested Leads
+                                </a>
+                                
+                            </div>
+                            <div class="dropdown-menu-column">
+
+                                <a class="dropdown-item" href="{{route('lead.not.response.leads')}}">
+                                    No Response Leads
+                                </a>
+                                
+                            </div>
+                            <div class="dropdown-menu-column">
+
+                                <a class="dropdown-item" href="{{route('lead.admission.leads')}}">
+                                    Admitted Leads
+                                </a>
+                                
+                            </div>
+                        
                         </div>
                     </div>
                 </li>

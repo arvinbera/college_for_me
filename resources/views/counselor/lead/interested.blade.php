@@ -1,8 +1,6 @@
-@extends('layouts.lead.app')
+@extends('layouts.counselor.app')
 
 @push('js')
-@endpush
-@push('css')
 @endpush
 
 @section('content')
@@ -23,17 +21,7 @@
                     <!-- Page title actions -->
                     <div class="col-auto ms-auto d-print-none">
                         <div class="btn-list">
-                            <a href="{{ route('lead.add') }}" class="btn btn-primary d-none d-sm-inline-block">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M12 5l0 14" />
-                                    <path d="M5 12l14 0" />
-                                </svg>
-                                Add Lead
-                            </a>
-
+                          
                         </div>
                     </div>
                 </div>
@@ -73,38 +61,25 @@
                                         <thead>
                                             <tr>
                                                 <th class="w-1">Sl</th>
-                                                <th>Name</th>
+                                                <th>Lead name</th>
                                                 <th>Phone</th>
-                                                <th>Counselor</th>
-                                                <th>Lead Source</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody class="table-tbody">
-                                            @foreach ($leads as $lead)
+                                            @foreach ($counselor_leads as $lead)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $lead->name }}</td>
-                                                    <td>{{ $lead->phone }}</td>
-                                                    <td>
-                                                        @if(isset($lead->counselor[0]->counselor->name))
-                                                        {{ $lead->counselor[0]->counselor->name }}
-                                                        @else
-                                                         Not Assigned
-                                                        @endif
-                                                    </td>
-                                                    <td>{{ $lead->lead_source }}</td>
-                                                    <td>
-                                                        <a href="{{ route('lead.edit', $lead->id) }}" class="btn btn-sm btn-outline-primary">Edit</a>
-                                                        <a href="{{ route('lead.details', $lead->id) }}" class="btn btn-sm btn-outline-primary">View</a>
-                                                    </td>
+                                                    <td>{{ $lead->lead->name }}</td>
+                                                    <td>{{ $lead->lead->phone }}</td>
+                                                    <td><a href="{{route('counselor.lead.details', $lead->lead->id)}}" class="btn btn-primary">View</a></td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
 
                                     </table>
-                                    {{$leads->links('pagination::bootstrap-5')}}
                                 </div>
+                                {{$counselor_leads->links('pagination::bootstrap-5')}}
                             </div>
                         </div>
                     </div>
@@ -114,3 +89,6 @@
         </div>
     </div>
 @endsection
+
+@push('css')
+@endpush
