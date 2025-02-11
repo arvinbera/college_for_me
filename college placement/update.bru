@@ -1,0 +1,17 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://127.0.0.1:8001/api/college-admin/placement/update/22
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  high_package: 20
+  avg_package: 45
+  placement_description: desc
+}

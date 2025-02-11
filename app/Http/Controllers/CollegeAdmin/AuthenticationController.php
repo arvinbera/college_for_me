@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Http\Controllers\ApiResponseCntroller;
 
 class AuthenticationController extends Controller
 {
@@ -26,19 +27,29 @@ class AuthenticationController extends Controller
             $success['token'] = $user->createToken('MyApp')->plainTextToken;
             $success['name'] = $user->name;
 
-            // Successful login response
-            return response()->json([
-                'is_success' => true,
+            $data = [
                 'token' => $success['token'],
                 'name' => $success['name'],
-            ], 200);
+            ];
+            
+            // Successful login response
+             return ApiResponseCntroller::response_success(data: $data, message: 'Login Success', status: 200);
+            
+
         } else {
             // Failed login response
-            return response()->json([
-                'is_success' => false,
-                'message' => 'Invalid email or password.',
-            ], 401);
+
+            return ApiResponseCntroller::response_error(message: 'Invalid email or password.', status: 401);
+
         }
     }
+
+    public function api_logout(Request $request)
+    {
+        auth()->user()->tokens()->delete();
+        return ApiResponseCntroller::response_success(message: 'Logout Success', status: 200);
+      
+    }
+
 
 }

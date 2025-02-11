@@ -1,0 +1,18 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://127.0.0.1:8001/api/college-admin/faculty/update/1
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  college_id: 2
+  department_id: 2
+  faculty_name: Arnab
+  faculty_designation: hod
+}
