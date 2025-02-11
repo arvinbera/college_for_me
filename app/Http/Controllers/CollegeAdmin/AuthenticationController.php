@@ -51,5 +51,13 @@ class AuthenticationController extends Controller
       
     }
 
+    public function user(Request $request)
+    {
+        if (Auth::check()) {
+            return ApiResponseCntroller::response_success($request->user());
+        } else {
+            return ApiResponseCntroller::response_error([], 'Unauthorized', 401);
+        }
+    }
 
 }
