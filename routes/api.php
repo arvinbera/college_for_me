@@ -13,13 +13,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::post('collegeadmin/login', [AuthenticationController::class, 'college_admin_login']);
+
 Route::middleware('auth:sanctum')->group(function(){
     Route::post('collegeadmin/logout',[AuthenticationController::class, 'api_logout']);
 });
 
-// Route::get('/user', function (Request $request) {
-//     return $request->user();
-// })->middleware('auth:sanctum');
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/user', [AuthenticationController::class, 'user']);
+});
+
+
+
 
 // college Info 
 Route::get('college-admin/college/edit/{id}',[CollegeinfoController::class,'edit']);
@@ -51,6 +55,3 @@ Route::post('college-admin/course/update/{id}',[CourseController::class, 'update
 Route::get('college-admin/course/list',[CourseController::class, 'index']);
 
 
-// Route::get('student' , function(){
-//        return "This is student api";
-//  });
