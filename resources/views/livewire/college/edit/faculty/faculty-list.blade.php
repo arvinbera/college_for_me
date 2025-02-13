@@ -15,7 +15,7 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $faculty->faculty_name }}</td>
                     <td>{{ $faculty->department->department_name }}</td>
-                    <td><a href="{{ route('college.faculty.edit', $faculty->id) }}"
+                    <td><a href="{{ route('college.faculty.edit', [$faculty->college_id,$faculty->id]) }}"
                             class="btn btn-sm btn-outline-primary">Edit</a></td>
                 </tr>
             @endforeach

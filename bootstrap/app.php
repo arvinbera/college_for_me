@@ -34,6 +34,10 @@ return Application::configure(basePath: dirname(__DIR__))
 
         $middleware->alias(['counselor-access' => \App\Http\Middleware\CounselorAuth::class]);
     })
+    ->withMiddleware(function (Middleware $middleware) {
+
+        $middleware->alias(['college-admin-access' => \App\Http\Middleware\CollegeAdminAuth::class]);
+    })
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
