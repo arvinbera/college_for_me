@@ -51,8 +51,12 @@ class AuthenticationController extends Controller
       
     }
 
-    public function user(Request $request)
+    public function verify_user(Request $request, $token)
     {
+        if (!$token){
+            return ApiResponseCntroller::response_error([], 'Unauthorized', 401);
+        }
+
         if (Auth::check()) {
             return ApiResponseCntroller::response_success($request->user());
         } else {

@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->group(function(){
 });
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/user', [AuthenticationController::class, 'user']);
+    Route::get('/verify-user/{token}', [AuthenticationController::class, 'verify_user']);
 });
 
 
