@@ -12,4 +12,9 @@ class College extends Model
     {
         return $this->hasMany(CollegeContact::class, 'college_id', 'id');
     }
+
+    public function college_course_department()
+    {
+        return $this->hasMany(CollegeCourseDepartment::class, 'college_id', 'id');
+    }
 }
