@@ -10,4 +10,9 @@ class CollegeLead extends Model
     {
         return $this->belongsTo(College::class, 'college_id', 'id');
     }
+
+    public function lead()
+    {
+        return $this->belongsTo(AllLead::class, 'lead_id', 'id');
+    }
 }

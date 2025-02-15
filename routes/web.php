@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\StateDistrictController;
+use App\Http\Controllers\CollegeAdmin\CollegeAdminController;
 use App\Http\Controllers\FeesStructureController;
 use App\Http\Controllers\PlacementController;
 use App\Models\FeesStructure;
@@ -84,4 +85,7 @@ Route::middleware('user-access')->group(function () {
     //College Claim
     Route::get('admin/college/claim/list', [CollegeClaimController::class, 'claim_queries'])->name('college.claim.list');
     Route::get('admin/college/claim/details/{college_id}', [CollegeClaimController::class, 'claim_details'])->name('college.claim.details');
+    //College Admin
+    Route::get('admin/college/collegeadmin/add/{college_id}', [CollegeAdminController::class, 'add_college_admin'])->name('college.collegeadmin.add');
+    Route::post('admin/college/collegeadmin/submit', [CollegeAdminController::class, 'add_college_admin_submit'])->name('college.collegeadmin.submit');
 });

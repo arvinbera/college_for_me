@@ -19,6 +19,7 @@
                                 class="btn btn-sm btn-outline-primary">Edit</a>
                             @if ($college->is_verify)
                                 <a href="#" class="btn btn-sm btn-outline-danger" wire:click.prevent="remove_verify({{$college->id}})">Remove Blue Tick</a>    
+                                <a href="{{route('college.collegeadmin.add',$college->id)}}" class="btn btn-sm btn-outline-warning">Add Admin</a>  
                             @else
                                 <a href="#" class="btn btn-sm btn-outline-success" wire:click.prevent="add_verify({{$college->id}})">Add Blue Tick</a>    
                             @endif
