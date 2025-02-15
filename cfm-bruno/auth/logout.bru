@@ -1,0 +1,20 @@
+meta {
+  name: logout
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8000/api/collegeadmin/logout
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: 12|MkSlGWzRkebu28dyXJEmX4aSq0Eg1DaYujJmgP2v2a2f1924
+}
+
+body:multipart-form {
+  ~email: arvin.bera@college.com
+  ~password: 123456s
+}

@@ -1,0 +1,20 @@
+meta {
+  name: checkAuth
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:8000/api/verify-user/10|lHpEdZwPY4tI8nJYjWT2e0X8iyI61Hhi5kmAQR1Uafc3f8ba
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: 10|lHpEdZwPY4tI8nJYjWT2e0X8iyI61Hhi5kmAQR1Uafc3f8ba
+}
+
+body:multipart-form {
+  ~email: arvin.bera@college.com
+  ~password: 123456s
+}
