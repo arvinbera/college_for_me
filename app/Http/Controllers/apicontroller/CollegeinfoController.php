@@ -10,6 +10,12 @@ use App\Models\College;
 
 class CollegeinfoController extends Controller
 {
+
+    public function details($id)
+    {
+        $college_details = College::where('id', $id)->first();
+        return ApiResponseCntroller::response_success(data: $college_details, message: 'College details fetched successfully', status: 200);
+    }
     public function edit($id)
     {
         $college_info = College::find($id);
@@ -30,7 +36,6 @@ class CollegeinfoController extends Controller
             'institute_type' => 'required|string|max:191',
         ]);
         if ($validator->fails()) {
-
 
             return ApiResponseCntroller::response_error(message: 'Validation Error', errors: $validator->errors(), status: 404);
             // return response()->json([
