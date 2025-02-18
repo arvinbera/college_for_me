@@ -38,6 +38,12 @@
                                 </div>
                                 <div class="row g-3">
                                     <div class="col-md">
+                                        <div class="form-label">Article Slug</div>
+                                        <input type="text" class="form-control" name="article_slug" >
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-md">
                                         <div class="form-label">Upload Banner Pics</div>
                                         <input type="file" class="form-control" name="banner_image">
                                     </div>

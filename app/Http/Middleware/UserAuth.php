@@ -16,7 +16,7 @@ class UserAuth
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (isset(Auth::user()->role)) {
+        if (isset(Auth::user()->role) && (Auth::user()->role == 1)) {
             return $next($request);
         }
         return redirect()->route('admin.login');

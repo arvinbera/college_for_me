@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\ArticleCategory;
 use Illuminate\Http\Request;
+use Str;
 
 class ArticleController extends Controller
 {
@@ -21,6 +22,7 @@ class ArticleController extends Controller
     {
         $entity = new Article();
         $entity->title = $request->article_name;
+        $entity->article_slug = Str::slug($request->article_name);
         $entity->meta_description = $request->meta_description;
         $entity->banner_image = FileHelper::Upload($request->banner_image, null, FileHelper::$article_banner_image)->upload_name;
         $entity->article_category_id = $request->article_category_id;
@@ -51,6 +53,10 @@ class ArticleController extends Controller
             $article_details->banner_image = FileHelper::Upload($request->banner_image, $article_details->banner_image, FileHelper::$article_banner_image)->upload_name;
         }
         $article_details->meta_description = $request->meta_description;
+        $article_details->article_slug = Str::slug($request->article_name);
+        if ($request->article_slug) {
+            $article_details->article_slug = Str::slug($request->article_slug);
+        }
         $article_details->article_category_id = $request->article_category_id;
         $article_details->article_description = $request->article_description;
         $article_details->update($article_details->toArray());

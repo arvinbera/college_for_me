@@ -29,19 +29,19 @@
                                                     class="list-group-item list-group-item-action d-flex align-items-center">College
                                                     Address</a>
                                                 <a href="{{ route('college.course.edit', $college_id) }}"
-                                                    class="list-group-item list-group-item-action d-flex align-items-center active">College
+                                                    class="list-group-item list-group-item-action d-flex align-items-center">College
                                                     Courses</a>
                                                 <a href="{{ route('college.gallery.edit', $college_id) }}"
                                                     class="list-group-item list-group-item-action d-flex align-items-center">College
                                                     Gallery</a>
                                                 <a href="{{ route('college.faculty.list.edit', $college_id) }}"
-                                                    class="list-group-item list-group-item-action d-flex align-items-center">Faculty</a>
+                                                    class="list-group-item list-group-item-action d-flex align-items-center active">Faculty</a>
                                             
                                             </div>
 
                                             </div>
                                         </div>
-                                        @livewire('college.edit.course', ['id' => $college_id])
+                                        @livewire('college.edit.faculty.faculty-new', ['id' => $college_id])
                                     </div>
                                 </div>
                             </div>
