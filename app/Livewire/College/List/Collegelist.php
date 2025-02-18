@@ -8,7 +8,7 @@ use Livewire\WithPagination;
 
 class Collegelist extends Component
 {
-    public $college_details;
+    public $college_details, $college_key = '';
     use WithPagination;
     protected string $paginationTheme = 'bootstrap';
 
@@ -17,6 +17,11 @@ class Collegelist extends Component
         $this->college_details = College::where('id', $id)->update(['is_verify' => true]);
         flash('Bluetick added successfully');
     }
+
+    public function updatingCollegeKey()
+    {
+        $this->resetPage(); // Reset pagination when search input changes
+    }
     public function remove_verify($id)
     {
         $this->college_details = College::where('id', $id)->update(['is_verify' => false]);
@@ -24,6 +29,9 @@ class Collegelist extends Component
     }
     public function render()
     {
-        return view('livewire.college.list.collegelist', ['colleges' => College::paginate(2)]);
+        $colleges = College::where('name', 'like', '%' . $this->college_key . '%')
+            ->paginate(2);
+
+        return view('livewire.college.list.collegelist', compact('colleges'));
     }
 }

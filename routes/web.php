@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ArticleCategoryController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\CollegeClaimController;
 use App\Http\Controllers\Admin\CollegeController;
 use App\Http\Controllers\Admin\CollegeEditController;
 use App\Http\Controllers\Admin\CollegeListController;
@@ -10,14 +11,18 @@ use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\StateDistrictController;
+
 use App\Http\Controllers\BillController;
+
+use App\Http\Controllers\CollegeAdmin\CollegeAdminController;
+
 use App\Http\Controllers\FeesStructureController;
 use App\Http\Controllers\PlacementController;
 use App\Models\FeesStructure;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('admin.login');
 });
 
 //Authentication
@@ -49,9 +54,9 @@ Route::middleware('user-access')->group(function () {
     Route::get('admin/college/address/edit/{college_id}', [CollegeEditController::class, 'college_address_edit'])->name('college.address.edit');
     Route::get('admin/college/course/edit/{college_id}', [CollegeEditController::class, 'college_course_edit'])->name('college.course.edit');
     Route::get('admin/college/faculty/list/{college_id}', [CollegeEditController::class, 'college_faculty_list'])->name('college.faculty.list.edit');
-    Route::get('admin/college/faculty/edit/{college_id}', [CollegeEditController::class, 'college_faculty_edit'])->name('college.faculty.edit');
+    Route::get('admin/college/faculty/edit/{college_id}/{faculty_id}', [CollegeEditController::class, 'college_faculty_edit'])->name('college.faculty.edit');
     Route::get('admin/college/gallery/edit/{college_id}', [CollegeEditController::class, 'college_gallery_edit'])->name('college.gallery.edit');
-
+    Route::get('admin/college/college/new/faculty/{college_id}', [CollegeEditController::class, 'college_faculty_new'])->name('college.new.faculty');
     Route::get('admin/college/placement/edit/{college_id}', [CollegeEditController::class, 'college_placement_edit'])->name('college.placement.edit');
     // placement
     Route::get('admin/placement/list',[PlacementController::class,'index'])->name('placement.list');
@@ -59,6 +64,7 @@ Route::middleware('user-access')->group(function () {
     Route::post('admin/placement/store',[PlacementController::class, 'store'])->name('placement.store');
     Route::get('admin/placement/edit/{id}',[PlacementController::class,'edit'])->name('placement.edit');
     Route::post('admin/placement/update/{id}',[PlacementController::class, 'update'])->name('placement.update');
+
     
     // bill controller
     Route::get('admin/original-list',[BillController::class, 'original_list'])->name('list.original');
@@ -71,13 +77,16 @@ Route::middleware('user-access')->group(function () {
     Route::post('admin/proforma/update/{id}',[BillController::class, 'proforma_update'])->name('update.proforma.bill');
     // bill controller
 
+
+
+    // Fees Course Eligibility
+
     Route::get('admin/college/coursefeeseligibility/list/{college_id}', [CollegeEditController::class, 'college_course_fees_eligibility_list'])->name('college.course.fees.eligibility.list.edit');
     Route::get('admin/college/coursefeeseligibility/edit/{course_fees_id}/{college_id}', [CollegeEditController::class, 'college_course_fees_eligibility_edit'])->name('college.course.fees.eligibility.edit');
-
+    Route::get('admin/college/coursefeeseligibility/add/{college_id}', [CollegeEditController::class, 'college_add_new_course'])->name('college.course.fees.eligibility.add.new');
     //list
     Route::get('admin/college/list', [CollegeListController::class, 'list'])->name('college.list');
     Route::get('district/list/{state_id}', [StateDistrictController::class, 'districts_under_states'])->name('district.list');
-
 
     // fees structure
     Route::get('admin/fees_structure/list',[FeesStructureController::class, 'index'])->name('admin.fees_structure');
@@ -92,5 +101,10 @@ Route::middleware('user-access')->group(function () {
     Route::get('admin/article/list', [ArticleController::class, 'list_article'])->name('article.list');
     Route::get('admin/article/edit/{id}', [ArticleController::class, 'edit_article'])->name('article.edit');
     Route::post('admin/article/update', [ArticleController::class, 'update_article'])->name('article.update');
-
+    //College Claim
+    Route::get('admin/college/claim/list', [CollegeClaimController::class, 'claim_queries'])->name('college.claim.list');
+    Route::get('admin/college/claim/details/{college_id}', [CollegeClaimController::class, 'claim_details'])->name('college.claim.details');
+    //College Admin
+    Route::get('admin/college/collegeadmin/add/{college_id}', [CollegeAdminController::class, 'add_college_admin'])->name('college.collegeadmin.add');
+    Route::post('admin/college/collegeadmin/submit', [CollegeAdminController::class, 'add_college_admin_submit'])->name('college.collegeadmin.submit');
 });

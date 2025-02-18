@@ -1,0 +1,22 @@
+meta {
+  name: Filter Search
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://127.0.0.1:8000/api/college/filter_search/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "course_id":1,
+    "institute_type":1,
+    "state_id":28,
+    "district_id":488,
+    "city":"kolkata"
+    
+  }
+}

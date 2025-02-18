@@ -37,9 +37,9 @@ class CollegeEditController extends Controller
         return view('admin.college.edit.faculty.list', compact('college_id'));
     }
 
-    public function college_faculty_edit($faculty_id)
+    public function college_faculty_edit($college_id, $faculty_id)
     {
-        return view('admin.college.edit.faculty.edit', compact('faculty_id'));
+        return view('admin.college.edit.faculty.edit', compact('college_id', 'faculty_id'));
     }
 
     public function college_gallery_edit($college_id)
@@ -50,5 +50,15 @@ class CollegeEditController extends Controller
     public function college_placement_edit($college_id)
     {
         return view('admin.college.edit.placements', compact('college_id'));
+    }
+
+    public function college_add_new_course($college_id)
+    {
+        return view('admin.college.edit.course.index', compact('college_id'));
+    }
+
+    public function college_faculty_new($college_id)
+    {
+        return view('admin.college.edit.faculty.new', compact('college_id'));
     }
 }

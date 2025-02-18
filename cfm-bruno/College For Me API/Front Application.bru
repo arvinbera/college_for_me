@@ -1,0 +1,22 @@
+meta {
+  name: Front Application
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://127.0.0.1:8000/api/college/submit
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "college_id":7,
+    "student_name":"Subha",
+    "student_email":"subha@gmail.com",
+    "phone":"7896541236",
+    "course_id":2,
+    "state_id":28
+  }
+}

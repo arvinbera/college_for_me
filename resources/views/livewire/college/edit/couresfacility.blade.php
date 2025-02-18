@@ -28,6 +28,6 @@
     
     </table>
     <div class="d-flex justify-items-center mt-4">
-        <div class=" mx-auto"><a href="" class="btn btn-sm btn-outline-primary">Add Course</a></div>
+        <div class=" mx-auto"><a href="{{route('college.course.fees.eligibility.add.new', $college_id)}}" class="btn btn-sm btn-outline-primary">Add Course</a></div>
     </div>
 </div>

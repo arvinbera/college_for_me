@@ -1,0 +1,21 @@
+meta {
+  name: College Claim
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://127.0.0.1:8000/api/college/claim
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "college_id":3,
+    "name":"Arvin Bera",
+    "official_email":"arvin.bera@gmail.com",
+    "phone":"7980236755",
+    "designation":"Developer"
+  }
+}

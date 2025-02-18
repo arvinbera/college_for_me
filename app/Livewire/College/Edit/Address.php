@@ -43,14 +43,30 @@ class Address extends Component
     public function update_address()
     {
         $college_address_details = CollegeContact::where('college_id', $this->college_id)->first();
-        $college_address_details->college_address = $this->college_address;
-        $college_address_details->state_id = $this->selectedState;
-        $college_address_details->district_id = $this->selectedDistrict;
-        $college_address_details->pincode = $this->pincode;
-        $college_address_details->city = $this->city;
-        $college_address_details->email = $this->email;
-        $college_address_details->update($college_address_details->toArray());
-        flash('College address updated successfully!');
-        return redirect()->back();
+        if (empty($college_address_details)) {
+            $entity = new CollegeContact();
+            $entity->college_id = $this->college_id;
+            $entity->save();
+            $college_address_details = CollegeContact::where('college_id', $this->college_id)->first();
+            $college_address_details->college_address = $this->college_address ?? "";
+            $college_address_details->state_id = $this->selectedState ?? "";
+            $college_address_details->district_id = $this->selectedDistrict ?? "";
+            $college_address_details->pincode = $this->pincode ?? "";
+            $college_address_details->city = $this->city ?? "";
+            $college_address_details->email = $this->email ?? "";
+            $college_address_details->update($college_address_details->toArray());
+            flash('College address updated successfully!');
+            return redirect()->back();
+        } else {
+            $college_address_details->college_address = $this->college_address ?? "";
+            $college_address_details->state_id = $this->selectedState ?? "";
+            $college_address_details->district_id = $this->selectedDistrict ?? "";
+            $college_address_details->pincode = $this->pincode ?? "";
+            $college_address_details->city = $this->city ?? "";
+            $college_address_details->email = $this->email ?? "";
+            $college_address_details->update($college_address_details->toArray());
+            flash('College address updated successfully!');
+            return redirect()->back();
+        }
     }
 }
