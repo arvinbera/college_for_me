@@ -11,3 +11,5 @@ Route::get('college/search/{key}', [SearchController::class, 'header_search']);
 Route::get('college/filter_search/', [SearchController::class, 'college_filter_search']);
 Route::get('college/info/{college_id}', [FrontCollegeApiController::class, 'college_info_details']);
 Route::get('college/address/{college_id}', [FrontCollegeApiController::class, 'college_address_details']);
+Route::get('college/course/department/{college_id}', [FrontCollegeApiController::class, 'college_course_department_details']);
+Route::get('college/faculty/details/{college_id}', [FrontCollegeApiController::class, 'college_faculty_details']);
