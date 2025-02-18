@@ -4,12 +4,6 @@
             <h2 class="mb-4">College Faculty</h2>
 
             <h3 class="card-title mt-4">Faculty Info</h3>
-            {{-- <div class="row g-3">
-                <div class="col-md">
-                    <div class="form-label">College Name</div>
-                    <input type="text" class="form-control" wire:model="college_id">
-                </div>
-            </div> --}}
             <div class="row g-3">
                 <div class="col-md">
                     <div class="form-label">Faculty Name</div>

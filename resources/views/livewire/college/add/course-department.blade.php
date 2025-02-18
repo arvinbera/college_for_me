@@ -65,7 +65,7 @@
         @endif
     </form>
 
-    <form class="card" action="{{route('admin.fees_structure.store')}}" method="post">
+    {{-- <form class="card" action="{{route('admin.fees_structure.store')}}" method="post">
                     @csrf
                     <div class="card-body">
                         <h3 class="card-title">Add Fees Structure</h3>
@@ -85,7 +85,6 @@
                                 @enderror
                             </div>
 
-
                             <div class="form-row col-12">
                                 <div class="form-group col">Fees Structure</div>
                                 <input type="number" class="form-control" name="fees_structure" placeholder="Enter amount">
@@ -102,11 +101,10 @@
                                 @enderror
                             </div>
 
-
                         </div>
                     </div>
                     <div class="card-footer text-left">
                         <button type="submit" class="btn btn-primary">Add Fees</button>
                     </div>
-                </form>
+                </form> --}}
 </div>

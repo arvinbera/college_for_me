@@ -29,6 +29,10 @@ class AuthController extends Controller
         if (Auth::attempt($credentials, true)) {
             if (Auth::user()->role == 1) {
                 return redirect()->route('dashboard');
+            } elseif (Auth::user()->role == 4) {
+                return redirect()->route('lead.dashboard');
+            } elseif (Auth::user()->role == 5) {
+                return redirect()->route('counselor.dashboard');
             } else {
                 return redirect()->back();
             }
@@ -39,6 +43,19 @@ class AuthController extends Controller
     }
 
     public function admin_logout()
+    {
+        Session::flush();
+        Auth::logout();
+        return redirect()->route('admin.login');
+    }
+    public function lead_admin_logout()
+    {
+        Session::flush();
+        Auth::logout();
+        return redirect()->route('admin.login');
+    }
+
+    public function counselor_logout()
     {
         Session::flush();
         Auth::logout();
