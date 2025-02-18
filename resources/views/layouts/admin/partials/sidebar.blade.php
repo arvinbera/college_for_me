@@ -166,11 +166,11 @@
                         <div class="dropdown-menu-columns">
                             <div class="dropdown-menu-column">
 
-                                <a class="dropdown-item" href="{{route ('list.lead.model')}}">
-                                    Lead Model
+                                <a class="dropdown-item" href="{{route ('list.original')}}">
+                                    View all Original Bills
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    Admission Model
+                                <a class="dropdown-item" href="{{route ('list.proforma')}}">
+                                    View all Proforma Bills
                                 </a>
                             </div>
                         </div>

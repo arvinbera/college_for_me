@@ -81,14 +81,14 @@
                                         <tbody class="table-tbody">
                                            
                                         </tbody>
-                                        @foreach($bills as $bill)
+                                        @foreach($proforma_bills as $bill)
                                             <tr>
                                                 <td>{{$loop->iteration}}</td>
                                                 <td>{{$bill->college->name}}</td>
                                                 <td>{{$bill->course_duration}}</td>
                                                 <td><a href="" class="btn btn-sm btn-outline-primary">View</a></td>
                                                 <td><a href="" class="btn btn-sm btn-outline-primary">View</a></td>
-                                                <td><a href="{{route('edit.original.bill',[$bill->id])}}" class="btn btn-sm btn-outline-primary">Edit</a></td>
+                                                <td><a href="{{route ('edit.proforma.bill', $bill->id)}}" class="btn btn-sm btn-outline-primary">Edit</a></td>
                                             </tr>
                                         @endforeach
                                     </table>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0fbe91adfdd022fbc1249e7cd3d899a5",
+    "content-hash": "93d92a2694b5b630e19d017634f0dc4f",
     "packages": [
         {
             "name": "brick/math",
@@ -2468,6 +2468,57 @@
                 }
             ],
             "time": "2024-12-05T17:15:07+00:00"
+        },
+        {
+            "name": "nassiry/flash-messages",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nassiry/flash-messages.git",
+                "reference": "1c041e3f490fddee1e01a6a41f082fe852381b16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nassiry/flash-messages/zipball/1c041e3f490fddee1e01a6a41f082fe852381b16",
+                "reference": "1c041e3f490fddee1e01a6a41f082fe852381b16",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nassiry\\FlashMessages\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "A.S Nassiry",
+                    "email": "me@example.com",
+                    "homepage": "https://github.com/nassiry/flash-messages",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP package for handling flash messages with session storage & rendering.",
+            "keywords": [
+                "flash-message",
+                "php-flash",
+                "render-flashes",
+                "session-message"
+            ],
+            "support": {
+                "issues": "https://github.com/nassiry/flash-messages/issues",
+                "source": "https://github.com/nassiry/flash-messages/tree/v1.0.0"
+            },
+            "time": "2025-01-03T09:25:18+00:00"
         },
         {
             "name": "nesbot/carbon",

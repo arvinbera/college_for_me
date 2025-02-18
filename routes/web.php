@@ -61,9 +61,14 @@ Route::middleware('user-access')->group(function () {
     Route::post('admin/placement/update/{id}',[PlacementController::class, 'update'])->name('placement.update');
     
     // bill controller
-    Route::get('admin/lead_model/list',[BillController::class, 'lead_model_list'])->name('list.lead.model');
+    Route::get('admin/original-list',[BillController::class, 'original_list'])->name('list.original');
+    Route::get('admin/proforma-list',[BillController::class, 'proforma_list'])->name('list.proforma');
     Route::get('admin/lead_model/add',[BillController::class, 'lead_model_add'])->name('add.lead.model');
     Route::post('admin/lead_model/store',[BillController::class, 'store'])->name('store.lead.model');
+    Route::get('admin/original/edit/{id}',[BillController::class,'original_edit'])->name('edit.original.bill');
+    Route::post('admin/original/update/{id}',[BillController::class, 'original_update'])->name('update.original.bill');
+    Route::get('admin/proforma/edit/{id}',[BillController::class,'proforma_edit'])->name('edit.proforma.bill');
+    Route::post('admin/proforma/update/{id}',[BillController::class, 'proforma_update'])->name('update.proforma.bill');
     // bill controller
 
     Route::get('admin/college/coursefeeseligibility/list/{college_id}', [CollegeEditController::class, 'college_course_fees_eligibility_list'])->name('college.course.fees.eligibility.list.edit');
