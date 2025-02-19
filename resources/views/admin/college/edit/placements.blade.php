@@ -43,7 +43,7 @@
 
                                             </div>
                                         </div>
-                                        @livewire('college.edit.placements', ['id' => $college_id])
+                                       <div class="col-12 col-md-9 "> @livewire('college.edit.placements', ['id' => $college_id])</div>
                                     </div>
                                 </div>
                             </div>

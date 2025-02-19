@@ -36,7 +36,8 @@
                                                     Gallery</a>
                                                 <a href="{{ route('college.faculty.list.edit', $college_id) }}"
                                                     class="list-group-item list-group-item-action d-flex align-items-center">Faculty</a>
-                                            
+                                                <a href="{{ route('college.placement.edit', $college_id) }}"
+                                                    class="list-group-item list-group-item-action d-flex align-items-center">Placement</a>
                                             </div>
 
                                             </div>
