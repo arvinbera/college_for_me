@@ -10,7 +10,7 @@
 <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
 
 <div class="col mx-auto d-flex flex-column">
-    <form wire:submit.prevent="submit_placement" class="card">
+    <form wire:submit.prevent="submit_placement" >
         <div class="card-body">
             <h2 class="mb-4">College Placement</h2>
             @if (session()->has('college_id'))

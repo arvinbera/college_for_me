@@ -43,7 +43,10 @@
 
                                             </div>
                                         </div>
-                                        @livewire('college.add.placements')
+                                       <div class="col-12 col-md-9 ">
+
+                                           @livewire('college.add.placements')
+                                        </div>
                                     </div>
                                 </div>
                             </div>
