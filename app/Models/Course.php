@@ -10,5 +10,6 @@ class Course extends Model
         "course_name",
         "course_slug",
         "course_duration",
+        "course_category_id"
     ];
 }

@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\CollegeClaimController;
 use App\Http\Controllers\Admin\CollegeController;
 use App\Http\Controllers\Admin\CollegeEditController;
 use App\Http\Controllers\Admin\CollegeListController;
+use App\Http\Controllers\Admin\CourseCategoryController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DepartmentController;
@@ -34,6 +35,8 @@ Route::middleware('user-access')->group(function () {
     Route::get('admin/logout', [AuthController::class, 'admin_logout'])->name('admin.logout');
     //admin dashboard
     Route::get('admin/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('admin/course_category/add', [CourseCategoryController::class, 'course_category_add'])->name('course.category.add');
+    Route::get('admin/course_category/list', [CourseCategoryController::class, 'course_category_list'])->name('course.category.list');
     Route::get('admin/course/list', [CourseController::class, 'course_list'])->name('course.list');
     Route::get('admin/course/add', [CourseController::class, 'course_add'])->name('course.add');
     Route::get('admin/course/edit/{id}', [CourseController::class, 'course_edit'])->name('course.edit');
@@ -65,7 +68,6 @@ Route::middleware('user-access')->group(function () {
     Route::get('admin/placement/edit/{id}',[PlacementController::class,'edit'])->name('placement.edit');
     Route::post('admin/placement/update/{id}',[PlacementController::class, 'update'])->name('placement.update');
 
-    
     // bill controller
     Route::get('admin/original-list',[BillController::class, 'original_list'])->name('list.original');
     Route::get('admin/proforma-list',[BillController::class, 'proforma_list'])->name('list.proforma');
@@ -76,8 +78,6 @@ Route::middleware('user-access')->group(function () {
     Route::get('admin/proforma/edit/{id}',[BillController::class,'proforma_edit'])->name('edit.proforma.bill');
     Route::post('admin/proforma/update/{id}',[BillController::class, 'proforma_update'])->name('update.proforma.bill');
     // bill controller
-
-
 
     // Fees Course Eligibility
 
