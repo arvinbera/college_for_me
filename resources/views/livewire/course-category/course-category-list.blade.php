@@ -14,7 +14,7 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $category->course_category_name }}</td>
-                        <td><a href="#" class="btn btn-sm btn-outline-primary">Edit</a></td>
+                        <td><a href="{{route('course.category.edit', $category->id)}}" class="btn btn-sm btn-outline-primary">Edit</a></td>
                     </tr>
                 @endforeach
 

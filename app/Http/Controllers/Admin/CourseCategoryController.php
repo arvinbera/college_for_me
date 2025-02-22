@@ -16,4 +16,9 @@ class CourseCategoryController extends Controller
     {
         return view('admin.course_category.list');
     }
+
+    public function course_category_edit($id)
+    {
+        return view('admin.course_category.edit', compact('id'));
+    }
 }

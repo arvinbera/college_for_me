@@ -37,6 +37,7 @@ Route::middleware('user-access')->group(function () {
     Route::get('admin/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('admin/course_category/add', [CourseCategoryController::class, 'course_category_add'])->name('course.category.add');
     Route::get('admin/course_category/list', [CourseCategoryController::class, 'course_category_list'])->name('course.category.list');
+    Route::get('admin/course_category/edit/{id}', [CourseCategoryController::class, 'course_category_edit'])->name('course.category.edit');
     Route::get('admin/course/list', [CourseController::class, 'course_list'])->name('course.list');
     Route::get('admin/course/add', [CourseController::class, 'course_add'])->name('course.add');
     Route::get('admin/course/edit/{id}', [CourseController::class, 'course_edit'])->name('course.edit');
