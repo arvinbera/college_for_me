@@ -27,7 +27,7 @@
                             <div class="form-row col-12">
                                 <div class="form-group col">
                                     <label for="inputAddress">College Name</label>
-                                    <select class="form-control example" name="college_id" id="gst_type" onchange="gsttype()">
+                                    <select class="js-example-basic-single form-control" name="college_id" id="gst_type" onchange="gsttype()">
                                         <option value=""> --Select College-- </option>
                                         @foreach ($all_colleges as $college)
                                         {{-- @if (isset($college->school_address[0]?->address))--}}
@@ -114,7 +114,6 @@
                                 </div>
                             </div>
 
-
                             <div class="form-row col-12">
                                 <div class="form-group col">
                                     <label for="receipt_date">Receipt Date</label>
@@ -158,8 +157,6 @@
                                         class="form-control" value="{{$bill_edit->check_number}}">
                                 </div>
                             </div>
-
-
 
                         </div>
                     </div>
@@ -214,5 +211,11 @@
             document.getElementById('original').style.display = "block";
         }
     }
+</script>
+<script>
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
+
 </script>
 @endpush
