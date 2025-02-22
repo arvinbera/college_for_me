@@ -39,6 +39,20 @@
 
                             </div>
                         </div>
+                        <div class="form-row col-12">
+                            <div class="form-group col">Select Course Duration</div>
+                            <select class="form-select" name="course_category_id">
+                                <option value="">Select Course Category</option>
+                                @foreach ($course_categories as $category)
+                                    <option value="{{ $category->id }}" >
+                                        {{ $category->course_category_name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @error('course_duration')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
                         <div class="card-footer text-left">
                             <button type="submit" class="btn btn-primary">Add Course</button>
                         </div>
@@ -49,6 +63,6 @@
     </div>
 
     <!-- <div class="col-12" style="margin-top:75px;">
-                                                                                                                           
-                                                                                                                        </div> -->
+                                                                                                                               
+                                                                                                                            </div> -->
 @endsection

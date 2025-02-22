@@ -60,7 +60,7 @@
             <div class="row g-3">
                 <div class="col-md">
                     <div class="form-label">Select City</div>
-                    <select name="" id="" class="form-control" wire:model="city">
+                    <select name="" id="select2" class="form-control" wire:model="city">
                         <option value="">Select</option>
                         <option value="Kolkata">Kolkata</option>
                         <option value="Delhi">Delhi</option>
