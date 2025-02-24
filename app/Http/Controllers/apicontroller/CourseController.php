@@ -12,19 +12,19 @@ class CourseController extends Controller
     public function index()
     {
         $college_course = Course::all();
-        if ($college_course->count() > 0){
+        if ($college_course->count() > 0) {
             $data = [
-                'success'=> true,
-                'college_faculty'=> $college_course,
+                'success' => true,
+                'college_faculty' => $college_course,
                 'statusCode' => 200,
-                'message'=> 'Records fetch successfully',
+                'message' => 'Records fetch successfully',
             ];
             return response()->json($data, 200);
         } else {
             $data = [
                 'success' => false,
                 'error' => [
-                    'message'=> 'No such records found',
+                    'message' => 'No such records found',
                 ],
                 'statusCode' => 404,
             ];
@@ -32,22 +32,22 @@ class CourseController extends Controller
         }
     }
 
-    public function edit($id)
+    public function show($id)
     {
         $college_course = Course::find($id);
 
         if ($college_course) {
             return response()->json([
-                'success'=> true,
-                'data'=> $college_course,
+                'success' => true,
+                'data' => $college_course,
                 'statusCode' => 200,
-                'message'=> 'Records fetch successfully',
+                'message' => 'Records fetch successfully',
             ], 200);
         } else {
             return response()->json([
                 'success' => false,
-                'error'=>[
-                  'message'=> 'NO such records found !',
+                'error' => [
+                    'message' => 'NO such records found !',
                 ],
                 'statusCode' => 404,
             ], 404);
@@ -56,34 +56,34 @@ class CourseController extends Controller
 
     public function update(Request $request, int $id)
     {
-        $validator = Validator::make($request->all(),[
+        $validator = Validator::make($request->all(), [
             'course_name' => 'required',
             'course_duration' => 'required',
         ]);
-        if ($validator->fails()){
+        if ($validator->fails()) {
             return response()->json([
-                'success'=> false,
-                'error'=> $validator->messages(),
+                'success' => false,
+                'error' => $validator->messages(),
             ], 404);
         } else {
             $college_course = Course::find($id);
 
-            if($college_course){
+            if ($college_course) {
                 $college_course->update([
-                    'course_name'=> $request->course_name,
-                    'course_slug'=>$request->course_name,
-                    'course_duration'=> $request->course_duration,
+                    'course_name' => $request->course_name,
+                    'course_slug' => $request->course_name,
+                    'course_duration' => $request->course_duration,
                 ]);
                 return response()->json([
-                    'success'=> true,
-                    'message'=> 'Data updated successfully !',
+                    'success' => true,
+                    'message' => 'Data updated successfully !',
                     'statusCode' => 202
                 ], 202);
             } else {
                 return response()->json([
-                    'success'=> false,
-                    'error'=>[
-                      'message'=> 'No such record found'
+                    'success' => false,
+                    'error' => [
+                        'message' => 'No such record found'
                     ],
                     'statusCode' => 404,
                 ], 404);
