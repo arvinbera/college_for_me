@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CollegeLeadController extends Controller
 {
-    public function lead_list()
+    public function index()
     {
         $admin_user_id = Auth::user()->id;
         $college_id = CollegeAdminDashboard::where('admin_id', $admin_user_id)->first()->college_id;
@@ -24,9 +24,9 @@ class CollegeLeadController extends Controller
         ]);
     }
 
-    public function lead_details($lead_id)
+    public function show($lead)
     {
-        $lead_details = CollegeLead::with('lead')->where('id', $lead_id)->first();
+        $lead_details = CollegeLead::with('lead')->where('id', $lead)->first();
         return response()->json([
             'is_success' => true,
             'data' => $lead_details,
@@ -34,11 +34,11 @@ class CollegeLeadController extends Controller
         ]);
     }
 
-    public function lead_remark_submit(Request $request)
+    public function storeRemark(Request $request)
     {
         $admin_user_id = Auth::user()->id;
         $college_id = CollegeAdminDashboard::where('admin_id', $admin_user_id)->first()->college_id;
-        $lead_id = $request->lead_id;
+        $lead_id = $request->lead;
         $remarks = $request->remarks;
         $status = $request->status;
         $x = new CollegeLeadRemark();
@@ -54,9 +54,9 @@ class CollegeLeadController extends Controller
         ]);
     }
 
-    public function lead_remark_list($lead_id)
+    public function remarksIndex($lead)
     {
-        $college_lead_remarks = CollegeLeadRemark::where('lead_id', $lead_id)->get();
+        $college_lead_remarks = CollegeLeadRemark::where('lead_id', $lead)->get();
         return response()->json([
             'is_success' => true,
             'data' => $college_lead_remarks,

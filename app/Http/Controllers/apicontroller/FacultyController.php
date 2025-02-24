@@ -14,18 +14,16 @@ class FacultyController extends Controller
     {
         $college_faculty = CollegeFaculty::all();
         if ($college_faculty->count() > 0) {
-         
+
             return ApiResponseCntroller::response_success(data: $college_faculty, message: 'Records fetch successfully', status: 200);
-      
         } else {
-   
+
 
             return  ApiResponseCntroller::response_error(message: 'No such records found', status: 404);
-
         }
     }
 
-    public function edit($id)
+    public function show($id)
     {
         $college_faculty = CollegeFaculty::find($id);
 

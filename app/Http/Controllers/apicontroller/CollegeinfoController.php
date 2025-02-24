@@ -16,7 +16,7 @@ class CollegeinfoController extends Controller
         $college_details = College::where('id', $id)->first();
         return ApiResponseCntroller::response_success(data: $college_details, message: 'College details fetched successfully', status: 200);
     }
-    public function edit($id)
+    public function show($id)
     {
         $college_info = College::find($id);
         if ($college_info) {
