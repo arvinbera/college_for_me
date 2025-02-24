@@ -12,10 +12,10 @@ use Illuminate\Http\Request;
 
 class CollegeGalleryController extends Controller
 {
-    public function edit($id)
+    public function show($id)
     {
         $college_gallery = CollegeImage::find($id);
-        if ($college_gallery){
+        if ($college_gallery) {
             return ApiResponseCntroller::response_success(data: $college_gallery, message: 'Records fetch successfully', status: 200);
             // return response()->json([
             //     'success'=> true,
@@ -23,7 +23,7 @@ class CollegeGalleryController extends Controller
             //     'statusCode'=> 200,
             //     'message'=> "Records fetch successfully",
             // ], 200);
-        }else{
+        } else {
             return ApiResponseCntroller::response_error(message: 'NO such records found !', status: 404);
             // return response()->json([
             //     'success'=> false,
@@ -37,16 +37,16 @@ class CollegeGalleryController extends Controller
 
     public function update(Request $request, int $id)
     {
-        $validator = Validator::make($request->all(),[
+        $validator = Validator::make($request->all(), [
             'college_image' => 'required',
         ]);
-        if ($validator->fails()){
+        if ($validator->fails()) {
             return ApiResponseCntroller::response_error(message: 'Validation Error', errors: $validator->errors(), status: 404);
             // return response()->json([
             //     'success' => false,
             //     'error'=> $validator->messages(),
             // ], 404);
-        } else{
+        } else {
             $college_gallery = CollegeImage::find($id);
 
             if ($college_gallery) {

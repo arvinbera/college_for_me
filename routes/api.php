@@ -13,49 +13,61 @@ use App\Http\Controllers\CollegeAdmin\CollegeLeadController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::post('collegeadmin/login', [AuthenticationController::class, 'college_admin_login']);
 
-Route::middleware('auth:sanctum')->group(function () {
-    Route::post('collegeadmin/logout', [AuthenticationController::class, 'api_logout']);
+
+
+// Authentication
+Route::prefix('auth')->group(function () {
+    // Login (non‐protected, as it creates a token)
+    Route::post('login', [AuthenticationController::class, 'college_admin_login']);
+
+    Route::middleware('auth:sanctum')->group(function () {
+        // Logout
+        Route::post('logout', [AuthenticationController::class, 'api_logout']);
+        // Verify user (token passed as route parameter or query string)
+        Route::get('verify/{token}', [AuthenticationController::class, 'verify_user']);
+    });
 });
 
-Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/verify-user/{token}', [AuthenticationController::class, 'verify_user']);
+// College Admin Resources (protected by Sanctum)
+Route::prefix('college-admin')->middleware('auth:sanctum')->group(function () {
+    // College resource – use GET to retrieve and PUT to update.
+    Route::get('colleges/{id}', [CollegeinfoController::class, 'show']);
+    Route::put('colleges/{id}', [CollegeinfoController::class, 'update']);
+
+    // College Contact resource
+    Route::get('contacts/{id}', [CollegeContactController::class, 'show']);
+    Route::put('contacts/{id}', [CollegeContactController::class, 'update']);
+
+    // College Gallery resource
+    Route::get('galleries/{id}', [CollegeGalleryController::class, 'show']);
+    Route::put('galleries/{id}', [CollegeGalleryController::class, 'update']);
+
+    // Faculty resource
+    Route::get('faculties', [FacultyController::class, 'index']);
+    Route::get('faculties/{id}', [FacultyController::class, 'show']);
+    Route::put('faculties/{id}', [FacultyController::class, 'update']);
+
+    // Placement resource
+    Route::get('placements/{id}', [PlacementController::class, 'show']);
+    Route::put('placements/{id}', [PlacementController::class, 'update']);
+
+    // Article resource (listing only)
+    Route::get('articles', [ArticleController::class, 'index']);
+
+    // Course resource
+    Route::get('courses', [CourseController::class, 'index']);
+    Route::get('courses/{id}', [CourseController::class, 'show']);
+    Route::put('courses/{id}', [CourseController::class, 'update']);
 });
 
-// college Info 
-Route::get('college-admin/college/info/{id}', [CollegeinfoController::class, 'details']);
-Route::get('college-admin/college/edit/{id}', [CollegeinfoController::class, 'edit']);
-Route::post('college-admin/college/update/{id}', [CollegeinfoController::class, 'update']);
+// College Leads & Remarks (with additional access control)
+Route::prefix('college')->middleware(['auth:sanctum', 'college-admin-access'])->group(function () {
+    // Leads resource – listing and details.
+    Route::get('leads', [CollegeLeadController::class, 'index']);
+    Route::get('leads/{lead}', [CollegeLeadController::class, 'show']);
 
-// college contact
-Route::get('college-admin/contact/edit/{id}', [CollegeContactController::class, 'edit']);
-Route::post('college-admin/contact/update/{id}', [CollegeContactController::class, 'update']);
-
-// college gallary
-Route::get('college-admin/gallery/edit/{id}', [CollegeGalleryController::class, 'edit']);
-Route::post('college-admin/gallery/update/{id}', [CollegeGalleryController::class, 'update']);
-
-// college faculty
-Route::get('college-admin/faculty/list', [FacultyController::class, 'index']);
-Route::get('college-admin/faculty/edit/{id}', [FacultyController::class, 'edit']);
-Route::post('college-admin/faculty/update/{id}', [FacultyController::class, 'update']);
-
-// college placement
-Route::get('college-admin/placement/edit/{id}', [PlacementController::class, 'edit']);
-Route::post('college-admin/placement/update/{id}', [PlacementController::class, 'update']);
-
-// college article
-Route::get('college-admin/article/list', [ArticleController::class, 'index']);
-
-// college course
-Route::get('college-admin/course/edit/{id}', [CourseController::class, 'edit']);
-Route::post('college-admin/course/update/{id}', [CourseController::class, 'update']);
-Route::get('college-admin/course/list', [CourseController::class, 'index']);
-
-Route::middleware(['auth:sanctum', 'college-admin-access'])->group(function () {
-    Route::get('college/lead/list', [CollegeLeadController::class, 'lead_list']);
-    Route::get('college/lead/details/{lead_id}', [CollegeLeadController::class, 'lead_details']);
-    Route::post('college/lead/remark/submit', [CollegeLeadController::class, 'lead_remark_submit']);
-    Route::get('college/lead/remark/list/{lead_id}', [CollegeLeadController::class, 'lead_remark_list']);
+    // Nested lead remarks as a sub-resource.
+    Route::get('leads/{lead}/remarks', [CollegeLeadController::class, 'remarksIndex']);
+    Route::post('leads/{lead}/remarks', [CollegeLeadController::class, 'storeRemark']);
 });
