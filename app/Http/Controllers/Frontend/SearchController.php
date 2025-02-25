@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Core\FileHelper;
 use App\Http\Controllers\Controller;
 use App\Models\College;
 use Illuminate\Http\Request;
@@ -68,12 +69,11 @@ class SearchController extends Controller
             });
         }
         $college_search_list = $college_search_list->get();
+        foreach ($college_search_list as $college) {
+            $college->logo_image_path =  asset('/storage/' . $college->college_logo);
+        }
 
         return ApiResponseCntroller::response_success(data: $college_search_list, message: 'College List', status: 200);
-        // return response()->json([
-        //     'is_success' => true,
-        //     'data' => $college_search_list,
-        //     'message' => 'College List',
-        // ]);
+ 
     }
 }
