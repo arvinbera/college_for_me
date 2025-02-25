@@ -10,11 +10,10 @@ use Illuminate\Http\Request;
 
 class CollegeContactController extends Controller
 {
-    public function edit($id)
+    public function show($id)
     {
         $college_contact = CollegeContact::find($id);
-        if ($college_contact)
-        {
+        if ($college_contact) {
             return ApiResponseCntroller::response_success(data: $college_contact, message: 'Records fetch successfully', status: 200);
             // return response()->json([
             //     'success' => true,
@@ -33,24 +32,22 @@ class CollegeContactController extends Controller
             //     'statusCode' => 404,
             // ], 404);
         }
-            
-        
     }
 
-    public function update(Request $request,int $id)
+    public function update(Request $request, int $id)
     {
-        $validator = Validator::make($request->all(),[
-            'college_address'=> 'required|string|max:191',
+        $validator = Validator::make($request->all(), [
+            'college_address' => 'required|string|max:191',
             'pincode' => 'required',
             'college_id' => 'required',
             'state_id' => 'required',
             'district_id' => 'required',
-            'city'=> 'required',
-            'email'=> 'required'
+            'city' => 'required',
+            'email' => 'required'
         ]);
-        if ($validator->fails()){
+        if ($validator->fails()) {
 
-           return ApiResponseCntroller::response_error(message: 'Validation Error', errors: $validator->errors(), status: 404);
+            return ApiResponseCntroller::response_error(message: 'Validation Error', errors: $validator->errors(), status: 404);
             // return response()->json([
             //     'success'=> false,
             //     'error'=> $validator->messages(),
@@ -58,11 +55,11 @@ class CollegeContactController extends Controller
         } else {
             $college_contact = CollegeContact::find($id);
 
-            if($college_contact){
+            if ($college_contact) {
                 $college_contact->update([
-                    'college_address'=> $request->college_address,
+                    'college_address' => $request->college_address,
                     'pincode' => $request->pincode,
-                    'college_id'=> $request->college_id,
+                    'college_id' => $request->college_id,
                     'state_id' => $request->state_id,
                     'district_id' => $request->district_id,
                     'city' => $request->city,
