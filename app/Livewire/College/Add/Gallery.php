@@ -35,11 +35,14 @@ class Gallery extends Component
     public function submit_college_pics()
     {
         $this->college_id = Session::get('college_id');
+        $college = College::find($this->college_id);
         foreach ($this->images as $image) {
+            // $x = $college->addMedia($image)->toMediaCollection('gallery');
+            // dd($x);
             $entity = new CollegeImage();
             $entity->college_id = $this->college_id;
             $entity->college_image = $image;
-            $entity->college_image = $image->store('gallery');
+            $entity->addMedia($image)->toMediaCollection('gallery');
             $entity->save();
         }
         flash('Gallery image uploaded successfully!');
