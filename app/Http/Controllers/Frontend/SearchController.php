@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Core\FileHelper;
 use App\Http\Controllers\Controller;
 use App\Models\College;
 use Illuminate\Http\Request;
+use Spatie\FlareClient\Api;
+use App\Http\Controllers\ApiResponseCntroller;
 
 class SearchController extends Controller
 {
@@ -25,11 +28,12 @@ class SearchController extends Controller
                 // ->take(10)
                 ->get();
             $college_list = $college_verified_list->concat($college_not_verified_list);
-            return response()->json([
-                'is_success' => true,
-                'data' => $college_list,
-                'message' => 'College List',
-            ]);
+            return ApiResponseCntroller::response_success(data: $college_list, message: 'College List', status: 200);
+            // return response()->json([
+            //     'is_success' => true,
+            //     'data' => $college_list,
+            //     'message' => 'College List',
+            // ]);
         }
     }
 
@@ -65,10 +69,11 @@ class SearchController extends Controller
             });
         }
         $college_search_list = $college_search_list->get();
-        return response()->json([
-            'is_success' => true,
-            'data' => $college_search_list,
-            'message' => 'College List',
-        ]);
+        foreach ($college_search_list as $college) {
+            $college->logo_image_path =  asset('/storage/' . $college->college_logo);
+        }
+
+        return ApiResponseCntroller::response_success(data: $college_search_list, message: 'College List', status: 200);
+ 
     }
 }
