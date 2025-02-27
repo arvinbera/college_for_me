@@ -12,4 +12,9 @@ class Course extends Model
         "course_duration",
         "course_category_id"
     ];
+
+    public function department()
+    {
+        return $this->hasMany(CollegeCourseDepartment::class, 'course_id', 'id');
+    }
 }

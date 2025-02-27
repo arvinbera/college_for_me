@@ -31,6 +31,7 @@ class Add extends Component
         $entity->college_about = $this->college_about;
         $entity->institute_type = $this->organization_type;
         // $entity->college_logo = $this->logo->store('logo');
+        $x = $entity->addMedia($this->logo)->toMediaCollection('gallery');
         $entity->save();
         flash('College info saved successfully!');
         Session::put('college_id', $entity->id);
