@@ -86,6 +86,7 @@ class FrontCollegeApiController extends Controller
         if (!$college_faculty_details) {
             return ApiResponseCntroller::response_error(message: 'College faculty not found', status: 404);
         }
+
         return ApiResponseCntroller::response_success(data: $college_faculty_details, message: 'College faculty details fetched successfully', status: 200);
     }
 
