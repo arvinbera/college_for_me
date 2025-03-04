@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var tryItOutBaseUrl = "http://localhost";
+        var tryItOutBaseUrl = "http://localhost:8000";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -71,98 +71,95 @@
                     <a href="#endpoints">Endpoints</a>
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-collegeadmin-login">
-                                <a href="#endpoints-POSTapi-collegeadmin-login">College Admin Login</a>
+                                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-auth-login">
+                                <a href="#endpoints-POSTapi-auth-login">College Admin Login</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-collegeadmin-logout">
-                                <a href="#endpoints-POSTapi-collegeadmin-logout">POST api/collegeadmin/logout</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-auth-logout">
+                                <a href="#endpoints-POSTapi-auth-logout">POST api/auth/logout</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-verify-user--token-">
-                                <a href="#endpoints-GETapi-verify-user--token-">GET api/verify-user/{token}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-auth-verify--token-">
+                                <a href="#endpoints-GETapi-auth-verify--token-">GET api/auth/verify/{token}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-college-info--id-">
-                                <a href="#endpoints-GETapi-college-admin-college-info--id-">GET api/college-admin/college/info/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-colleges--id-">
+                                <a href="#endpoints-GETapi-college-admin-colleges--id-">GET api/college-admin/colleges/{id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-college-edit--id-">
-                                <a href="#endpoints-GETapi-college-admin-college-edit--id-">GET api/college-admin/college/edit/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-PUTapi-college-admin-colleges--id-">
+                                <a href="#endpoints-PUTapi-college-admin-colleges--id-">PUT api/college-admin/colleges/{id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-college-admin-college-update--id-">
-                                <a href="#endpoints-POSTapi-college-admin-college-update--id-">POST api/college-admin/college/update/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-contacts--id-">
+                                <a href="#endpoints-GETapi-college-admin-contacts--id-">GET api/college-admin/contacts/{id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-contact-edit--id-">
-                                <a href="#endpoints-GETapi-college-admin-contact-edit--id-">GET api/college-admin/contact/edit/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-PUTapi-college-admin-contacts--id-">
+                                <a href="#endpoints-PUTapi-college-admin-contacts--id-">PUT api/college-admin/contacts/{id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-college-admin-contact-update--id-">
-                                <a href="#endpoints-POSTapi-college-admin-contact-update--id-">POST api/college-admin/contact/update/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-galleries--id-">
+                                <a href="#endpoints-GETapi-college-admin-galleries--id-">GET api/college-admin/galleries/{id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-gallery-edit--id-">
-                                <a href="#endpoints-GETapi-college-admin-gallery-edit--id-">GET api/college-admin/gallery/edit/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-PUTapi-college-admin-galleries--id-">
+                                <a href="#endpoints-PUTapi-college-admin-galleries--id-">PUT api/college-admin/galleries/{id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-college-admin-gallery-update--id-">
-                                <a href="#endpoints-POSTapi-college-admin-gallery-update--id-">POST api/college-admin/gallery/update/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-faculties">
+                                <a href="#endpoints-GETapi-college-admin-faculties">GET api/college-admin/faculties</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-faculty-list">
-                                <a href="#endpoints-GETapi-college-admin-faculty-list">GET api/college-admin/faculty/list</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-faculties--id-">
+                                <a href="#endpoints-GETapi-college-admin-faculties--id-">GET api/college-admin/faculties/{id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-faculty-edit--id-">
-                                <a href="#endpoints-GETapi-college-admin-faculty-edit--id-">GET api/college-admin/faculty/edit/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-PUTapi-college-admin-faculties--id-">
+                                <a href="#endpoints-PUTapi-college-admin-faculties--id-">PUT api/college-admin/faculties/{id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-college-admin-faculty-update--id-">
-                                <a href="#endpoints-POSTapi-college-admin-faculty-update--id-">POST api/college-admin/faculty/update/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-placements--id-">
+                                <a href="#endpoints-GETapi-college-admin-placements--id-">GET api/college-admin/placements/{id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-placement-edit--id-">
-                                <a href="#endpoints-GETapi-college-admin-placement-edit--id-">GET api/college-admin/placement/edit/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-PUTapi-college-admin-placements--id-">
+                                <a href="#endpoints-PUTapi-college-admin-placements--id-">PUT api/college-admin/placements/{id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-college-admin-placement-update--id-">
-                                <a href="#endpoints-POSTapi-college-admin-placement-update--id-">POST api/college-admin/placement/update/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-articles">
+                                <a href="#endpoints-GETapi-college-admin-articles">GET api/college-admin/articles</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-article-list">
-                                <a href="#endpoints-GETapi-college-admin-article-list">GET api/college-admin/article/list</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-courses">
+                                <a href="#endpoints-GETapi-college-admin-courses">GET api/college-admin/courses</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-course-edit--id-">
-                                <a href="#endpoints-GETapi-college-admin-course-edit--id-">GET api/college-admin/course/edit/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-courses--id-">
+                                <a href="#endpoints-GETapi-college-admin-courses--id-">GET api/college-admin/courses/{id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-college-admin-course-update--id-">
-                                <a href="#endpoints-POSTapi-college-admin-course-update--id-">POST api/college-admin/course/update/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-PUTapi-college-admin-courses--id-">
+                                <a href="#endpoints-PUTapi-college-admin-courses--id-">PUT api/college-admin/courses/{id}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-admin-course-list">
-                                <a href="#endpoints-GETapi-college-admin-course-list">GET api/college-admin/course/list</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-leads">
+                                <a href="#endpoints-GETapi-college-leads">GET api/college/leads</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-lead-list">
-                                <a href="#endpoints-GETapi-college-lead-list">GET api/college/lead/list</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-leads--lead-">
+                                <a href="#endpoints-GETapi-college-leads--lead-">GET api/college/leads/{lead}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-lead-details--lead_id-">
-                                <a href="#endpoints-GETapi-college-lead-details--lead_id-">GET api/college/lead/details/{lead_id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-leads--lead--remarks">
+                                <a href="#endpoints-GETapi-college-leads--lead--remarks">GET api/college/leads/{lead}/remarks</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-college-lead-remark-submit">
-                                <a href="#endpoints-POSTapi-college-lead-remark-submit">POST api/college/lead/remark/submit</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-college-leads--lead--remarks">
+                                <a href="#endpoints-POSTapi-college-leads--lead--remarks">POST api/college/leads/{lead}/remarks</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-lead-remark-list--lead_id-">
-                                <a href="#endpoints-GETapi-college-lead-remark-list--lead_id-">GET api/college/lead/remark/list/{lead_id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-colleges-submit">
+                                <a href="#endpoints-POSTapi-colleges-submit">POST api/colleges/submit</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-college-submit">
-                                <a href="#endpoints-POSTapi-college-submit">POST api/college/submit</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-colleges-claim">
+                                <a href="#endpoints-POSTapi-colleges-claim">POST api/colleges/claim</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-college-claim">
-                                <a href="#endpoints-POSTapi-college-claim">POST api/college/claim</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college-search--key-">
-                                <a href="#endpoints-GETapi-college-search--key-">GET api/college/search/{key}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-colleges-search--key-">
+                                <a href="#endpoints-GETapi-colleges-search--key-">GET api/colleges/search/{key}</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-colleges">
                                 <a href="#endpoints-GETapi-colleges">GET api/colleges</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college--college_id--info">
-                                <a href="#endpoints-GETapi-college--college_id--info">GET api/college/{college_id}/info</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-colleges--college_slug-">
+                                <a href="#endpoints-GETapi-colleges--college_slug-">GET api/colleges/{college_slug}</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college--college_id--address">
-                                <a href="#endpoints-GETapi-college--college_id--address">GET api/college/{college_id}/address</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-colleges--college_id--address">
+                                <a href="#endpoints-GETapi-colleges--college_id--address">GET api/colleges/{college_id}/address</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college--college_id--course-department">
-                                <a href="#endpoints-GETapi-college--college_id--course-department">GET api/college/{college_id}/course-department</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-colleges--college_id--course-fees-department">
+                                <a href="#endpoints-GETapi-colleges--college_id--course-fees-department">GET api/colleges/{college_id}/course-fees-department</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-college--college_id--faculty">
-                                <a href="#endpoints-GETapi-college--college_id--faculty">GET api/college/{college_id}/faculty</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-colleges--college_id--faculty">
+                                <a href="#endpoints-GETapi-colleges--college_id--faculty">GET api/colleges/{college_id}/faculty</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -175,7 +172,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: February 24, 2025</li>
+        <li>Last updated: February 26, 2025</li>
     </ul>
 </div>
 
@@ -184,7 +181,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost</code>
+    <strong>Base URL</strong>: <code>http://localhost:8000</code>
 </aside>
 <pre><code>This documentation aims to provide all the information you need to work with our API.
 
@@ -198,20 +195,20 @@ You can switch the language used with the tabs at the top right (or from the nav
 
     
 
-                                <h2 id="endpoints-POSTapi-collegeadmin-login">College Admin Login</h2>
+                                <h2 id="endpoints-POSTapi-auth-login">College Admin Login</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-POSTapi-collegeadmin-login">
+<span id="example-requests-POSTapi-auth-login">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/collegeadmin/login" \
+    "http://localhost:8000/api/auth/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -223,7 +220,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/collegeadmin/login"
+    "http://localhost:8000/api/auth/login"
 );
 
 const headers = {
@@ -244,45 +241,45 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-POSTapi-collegeadmin-login">
+<span id="example-responses-POSTapi-auth-login">
 </span>
-<span id="execution-results-POSTapi-collegeadmin-login" hidden>
+<span id="execution-results-POSTapi-auth-login" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-collegeadmin-login"></span>:
+                id="execution-response-status-POSTapi-auth-login"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-collegeadmin-login"
+    <pre class="json"><code id="execution-response-content-POSTapi-auth-login"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-collegeadmin-login" hidden>
+<span id="execution-error-POSTapi-auth-login" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-collegeadmin-login">
+    <pre><code id="execution-error-message-POSTapi-auth-login">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-collegeadmin-login" data-method="POST"
-      data-path="api/collegeadmin/login"
+<form id="form-POSTapi-auth-login" data-method="POST"
+      data-path="api/auth/login"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-collegeadmin-login', this);">
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-login', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-collegeadmin-login"
-                    onclick="tryItOut('POSTapi-collegeadmin-login');">Try it out ⚡
+                    id="btn-tryout-POSTapi-auth-login"
+                    onclick="tryItOut('POSTapi-auth-login');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-collegeadmin-login"
-                    onclick="cancelTryOut('POSTapi-collegeadmin-login');" hidden>Cancel 🛑
+                    id="btn-canceltryout-POSTapi-auth-login"
+                    onclick="cancelTryOut('POSTapi-auth-login');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-collegeadmin-login"
+                    id="btn-executetryout-POSTapi-auth-login"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -290,7 +287,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
-            <b><code>api/collegeadmin/login</code></b>
+            <b><code>api/auth/login</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -298,7 +295,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-collegeadmin-login"
+                              name="Content-Type"                data-endpoint="POSTapi-auth-login"
                value="application/json"
                data-component="header">
     <br>
@@ -309,7 +306,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-collegeadmin-login"
+                              name="Accept"                data-endpoint="POSTapi-auth-login"
                value="application/json"
                data-component="header">
     <br>
@@ -321,7 +318,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="email"                data-endpoint="POSTapi-collegeadmin-login"
+                              name="email"                data-endpoint="POSTapi-auth-login"
                value="gbailey@example.net"
                data-component="body">
     <br>
@@ -332,7 +329,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="password"                data-endpoint="POSTapi-collegeadmin-login"
+                              name="password"                data-endpoint="POSTapi-auth-login"
                value="+-0pBNvYgxwmi/#iw"
                data-component="body">
     <br>
@@ -340,27 +337,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </div>
         </form>
 
-                    <h2 id="endpoints-POSTapi-collegeadmin-logout">POST api/collegeadmin/logout</h2>
+                    <h2 id="endpoints-POSTapi-auth-logout">POST api/auth/logout</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-POSTapi-collegeadmin-logout">
+<span id="example-requests-POSTapi-auth-logout">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/collegeadmin/logout" \
+    "http://localhost:8000/api/auth/logout" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/collegeadmin/logout"
+    "http://localhost:8000/api/auth/logout"
 );
 
 const headers = {
@@ -375,45 +372,45 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-POSTapi-collegeadmin-logout">
+<span id="example-responses-POSTapi-auth-logout">
 </span>
-<span id="execution-results-POSTapi-collegeadmin-logout" hidden>
+<span id="execution-results-POSTapi-auth-logout" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-collegeadmin-logout"></span>:
+                id="execution-response-status-POSTapi-auth-logout"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-collegeadmin-logout"
+    <pre class="json"><code id="execution-response-content-POSTapi-auth-logout"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-collegeadmin-logout" hidden>
+<span id="execution-error-POSTapi-auth-logout" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-collegeadmin-logout">
+    <pre><code id="execution-error-message-POSTapi-auth-logout">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-collegeadmin-logout" data-method="POST"
-      data-path="api/collegeadmin/logout"
+<form id="form-POSTapi-auth-logout" data-method="POST"
+      data-path="api/auth/logout"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-collegeadmin-logout', this);">
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-logout', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-collegeadmin-logout"
-                    onclick="tryItOut('POSTapi-collegeadmin-logout');">Try it out ⚡
+                    id="btn-tryout-POSTapi-auth-logout"
+                    onclick="tryItOut('POSTapi-auth-logout');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-collegeadmin-logout"
-                    onclick="cancelTryOut('POSTapi-collegeadmin-logout');" hidden>Cancel 🛑
+                    id="btn-canceltryout-POSTapi-auth-logout"
+                    onclick="cancelTryOut('POSTapi-auth-logout');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-collegeadmin-logout"
+                    id="btn-executetryout-POSTapi-auth-logout"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -421,7 +418,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
-            <b><code>api/collegeadmin/logout</code></b>
+            <b><code>api/auth/logout</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -429,7 +426,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-collegeadmin-logout"
+                              name="Content-Type"                data-endpoint="POSTapi-auth-logout"
                value="application/json"
                data-component="header">
     <br>
@@ -440,7 +437,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-collegeadmin-logout"
+                              name="Accept"                data-endpoint="POSTapi-auth-logout"
                value="application/json"
                data-component="header">
     <br>
@@ -448,27 +445,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-GETapi-verify-user--token-">GET api/verify-user/{token}</h2>
+                    <h2 id="endpoints-GETapi-auth-verify--token-">GET api/auth/verify/{token}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-verify-user--token-">
+<span id="example-requests-GETapi-auth-verify--token-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/verify-user/architecto" \
+    --get "http://localhost:8000/api/auth/verify/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/verify-user/architecto"
+    "http://localhost:8000/api/auth/verify/architecto"
 );
 
 const headers = {
@@ -483,7 +480,7 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-verify-user--token-">
+<span id="example-responses-GETapi-auth-verify--token-">
             <blockquote>
             <p>Example response (401):</p>
         </blockquote>
@@ -501,43 +498,43 @@ access-control-allow-origin: *
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-verify-user--token-" hidden>
+<span id="execution-results-GETapi-auth-verify--token-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-verify-user--token-"></span>:
+                id="execution-response-status-GETapi-auth-verify--token-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-verify-user--token-"
+    <pre class="json"><code id="execution-response-content-GETapi-auth-verify--token-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-verify-user--token-" hidden>
+<span id="execution-error-GETapi-auth-verify--token-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-verify-user--token-">
+    <pre><code id="execution-error-message-GETapi-auth-verify--token-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-verify-user--token-" data-method="GET"
-      data-path="api/verify-user/{token}"
+<form id="form-GETapi-auth-verify--token-" data-method="GET"
+      data-path="api/auth/verify/{token}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-verify-user--token-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-auth-verify--token-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-verify-user--token-"
-                    onclick="tryItOut('GETapi-verify-user--token-');">Try it out ⚡
+                    id="btn-tryout-GETapi-auth-verify--token-"
+                    onclick="tryItOut('GETapi-auth-verify--token-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-verify-user--token-"
-                    onclick="cancelTryOut('GETapi-verify-user--token-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-auth-verify--token-"
+                    onclick="cancelTryOut('GETapi-auth-verify--token-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-verify-user--token-"
+                    id="btn-executetryout-GETapi-auth-verify--token-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -545,7 +542,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/verify-user/{token}</code></b>
+            <b><code>api/auth/verify/{token}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -553,7 +550,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-verify-user--token-"
+                              name="Content-Type"                data-endpoint="GETapi-auth-verify--token-"
                value="application/json"
                data-component="header">
     <br>
@@ -564,7 +561,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-verify-user--token-"
+                              name="Accept"                data-endpoint="GETapi-auth-verify--token-"
                value="application/json"
                data-component="header">
     <br>
@@ -576,7 +573,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="token"                data-endpoint="GETapi-verify-user--token-"
+                              name="token"                data-endpoint="GETapi-auth-verify--token-"
                value="architecto"
                data-component="url">
     <br>
@@ -584,27 +581,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-GETapi-college-admin-college-info--id-">GET api/college-admin/college/info/{id}</h2>
+                    <h2 id="endpoints-GETapi-college-admin-colleges--id-">GET api/college-admin/colleges/{id}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college-admin-college-info--id-">
+<span id="example-requests-GETapi-college-admin-colleges--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college-admin/college/info/architecto" \
+    --get "http://localhost:8000/api/college-admin/colleges/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/college/info/architecto"
+    "http://localhost:8000/api/college-admin/colleges/architecto"
 );
 
 const headers = {
@@ -619,9 +616,9 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college-admin-college-info--id-">
+<span id="example-responses-GETapi-college-admin-colleges--id-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -633,49 +630,47 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: null,
-    &quot;message&quot;: &quot;College details fetched successfully&quot;
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college-admin-college-info--id-" hidden>
+<span id="execution-results-GETapi-college-admin-colleges--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college-admin-college-info--id-"></span>:
+                id="execution-response-status-GETapi-college-admin-colleges--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college-admin-college-info--id-"
+    <pre class="json"><code id="execution-response-content-GETapi-college-admin-colleges--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college-admin-college-info--id-" hidden>
+<span id="execution-error-GETapi-college-admin-colleges--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college-admin-college-info--id-">
+    <pre><code id="execution-error-message-GETapi-college-admin-colleges--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college-admin-college-info--id-" data-method="GET"
-      data-path="api/college-admin/college/info/{id}"
+<form id="form-GETapi-college-admin-colleges--id-" data-method="GET"
+      data-path="api/college-admin/colleges/{id}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-college-info--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-colleges--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college-admin-college-info--id-"
-                    onclick="tryItOut('GETapi-college-admin-college-info--id-');">Try it out ⚡
+                    id="btn-tryout-GETapi-college-admin-colleges--id-"
+                    onclick="tryItOut('GETapi-college-admin-colleges--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college-admin-college-info--id-"
-                    onclick="cancelTryOut('GETapi-college-admin-college-info--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-college-admin-colleges--id-"
+                    onclick="cancelTryOut('GETapi-college-admin-colleges--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college-admin-college-info--id-"
+                    id="btn-executetryout-GETapi-college-admin-colleges--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -683,7 +678,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college-admin/college/info/{id}</code></b>
+            <b><code>api/college-admin/colleges/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -691,7 +686,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college-admin-college-info--id-"
+                              name="Content-Type"                data-endpoint="GETapi-college-admin-colleges--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -702,7 +697,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college-admin-college-info--id-"
+                              name="Accept"                data-endpoint="GETapi-college-admin-colleges--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -714,165 +709,28 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="id"                data-endpoint="GETapi-college-admin-college-info--id-"
+                              name="id"                data-endpoint="GETapi-college-admin-colleges--id-"
                value="architecto"
                data-component="url">
     <br>
-<p>The ID of the info. Example: <code>architecto</code></p>
+<p>The ID of the college. Example: <code>architecto</code></p>
             </div>
                     </form>
 
-                    <h2 id="endpoints-GETapi-college-admin-college-edit--id-">GET api/college-admin/college/edit/{id}</h2>
+                    <h2 id="endpoints-PUTapi-college-admin-colleges--id-">PUT api/college-admin/colleges/{id}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college-admin-college-edit--id-">
+<span id="example-requests-PUTapi-college-admin-colleges--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college-admin/college/edit/architecto" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/college/edit/architecto"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-college-admin-college-edit--id-">
-            <blockquote>
-            <p>Example response (404):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;message&quot;: &quot;No such records founds&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-college-admin-college-edit--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-college-admin-college-edit--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college-admin-college-edit--id-"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETapi-college-admin-college-edit--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college-admin-college-edit--id-">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-GETapi-college-admin-college-edit--id-" data-method="GET"
-      data-path="api/college-admin/college/edit/{id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-college-edit--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college-admin-college-edit--id-"
-                    onclick="tryItOut('GETapi-college-admin-college-edit--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college-admin-college-edit--id-"
-                    onclick="cancelTryOut('GETapi-college-admin-college-edit--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college-admin-college-edit--id-"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/college-admin/college/edit/{id}</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college-admin-college-edit--id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college-admin-college-edit--id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="GETapi-college-admin-college-edit--id-"
-               value="architecto"
-               data-component="url">
-    <br>
-<p>The ID of the edit. Example: <code>architecto</code></p>
-            </div>
-                    </form>
-
-                    <h2 id="endpoints-POSTapi-college-admin-college-update--id-">POST api/college-admin/college/update/{id}</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-college-admin-college-update--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/college-admin/college/update/architecto" \
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/college-admin/colleges/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -885,7 +743,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/college/update/architecto"
+    "http://localhost:8000/api/college-admin/colleges/architecto"
 );
 
 const headers = {
@@ -900,60 +758,60 @@ let body = {
 };
 
 fetch(url, {
-    method: "POST",
+    method: "PUT",
     headers,
     body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
 
-<span id="example-responses-POSTapi-college-admin-college-update--id-">
+<span id="example-responses-PUTapi-college-admin-colleges--id-">
 </span>
-<span id="execution-results-POSTapi-college-admin-college-update--id-" hidden>
+<span id="execution-results-PUTapi-college-admin-colleges--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-college-admin-college-update--id-"></span>:
+                id="execution-response-status-PUTapi-college-admin-colleges--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-college-admin-college-update--id-"
+    <pre class="json"><code id="execution-response-content-PUTapi-college-admin-colleges--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-college-admin-college-update--id-" hidden>
+<span id="execution-error-PUTapi-college-admin-colleges--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-college-admin-college-update--id-">
+    <pre><code id="execution-error-message-PUTapi-college-admin-colleges--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-college-admin-college-update--id-" data-method="POST"
-      data-path="api/college-admin/college/update/{id}"
+<form id="form-PUTapi-college-admin-colleges--id-" data-method="PUT"
+      data-path="api/college-admin/colleges/{id}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-college-admin-college-update--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-college-admin-colleges--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-college-admin-college-update--id-"
-                    onclick="tryItOut('POSTapi-college-admin-college-update--id-');">Try it out ⚡
+                    id="btn-tryout-PUTapi-college-admin-colleges--id-"
+                    onclick="tryItOut('PUTapi-college-admin-colleges--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-college-admin-college-update--id-"
-                    onclick="cancelTryOut('POSTapi-college-admin-college-update--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-PUTapi-college-admin-colleges--id-"
+                    onclick="cancelTryOut('PUTapi-college-admin-colleges--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-college-admin-college-update--id-"
+                    id="btn-executetryout-PUTapi-college-admin-colleges--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
             </button>
             </h3>
             <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/college-admin/college/update/{id}</code></b>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/college-admin/colleges/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -961,7 +819,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-college-admin-college-update--id-"
+                              name="Content-Type"                data-endpoint="PUTapi-college-admin-colleges--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -972,7 +830,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-college-admin-college-update--id-"
+                              name="Accept"                data-endpoint="PUTapi-college-admin-colleges--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -984,11 +842,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="id"                data-endpoint="POSTapi-college-admin-college-update--id-"
+                              name="id"                data-endpoint="PUTapi-college-admin-colleges--id-"
                value="architecto"
                data-component="url">
     <br>
-<p>The ID of the update. Example: <code>architecto</code></p>
+<p>The ID of the college. Example: <code>architecto</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -996,7 +854,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="name"                data-endpoint="POSTapi-college-admin-college-update--id-"
+                              name="name"                data-endpoint="PUTapi-college-admin-colleges--id-"
                value="b"
                data-component="body">
     <br>
@@ -1007,7 +865,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="college_about"                data-endpoint="POSTapi-college-admin-college-update--id-"
+                              name="college_about"                data-endpoint="PUTapi-college-admin-colleges--id-"
                value="n"
                data-component="body">
     <br>
@@ -1018,7 +876,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="institute_type"                data-endpoint="POSTapi-college-admin-college-update--id-"
+                              name="institute_type"                data-endpoint="PUTapi-college-admin-colleges--id-"
                value="g"
                data-component="body">
     <br>
@@ -1026,27 +884,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </div>
         </form>
 
-                    <h2 id="endpoints-GETapi-college-admin-contact-edit--id-">GET api/college-admin/contact/edit/{id}</h2>
+                    <h2 id="endpoints-GETapi-college-admin-contacts--id-">GET api/college-admin/contacts/{id}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college-admin-contact-edit--id-">
+<span id="example-requests-GETapi-college-admin-contacts--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college-admin/contact/edit/architecto" \
+    --get "http://localhost:8000/api/college-admin/contacts/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/contact/edit/architecto"
+    "http://localhost:8000/api/college-admin/contacts/architecto"
 );
 
 const headers = {
@@ -1061,9 +919,9 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college-admin-contact-edit--id-">
+<span id="example-responses-GETapi-college-admin-contacts--id-">
             <blockquote>
-            <p>Example response (404):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1075,48 +933,47 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;message&quot;: &quot;No such records founds&quot;
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college-admin-contact-edit--id-" hidden>
+<span id="execution-results-GETapi-college-admin-contacts--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college-admin-contact-edit--id-"></span>:
+                id="execution-response-status-GETapi-college-admin-contacts--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college-admin-contact-edit--id-"
+    <pre class="json"><code id="execution-response-content-GETapi-college-admin-contacts--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college-admin-contact-edit--id-" hidden>
+<span id="execution-error-GETapi-college-admin-contacts--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college-admin-contact-edit--id-">
+    <pre><code id="execution-error-message-GETapi-college-admin-contacts--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college-admin-contact-edit--id-" data-method="GET"
-      data-path="api/college-admin/contact/edit/{id}"
+<form id="form-GETapi-college-admin-contacts--id-" data-method="GET"
+      data-path="api/college-admin/contacts/{id}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-contact-edit--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-contacts--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college-admin-contact-edit--id-"
-                    onclick="tryItOut('GETapi-college-admin-contact-edit--id-');">Try it out ⚡
+                    id="btn-tryout-GETapi-college-admin-contacts--id-"
+                    onclick="tryItOut('GETapi-college-admin-contacts--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college-admin-contact-edit--id-"
-                    onclick="cancelTryOut('GETapi-college-admin-contact-edit--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-college-admin-contacts--id-"
+                    onclick="cancelTryOut('GETapi-college-admin-contacts--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college-admin-contact-edit--id-"
+                    id="btn-executetryout-GETapi-college-admin-contacts--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -1124,7 +981,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college-admin/contact/edit/{id}</code></b>
+            <b><code>api/college-admin/contacts/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -1132,7 +989,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college-admin-contact-edit--id-"
+                              name="Content-Type"                data-endpoint="GETapi-college-admin-contacts--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -1143,7 +1000,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college-admin-contact-edit--id-"
+                              name="Accept"                data-endpoint="GETapi-college-admin-contacts--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -1155,28 +1012,28 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="id"                data-endpoint="GETapi-college-admin-contact-edit--id-"
+                              name="id"                data-endpoint="GETapi-college-admin-contacts--id-"
                value="architecto"
                data-component="url">
     <br>
-<p>The ID of the edit. Example: <code>architecto</code></p>
+<p>The ID of the contact. Example: <code>architecto</code></p>
             </div>
                     </form>
 
-                    <h2 id="endpoints-POSTapi-college-admin-contact-update--id-">POST api/college-admin/contact/update/{id}</h2>
+                    <h2 id="endpoints-PUTapi-college-admin-contacts--id-">PUT api/college-admin/contacts/{id}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-POSTapi-college-admin-contact-update--id-">
+<span id="example-requests-PUTapi-college-admin-contacts--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/college-admin/contact/update/architecto" \
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/college-admin/contacts/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -1193,7 +1050,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/contact/update/architecto"
+    "http://localhost:8000/api/college-admin/contacts/architecto"
 );
 
 const headers = {
@@ -1212,60 +1069,60 @@ let body = {
 };
 
 fetch(url, {
-    method: "POST",
+    method: "PUT",
     headers,
     body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
 
-<span id="example-responses-POSTapi-college-admin-contact-update--id-">
+<span id="example-responses-PUTapi-college-admin-contacts--id-">
 </span>
-<span id="execution-results-POSTapi-college-admin-contact-update--id-" hidden>
+<span id="execution-results-PUTapi-college-admin-contacts--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-college-admin-contact-update--id-"></span>:
+                id="execution-response-status-PUTapi-college-admin-contacts--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-college-admin-contact-update--id-"
+    <pre class="json"><code id="execution-response-content-PUTapi-college-admin-contacts--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-college-admin-contact-update--id-" hidden>
+<span id="execution-error-PUTapi-college-admin-contacts--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-college-admin-contact-update--id-">
+    <pre><code id="execution-error-message-PUTapi-college-admin-contacts--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-college-admin-contact-update--id-" data-method="POST"
-      data-path="api/college-admin/contact/update/{id}"
+<form id="form-PUTapi-college-admin-contacts--id-" data-method="PUT"
+      data-path="api/college-admin/contacts/{id}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-college-admin-contact-update--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-college-admin-contacts--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-college-admin-contact-update--id-"
-                    onclick="tryItOut('POSTapi-college-admin-contact-update--id-');">Try it out ⚡
+                    id="btn-tryout-PUTapi-college-admin-contacts--id-"
+                    onclick="tryItOut('PUTapi-college-admin-contacts--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-college-admin-contact-update--id-"
-                    onclick="cancelTryOut('POSTapi-college-admin-contact-update--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-PUTapi-college-admin-contacts--id-"
+                    onclick="cancelTryOut('PUTapi-college-admin-contacts--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-college-admin-contact-update--id-"
+                    id="btn-executetryout-PUTapi-college-admin-contacts--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
             </button>
             </h3>
             <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/college-admin/contact/update/{id}</code></b>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/college-admin/contacts/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -1273,7 +1130,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-college-admin-contact-update--id-"
+                              name="Content-Type"                data-endpoint="PUTapi-college-admin-contacts--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -1284,7 +1141,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-college-admin-contact-update--id-"
+                              name="Accept"                data-endpoint="PUTapi-college-admin-contacts--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -1296,11 +1153,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="id"                data-endpoint="POSTapi-college-admin-contact-update--id-"
+                              name="id"                data-endpoint="PUTapi-college-admin-contacts--id-"
                value="architecto"
                data-component="url">
     <br>
-<p>The ID of the update. Example: <code>architecto</code></p>
+<p>The ID of the contact. Example: <code>architecto</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -1308,7 +1165,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="college_address"                data-endpoint="POSTapi-college-admin-contact-update--id-"
+                              name="college_address"                data-endpoint="PUTapi-college-admin-contacts--id-"
                value="b"
                data-component="body">
     <br>
@@ -1319,7 +1176,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="pincode"                data-endpoint="POSTapi-college-admin-contact-update--id-"
+                              name="pincode"                data-endpoint="PUTapi-college-admin-contacts--id-"
                value="architecto"
                data-component="body">
     <br>
@@ -1330,7 +1187,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="college_id"                data-endpoint="POSTapi-college-admin-contact-update--id-"
+                              name="college_id"                data-endpoint="PUTapi-college-admin-contacts--id-"
                value="architecto"
                data-component="body">
     <br>
@@ -1341,7 +1198,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="state_id"                data-endpoint="POSTapi-college-admin-contact-update--id-"
+                              name="state_id"                data-endpoint="PUTapi-college-admin-contacts--id-"
                value="architecto"
                data-component="body">
     <br>
@@ -1352,7 +1209,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="district_id"                data-endpoint="POSTapi-college-admin-contact-update--id-"
+                              name="district_id"                data-endpoint="PUTapi-college-admin-contacts--id-"
                value="architecto"
                data-component="body">
     <br>
@@ -1363,7 +1220,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="city"                data-endpoint="POSTapi-college-admin-contact-update--id-"
+                              name="city"                data-endpoint="PUTapi-college-admin-contacts--id-"
                value="architecto"
                data-component="body">
     <br>
@@ -1374,7 +1231,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="email"                data-endpoint="POSTapi-college-admin-contact-update--id-"
+                              name="email"                data-endpoint="PUTapi-college-admin-contacts--id-"
                value="architecto"
                data-component="body">
     <br>
@@ -1382,27 +1239,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </div>
         </form>
 
-                    <h2 id="endpoints-GETapi-college-admin-gallery-edit--id-">GET api/college-admin/gallery/edit/{id}</h2>
+                    <h2 id="endpoints-GETapi-college-admin-galleries--id-">GET api/college-admin/galleries/{id}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college-admin-gallery-edit--id-">
+<span id="example-requests-GETapi-college-admin-galleries--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college-admin/gallery/edit/architecto" \
+    --get "http://localhost:8000/api/college-admin/galleries/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/gallery/edit/architecto"
+    "http://localhost:8000/api/college-admin/galleries/architecto"
 );
 
 const headers = {
@@ -1417,9 +1274,9 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college-admin-gallery-edit--id-">
+<span id="example-responses-GETapi-college-admin-galleries--id-">
             <blockquote>
-            <p>Example response (404):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1431,48 +1288,47 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;message&quot;: &quot;NO such records found !&quot;
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college-admin-gallery-edit--id-" hidden>
+<span id="execution-results-GETapi-college-admin-galleries--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college-admin-gallery-edit--id-"></span>:
+                id="execution-response-status-GETapi-college-admin-galleries--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college-admin-gallery-edit--id-"
+    <pre class="json"><code id="execution-response-content-GETapi-college-admin-galleries--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college-admin-gallery-edit--id-" hidden>
+<span id="execution-error-GETapi-college-admin-galleries--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college-admin-gallery-edit--id-">
+    <pre><code id="execution-error-message-GETapi-college-admin-galleries--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college-admin-gallery-edit--id-" data-method="GET"
-      data-path="api/college-admin/gallery/edit/{id}"
+<form id="form-GETapi-college-admin-galleries--id-" data-method="GET"
+      data-path="api/college-admin/galleries/{id}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-gallery-edit--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-galleries--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college-admin-gallery-edit--id-"
-                    onclick="tryItOut('GETapi-college-admin-gallery-edit--id-');">Try it out ⚡
+                    id="btn-tryout-GETapi-college-admin-galleries--id-"
+                    onclick="tryItOut('GETapi-college-admin-galleries--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college-admin-gallery-edit--id-"
-                    onclick="cancelTryOut('GETapi-college-admin-gallery-edit--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-college-admin-galleries--id-"
+                    onclick="cancelTryOut('GETapi-college-admin-galleries--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college-admin-gallery-edit--id-"
+                    id="btn-executetryout-GETapi-college-admin-galleries--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -1480,7 +1336,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college-admin/gallery/edit/{id}</code></b>
+            <b><code>api/college-admin/galleries/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -1488,7 +1344,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college-admin-gallery-edit--id-"
+                              name="Content-Type"                data-endpoint="GETapi-college-admin-galleries--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -1499,7 +1355,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college-admin-gallery-edit--id-"
+                              name="Accept"                data-endpoint="GETapi-college-admin-galleries--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -1511,28 +1367,28 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="id"                data-endpoint="GETapi-college-admin-gallery-edit--id-"
+                              name="id"                data-endpoint="GETapi-college-admin-galleries--id-"
                value="architecto"
                data-component="url">
     <br>
-<p>The ID of the edit. Example: <code>architecto</code></p>
+<p>The ID of the gallery. Example: <code>architecto</code></p>
             </div>
                     </form>
 
-                    <h2 id="endpoints-POSTapi-college-admin-gallery-update--id-">POST api/college-admin/gallery/update/{id}</h2>
+                    <h2 id="endpoints-PUTapi-college-admin-galleries--id-">PUT api/college-admin/galleries/{id}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-POSTapi-college-admin-gallery-update--id-">
+<span id="example-requests-PUTapi-college-admin-galleries--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/college-admin/gallery/update/architecto" \
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/college-admin/galleries/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -1543,7 +1399,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/gallery/update/architecto"
+    "http://localhost:8000/api/college-admin/galleries/architecto"
 );
 
 const headers = {
@@ -1556,60 +1412,60 @@ let body = {
 };
 
 fetch(url, {
-    method: "POST",
+    method: "PUT",
     headers,
     body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
 
-<span id="example-responses-POSTapi-college-admin-gallery-update--id-">
+<span id="example-responses-PUTapi-college-admin-galleries--id-">
 </span>
-<span id="execution-results-POSTapi-college-admin-gallery-update--id-" hidden>
+<span id="execution-results-PUTapi-college-admin-galleries--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-college-admin-gallery-update--id-"></span>:
+                id="execution-response-status-PUTapi-college-admin-galleries--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-college-admin-gallery-update--id-"
+    <pre class="json"><code id="execution-response-content-PUTapi-college-admin-galleries--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-college-admin-gallery-update--id-" hidden>
+<span id="execution-error-PUTapi-college-admin-galleries--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-college-admin-gallery-update--id-">
+    <pre><code id="execution-error-message-PUTapi-college-admin-galleries--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-college-admin-gallery-update--id-" data-method="POST"
-      data-path="api/college-admin/gallery/update/{id}"
+<form id="form-PUTapi-college-admin-galleries--id-" data-method="PUT"
+      data-path="api/college-admin/galleries/{id}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-college-admin-gallery-update--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-college-admin-galleries--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-college-admin-gallery-update--id-"
-                    onclick="tryItOut('POSTapi-college-admin-gallery-update--id-');">Try it out ⚡
+                    id="btn-tryout-PUTapi-college-admin-galleries--id-"
+                    onclick="tryItOut('PUTapi-college-admin-galleries--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-college-admin-gallery-update--id-"
-                    onclick="cancelTryOut('POSTapi-college-admin-gallery-update--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-PUTapi-college-admin-galleries--id-"
+                    onclick="cancelTryOut('PUTapi-college-admin-galleries--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-college-admin-gallery-update--id-"
+                    id="btn-executetryout-PUTapi-college-admin-galleries--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
             </button>
             </h3>
             <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/college-admin/gallery/update/{id}</code></b>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/college-admin/galleries/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -1617,7 +1473,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-college-admin-gallery-update--id-"
+                              name="Content-Type"                data-endpoint="PUTapi-college-admin-galleries--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -1628,7 +1484,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-college-admin-gallery-update--id-"
+                              name="Accept"                data-endpoint="PUTapi-college-admin-galleries--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -1640,11 +1496,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="id"                data-endpoint="POSTapi-college-admin-gallery-update--id-"
+                              name="id"                data-endpoint="PUTapi-college-admin-galleries--id-"
                value="architecto"
                data-component="url">
     <br>
-<p>The ID of the update. Example: <code>architecto</code></p>
+<p>The ID of the gallery. Example: <code>architecto</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -1652,7 +1508,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="college_image"                data-endpoint="POSTapi-college-admin-gallery-update--id-"
+                              name="college_image"                data-endpoint="PUTapi-college-admin-galleries--id-"
                value="architecto"
                data-component="body">
     <br>
@@ -1660,27 +1516,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </div>
         </form>
 
-                    <h2 id="endpoints-GETapi-college-admin-faculty-list">GET api/college-admin/faculty/list</h2>
+                    <h2 id="endpoints-GETapi-college-admin-faculties">GET api/college-admin/faculties</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college-admin-faculty-list">
+<span id="example-requests-GETapi-college-admin-faculties">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college-admin/faculty/list" \
+    --get "http://localhost:8000/api/college-admin/faculties" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/faculty/list"
+    "http://localhost:8000/api/college-admin/faculties"
 );
 
 const headers = {
@@ -1695,9 +1551,9 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college-admin-faculty-list">
+<span id="example-responses-GETapi-college-admin-faculties">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1709,113 +1565,47 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;college_id&quot;: 3,
-            &quot;department_id&quot;: 2,
-            &quot;faculty_name&quot;: &quot;nunnjunjunju&quot;,
-            &quot;faculty_designation&quot;: null,
-            &quot;created_at&quot;: &quot;2024-12-12T02:13:39.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-12-12T02:13:39.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 2,
-            &quot;college_id&quot;: 3,
-            &quot;department_id&quot;: 1,
-            &quot;faculty_name&quot;: &quot;Dr. Krishna Kanta Maity&quot;,
-            &quot;faculty_designation&quot;: &quot;Associate Prof&quot;,
-            &quot;created_at&quot;: &quot;2024-12-12T02:15:26.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-01-15T02:06:38.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 3,
-            &quot;college_id&quot;: 7,
-            &quot;department_id&quot;: 1,
-            &quot;faculty_name&quot;: &quot;Molay Giri&quot;,
-            &quot;faculty_designation&quot;: &quot;Asst Proff&quot;,
-            &quot;created_at&quot;: &quot;2025-01-22T01:14:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-01-22T01:14:00.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 4,
-            &quot;college_id&quot;: 10,
-            &quot;department_id&quot;: 1,
-            &quot;faculty_name&quot;: &quot;Molay Kr Giri&quot;,
-            &quot;faculty_designation&quot;: &quot;Lecturer&quot;,
-            &quot;created_at&quot;: &quot;2025-01-27T03:31:17.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-01-27T03:31:17.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 5,
-            &quot;college_id&quot;: 3,
-            &quot;department_id&quot;: 1,
-            &quot;faculty_name&quot;: &quot;Mr. Sovonesh Paul&quot;,
-            &quot;faculty_designation&quot;: &quot;HOD&quot;,
-            &quot;created_at&quot;: &quot;2025-02-12T00:23:51.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-12T00:23:51.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 6,
-            &quot;college_id&quot;: 2,
-            &quot;department_id&quot;: 1,
-            &quot;faculty_name&quot;: &quot;Subhasish Mukherjee&quot;,
-            &quot;faculty_designation&quot;: &quot;Asst Professor&quot;,
-            &quot;created_at&quot;: &quot;2025-02-12T00:59:38.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-12T00:59:38.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 7,
-            &quot;college_id&quot;: 1,
-            &quot;department_id&quot;: 2,
-            &quot;faculty_name&quot;: &quot;Ankur Warikoo&quot;,
-            &quot;faculty_designation&quot;: &quot;Asst Professor&quot;,
-            &quot;created_at&quot;: &quot;2025-02-13T04:33:08.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-13T04:33:08.000000Z&quot;
-        }
-    ],
-    &quot;message&quot;: &quot;Records fetch successfully&quot;
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college-admin-faculty-list" hidden>
+<span id="execution-results-GETapi-college-admin-faculties" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college-admin-faculty-list"></span>:
+                id="execution-response-status-GETapi-college-admin-faculties"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college-admin-faculty-list"
+    <pre class="json"><code id="execution-response-content-GETapi-college-admin-faculties"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college-admin-faculty-list" hidden>
+<span id="execution-error-GETapi-college-admin-faculties" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college-admin-faculty-list">
+    <pre><code id="execution-error-message-GETapi-college-admin-faculties">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college-admin-faculty-list" data-method="GET"
-      data-path="api/college-admin/faculty/list"
+<form id="form-GETapi-college-admin-faculties" data-method="GET"
+      data-path="api/college-admin/faculties"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-faculty-list', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-faculties', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college-admin-faculty-list"
-                    onclick="tryItOut('GETapi-college-admin-faculty-list');">Try it out ⚡
+                    id="btn-tryout-GETapi-college-admin-faculties"
+                    onclick="tryItOut('GETapi-college-admin-faculties');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college-admin-faculty-list"
-                    onclick="cancelTryOut('GETapi-college-admin-faculty-list');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-college-admin-faculties"
+                    onclick="cancelTryOut('GETapi-college-admin-faculties');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college-admin-faculty-list"
+                    id="btn-executetryout-GETapi-college-admin-faculties"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -1823,7 +1613,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college-admin/faculty/list</code></b>
+            <b><code>api/college-admin/faculties</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -1831,7 +1621,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college-admin-faculty-list"
+                              name="Content-Type"                data-endpoint="GETapi-college-admin-faculties"
                value="application/json"
                data-component="header">
     <br>
@@ -1842,7 +1632,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college-admin-faculty-list"
+                              name="Accept"                data-endpoint="GETapi-college-admin-faculties"
                value="application/json"
                data-component="header">
     <br>
@@ -1850,27 +1640,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-GETapi-college-admin-faculty-edit--id-">GET api/college-admin/faculty/edit/{id}</h2>
+                    <h2 id="endpoints-GETapi-college-admin-faculties--id-">GET api/college-admin/faculties/{id}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college-admin-faculty-edit--id-">
+<span id="example-requests-GETapi-college-admin-faculties--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college-admin/faculty/edit/architecto" \
+    --get "http://localhost:8000/api/college-admin/faculties/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/faculty/edit/architecto"
+    "http://localhost:8000/api/college-admin/faculties/architecto"
 );
 
 const headers = {
@@ -1885,9 +1675,9 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college-admin-faculty-edit--id-">
+<span id="example-responses-GETapi-college-admin-faculties--id-">
             <blockquote>
-            <p>Example response (404):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1899,48 +1689,47 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;message&quot;: &quot;No such records founds&quot;
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college-admin-faculty-edit--id-" hidden>
+<span id="execution-results-GETapi-college-admin-faculties--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college-admin-faculty-edit--id-"></span>:
+                id="execution-response-status-GETapi-college-admin-faculties--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college-admin-faculty-edit--id-"
+    <pre class="json"><code id="execution-response-content-GETapi-college-admin-faculties--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college-admin-faculty-edit--id-" hidden>
+<span id="execution-error-GETapi-college-admin-faculties--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college-admin-faculty-edit--id-">
+    <pre><code id="execution-error-message-GETapi-college-admin-faculties--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college-admin-faculty-edit--id-" data-method="GET"
-      data-path="api/college-admin/faculty/edit/{id}"
+<form id="form-GETapi-college-admin-faculties--id-" data-method="GET"
+      data-path="api/college-admin/faculties/{id}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-faculty-edit--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-faculties--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college-admin-faculty-edit--id-"
-                    onclick="tryItOut('GETapi-college-admin-faculty-edit--id-');">Try it out ⚡
+                    id="btn-tryout-GETapi-college-admin-faculties--id-"
+                    onclick="tryItOut('GETapi-college-admin-faculties--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college-admin-faculty-edit--id-"
-                    onclick="cancelTryOut('GETapi-college-admin-faculty-edit--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-college-admin-faculties--id-"
+                    onclick="cancelTryOut('GETapi-college-admin-faculties--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college-admin-faculty-edit--id-"
+                    id="btn-executetryout-GETapi-college-admin-faculties--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -1948,7 +1737,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college-admin/faculty/edit/{id}</code></b>
+            <b><code>api/college-admin/faculties/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -1956,7 +1745,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college-admin-faculty-edit--id-"
+                              name="Content-Type"                data-endpoint="GETapi-college-admin-faculties--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -1967,7 +1756,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college-admin-faculty-edit--id-"
+                              name="Accept"                data-endpoint="GETapi-college-admin-faculties--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -1979,28 +1768,28 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="id"                data-endpoint="GETapi-college-admin-faculty-edit--id-"
+                              name="id"                data-endpoint="GETapi-college-admin-faculties--id-"
                value="architecto"
                data-component="url">
     <br>
-<p>The ID of the edit. Example: <code>architecto</code></p>
+<p>The ID of the faculty. Example: <code>architecto</code></p>
             </div>
                     </form>
 
-                    <h2 id="endpoints-POSTapi-college-admin-faculty-update--id-">POST api/college-admin/faculty/update/{id}</h2>
+                    <h2 id="endpoints-PUTapi-college-admin-faculties--id-">PUT api/college-admin/faculties/{id}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-POSTapi-college-admin-faculty-update--id-">
+<span id="example-requests-PUTapi-college-admin-faculties--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/college-admin/faculty/update/architecto" \
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/college-admin/faculties/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -2014,7 +1803,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/faculty/update/architecto"
+    "http://localhost:8000/api/college-admin/faculties/architecto"
 );
 
 const headers = {
@@ -2030,60 +1819,60 @@ let body = {
 };
 
 fetch(url, {
-    method: "POST",
+    method: "PUT",
     headers,
     body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
 
-<span id="example-responses-POSTapi-college-admin-faculty-update--id-">
+<span id="example-responses-PUTapi-college-admin-faculties--id-">
 </span>
-<span id="execution-results-POSTapi-college-admin-faculty-update--id-" hidden>
+<span id="execution-results-PUTapi-college-admin-faculties--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-college-admin-faculty-update--id-"></span>:
+                id="execution-response-status-PUTapi-college-admin-faculties--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-college-admin-faculty-update--id-"
+    <pre class="json"><code id="execution-response-content-PUTapi-college-admin-faculties--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-college-admin-faculty-update--id-" hidden>
+<span id="execution-error-PUTapi-college-admin-faculties--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-college-admin-faculty-update--id-">
+    <pre><code id="execution-error-message-PUTapi-college-admin-faculties--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-college-admin-faculty-update--id-" data-method="POST"
-      data-path="api/college-admin/faculty/update/{id}"
+<form id="form-PUTapi-college-admin-faculties--id-" data-method="PUT"
+      data-path="api/college-admin/faculties/{id}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-college-admin-faculty-update--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-college-admin-faculties--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-college-admin-faculty-update--id-"
-                    onclick="tryItOut('POSTapi-college-admin-faculty-update--id-');">Try it out ⚡
+                    id="btn-tryout-PUTapi-college-admin-faculties--id-"
+                    onclick="tryItOut('PUTapi-college-admin-faculties--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-college-admin-faculty-update--id-"
-                    onclick="cancelTryOut('POSTapi-college-admin-faculty-update--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-PUTapi-college-admin-faculties--id-"
+                    onclick="cancelTryOut('PUTapi-college-admin-faculties--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-college-admin-faculty-update--id-"
+                    id="btn-executetryout-PUTapi-college-admin-faculties--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
             </button>
             </h3>
             <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/college-admin/faculty/update/{id}</code></b>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/college-admin/faculties/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -2091,7 +1880,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-college-admin-faculty-update--id-"
+                              name="Content-Type"                data-endpoint="PUTapi-college-admin-faculties--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -2102,7 +1891,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-college-admin-faculty-update--id-"
+                              name="Accept"                data-endpoint="PUTapi-college-admin-faculties--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -2114,11 +1903,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="id"                data-endpoint="POSTapi-college-admin-faculty-update--id-"
+                              name="id"                data-endpoint="PUTapi-college-admin-faculties--id-"
                value="architecto"
                data-component="url">
     <br>
-<p>The ID of the update. Example: <code>architecto</code></p>
+<p>The ID of the faculty. Example: <code>architecto</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2126,7 +1915,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="college_id"                data-endpoint="POSTapi-college-admin-faculty-update--id-"
+                              name="college_id"                data-endpoint="PUTapi-college-admin-faculties--id-"
                value="architecto"
                data-component="body">
     <br>
@@ -2137,7 +1926,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="department_id"                data-endpoint="POSTapi-college-admin-faculty-update--id-"
+                              name="department_id"                data-endpoint="PUTapi-college-admin-faculties--id-"
                value="architecto"
                data-component="body">
     <br>
@@ -2148,7 +1937,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="faculty_name"                data-endpoint="POSTapi-college-admin-faculty-update--id-"
+                              name="faculty_name"                data-endpoint="PUTapi-college-admin-faculties--id-"
                value="n"
                data-component="body">
     <br>
@@ -2159,7 +1948,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="faculty_designation"                data-endpoint="POSTapi-college-admin-faculty-update--id-"
+                              name="faculty_designation"                data-endpoint="PUTapi-college-admin-faculties--id-"
                value="g"
                data-component="body">
     <br>
@@ -2167,27 +1956,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </div>
         </form>
 
-                    <h2 id="endpoints-GETapi-college-admin-placement-edit--id-">GET api/college-admin/placement/edit/{id}</h2>
+                    <h2 id="endpoints-GETapi-college-admin-placements--id-">GET api/college-admin/placements/{id}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college-admin-placement-edit--id-">
+<span id="example-requests-GETapi-college-admin-placements--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college-admin/placement/edit/architecto" \
+    --get "http://localhost:8000/api/college-admin/placements/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/placement/edit/architecto"
+    "http://localhost:8000/api/college-admin/placements/architecto"
 );
 
 const headers = {
@@ -2202,9 +1991,9 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college-admin-placement-edit--id-">
+<span id="example-responses-GETapi-college-admin-placements--id-">
             <blockquote>
-            <p>Example response (404):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -2216,51 +2005,47 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;error&quot;: {
-        &quot;message&quot;: &quot;NO such records found !&quot;
-    },
-    &quot;statusCode&quot;: 404
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college-admin-placement-edit--id-" hidden>
+<span id="execution-results-GETapi-college-admin-placements--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college-admin-placement-edit--id-"></span>:
+                id="execution-response-status-GETapi-college-admin-placements--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college-admin-placement-edit--id-"
+    <pre class="json"><code id="execution-response-content-GETapi-college-admin-placements--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college-admin-placement-edit--id-" hidden>
+<span id="execution-error-GETapi-college-admin-placements--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college-admin-placement-edit--id-">
+    <pre><code id="execution-error-message-GETapi-college-admin-placements--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college-admin-placement-edit--id-" data-method="GET"
-      data-path="api/college-admin/placement/edit/{id}"
+<form id="form-GETapi-college-admin-placements--id-" data-method="GET"
+      data-path="api/college-admin/placements/{id}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-placement-edit--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-placements--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college-admin-placement-edit--id-"
-                    onclick="tryItOut('GETapi-college-admin-placement-edit--id-');">Try it out ⚡
+                    id="btn-tryout-GETapi-college-admin-placements--id-"
+                    onclick="tryItOut('GETapi-college-admin-placements--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college-admin-placement-edit--id-"
-                    onclick="cancelTryOut('GETapi-college-admin-placement-edit--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-college-admin-placements--id-"
+                    onclick="cancelTryOut('GETapi-college-admin-placements--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college-admin-placement-edit--id-"
+                    id="btn-executetryout-GETapi-college-admin-placements--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -2268,7 +2053,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college-admin/placement/edit/{id}</code></b>
+            <b><code>api/college-admin/placements/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -2276,7 +2061,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college-admin-placement-edit--id-"
+                              name="Content-Type"                data-endpoint="GETapi-college-admin-placements--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -2287,7 +2072,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college-admin-placement-edit--id-"
+                              name="Accept"                data-endpoint="GETapi-college-admin-placements--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -2299,28 +2084,28 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="id"                data-endpoint="GETapi-college-admin-placement-edit--id-"
+                              name="id"                data-endpoint="GETapi-college-admin-placements--id-"
                value="architecto"
                data-component="url">
     <br>
-<p>The ID of the edit. Example: <code>architecto</code></p>
+<p>The ID of the placement. Example: <code>architecto</code></p>
             </div>
                     </form>
 
-                    <h2 id="endpoints-POSTapi-college-admin-placement-update--id-">POST api/college-admin/placement/update/{id}</h2>
+                    <h2 id="endpoints-PUTapi-college-admin-placements--id-">PUT api/college-admin/placements/{id}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-POSTapi-college-admin-placement-update--id-">
+<span id="example-requests-PUTapi-college-admin-placements--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/college-admin/placement/update/architecto" \
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/college-admin/placements/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -2333,7 +2118,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/placement/update/architecto"
+    "http://localhost:8000/api/college-admin/placements/architecto"
 );
 
 const headers = {
@@ -2348,60 +2133,60 @@ let body = {
 };
 
 fetch(url, {
-    method: "POST",
+    method: "PUT",
     headers,
     body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
 
-<span id="example-responses-POSTapi-college-admin-placement-update--id-">
+<span id="example-responses-PUTapi-college-admin-placements--id-">
 </span>
-<span id="execution-results-POSTapi-college-admin-placement-update--id-" hidden>
+<span id="execution-results-PUTapi-college-admin-placements--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-college-admin-placement-update--id-"></span>:
+                id="execution-response-status-PUTapi-college-admin-placements--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-college-admin-placement-update--id-"
+    <pre class="json"><code id="execution-response-content-PUTapi-college-admin-placements--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-college-admin-placement-update--id-" hidden>
+<span id="execution-error-PUTapi-college-admin-placements--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-college-admin-placement-update--id-">
+    <pre><code id="execution-error-message-PUTapi-college-admin-placements--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-college-admin-placement-update--id-" data-method="POST"
-      data-path="api/college-admin/placement/update/{id}"
+<form id="form-PUTapi-college-admin-placements--id-" data-method="PUT"
+      data-path="api/college-admin/placements/{id}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-college-admin-placement-update--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-college-admin-placements--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-college-admin-placement-update--id-"
-                    onclick="tryItOut('POSTapi-college-admin-placement-update--id-');">Try it out ⚡
+                    id="btn-tryout-PUTapi-college-admin-placements--id-"
+                    onclick="tryItOut('PUTapi-college-admin-placements--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-college-admin-placement-update--id-"
-                    onclick="cancelTryOut('POSTapi-college-admin-placement-update--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-PUTapi-college-admin-placements--id-"
+                    onclick="cancelTryOut('PUTapi-college-admin-placements--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-college-admin-placement-update--id-"
+                    id="btn-executetryout-PUTapi-college-admin-placements--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
             </button>
             </h3>
             <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/college-admin/placement/update/{id}</code></b>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/college-admin/placements/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -2409,7 +2194,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-college-admin-placement-update--id-"
+                              name="Content-Type"                data-endpoint="PUTapi-college-admin-placements--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -2420,7 +2205,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-college-admin-placement-update--id-"
+                              name="Accept"                data-endpoint="PUTapi-college-admin-placements--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -2432,11 +2217,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="id"                data-endpoint="POSTapi-college-admin-placement-update--id-"
+                              name="id"                data-endpoint="PUTapi-college-admin-placements--id-"
                value="architecto"
                data-component="url">
     <br>
-<p>The ID of the update. Example: <code>architecto</code></p>
+<p>The ID of the placement. Example: <code>architecto</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2444,7 +2229,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="high_package"                data-endpoint="POSTapi-college-admin-placement-update--id-"
+                              name="high_package"                data-endpoint="PUTapi-college-admin-placements--id-"
                value="architecto"
                data-component="body">
     <br>
@@ -2455,7 +2240,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="avg_package"                data-endpoint="POSTapi-college-admin-placement-update--id-"
+                              name="avg_package"                data-endpoint="PUTapi-college-admin-placements--id-"
                value="architecto"
                data-component="body">
     <br>
@@ -2466,7 +2251,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="placement_description"                data-endpoint="POSTapi-college-admin-placement-update--id-"
+                              name="placement_description"                data-endpoint="PUTapi-college-admin-placements--id-"
                value="architecto"
                data-component="body">
     <br>
@@ -2474,27 +2259,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </div>
         </form>
 
-                    <h2 id="endpoints-GETapi-college-admin-article-list">GET api/college-admin/article/list</h2>
+                    <h2 id="endpoints-GETapi-college-admin-articles">GET api/college-admin/articles</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college-admin-article-list">
+<span id="example-requests-GETapi-college-admin-articles">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college-admin/article/list" \
+    --get "http://localhost:8000/api/college-admin/articles" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/article/list"
+    "http://localhost:8000/api/college-admin/articles"
 );
 
 const headers = {
@@ -2509,9 +2294,9 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college-admin-article-list">
+<span id="example-responses-GETapi-college-admin-articles">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -2523,62 +2308,47 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;title&quot;: &quot;Today&#039;s News Headlines for School Assembly: 28 January 2025&quot;,
-            &quot;article_slug&quot;: &quot;new-head-line&quot;,
-            &quot;banner_image&quot;: &quot;o1ihobe7ga8occs04ggcow4s8owo4og.png&quot;,
-            &quot;meta_description&quot;: &quot;yvyvyvyvyuu[opo&quot;,
-            &quot;article_category_id&quot;: 1,
-            &quot;article_description&quot;: &quot;&lt;h1 class=\&quot;blog-details__title\&quot; style=\&quot;margin-top: 0px; margin-bottom: 18px; font-family: Gordita; font-weight: 700; line-height: 1.42; color: rgb(37, 37, 37); font-size: 28px;\&quot;&gt;Today&#039;s News Headlines for School Assembly: 28 January 2025&lt;/h1&gt;&lt;p style=\&quot;margin-bottom: 1rem;\&quot;&gt;&lt;span style=\&quot;background-color: transparent;\&quot;&gt;News Headlines for School Assembly for 28 January 2025: Welcome to today&#039;s news update for school assembly, where we bring you the latest in national and international news in a concise format. Here are today&#039;s news headlines in English for school assembly, perfect for delivering in 10 lines of today&#039;s news headlines. This roundup covers today&#039;s national news headlines in English alongside key international news for school assembly, keeping students informed and engaged with current events.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 1rem;\&quot;&gt;&lt;br style=\&quot;color: rgb(51, 51, 51); font-family: Gordita, Arial, Helvetica, sans-serif;\&quot;&gt;&lt;/p&gt;&quot;,
-            &quot;created_at&quot;: &quot;2025-01-27T04:12:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-01-27T04:24:15.000000Z&quot;
-        }
-    ],
-    &quot;statusCode&quot;: 200,
-    &quot;message&quot;: &quot;Records fetch successfully&quot;
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college-admin-article-list" hidden>
+<span id="execution-results-GETapi-college-admin-articles" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college-admin-article-list"></span>:
+                id="execution-response-status-GETapi-college-admin-articles"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college-admin-article-list"
+    <pre class="json"><code id="execution-response-content-GETapi-college-admin-articles"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college-admin-article-list" hidden>
+<span id="execution-error-GETapi-college-admin-articles" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college-admin-article-list">
+    <pre><code id="execution-error-message-GETapi-college-admin-articles">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college-admin-article-list" data-method="GET"
-      data-path="api/college-admin/article/list"
+<form id="form-GETapi-college-admin-articles" data-method="GET"
+      data-path="api/college-admin/articles"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-article-list', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-articles', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college-admin-article-list"
-                    onclick="tryItOut('GETapi-college-admin-article-list');">Try it out ⚡
+                    id="btn-tryout-GETapi-college-admin-articles"
+                    onclick="tryItOut('GETapi-college-admin-articles');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college-admin-article-list"
-                    onclick="cancelTryOut('GETapi-college-admin-article-list');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-college-admin-articles"
+                    onclick="cancelTryOut('GETapi-college-admin-articles');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college-admin-article-list"
+                    id="btn-executetryout-GETapi-college-admin-articles"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -2586,7 +2356,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college-admin/article/list</code></b>
+            <b><code>api/college-admin/articles</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -2594,7 +2364,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college-admin-article-list"
+                              name="Content-Type"                data-endpoint="GETapi-college-admin-articles"
                value="application/json"
                data-component="header">
     <br>
@@ -2605,7 +2375,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college-admin-article-list"
+                              name="Accept"                data-endpoint="GETapi-college-admin-articles"
                value="application/json"
                data-component="header">
     <br>
@@ -2613,27 +2383,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-GETapi-college-admin-course-edit--id-">GET api/college-admin/course/edit/{id}</h2>
+                    <h2 id="endpoints-GETapi-college-admin-courses">GET api/college-admin/courses</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college-admin-course-edit--id-">
+<span id="example-requests-GETapi-college-admin-courses">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college-admin/course/edit/architecto" \
+    --get "http://localhost:8000/api/college-admin/courses" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/course/edit/architecto"
+    "http://localhost:8000/api/college-admin/courses"
 );
 
 const headers = {
@@ -2648,9 +2418,9 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college-admin-course-edit--id-">
+<span id="example-responses-GETapi-college-admin-courses">
             <blockquote>
-            <p>Example response (404):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -2662,51 +2432,47 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;error&quot;: {
-        &quot;message&quot;: &quot;NO such records found !&quot;
-    },
-    &quot;statusCode&quot;: 404
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college-admin-course-edit--id-" hidden>
+<span id="execution-results-GETapi-college-admin-courses" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college-admin-course-edit--id-"></span>:
+                id="execution-response-status-GETapi-college-admin-courses"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college-admin-course-edit--id-"
+    <pre class="json"><code id="execution-response-content-GETapi-college-admin-courses"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college-admin-course-edit--id-" hidden>
+<span id="execution-error-GETapi-college-admin-courses" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college-admin-course-edit--id-">
+    <pre><code id="execution-error-message-GETapi-college-admin-courses">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college-admin-course-edit--id-" data-method="GET"
-      data-path="api/college-admin/course/edit/{id}"
+<form id="form-GETapi-college-admin-courses" data-method="GET"
+      data-path="api/college-admin/courses"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-course-edit--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-courses', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college-admin-course-edit--id-"
-                    onclick="tryItOut('GETapi-college-admin-course-edit--id-');">Try it out ⚡
+                    id="btn-tryout-GETapi-college-admin-courses"
+                    onclick="tryItOut('GETapi-college-admin-courses');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college-admin-course-edit--id-"
-                    onclick="cancelTryOut('GETapi-college-admin-course-edit--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-college-admin-courses"
+                    onclick="cancelTryOut('GETapi-college-admin-courses');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college-admin-course-edit--id-"
+                    id="btn-executetryout-GETapi-college-admin-courses"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -2714,7 +2480,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college-admin/course/edit/{id}</code></b>
+            <b><code>api/college-admin/courses</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -2722,7 +2488,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college-admin-course-edit--id-"
+                              name="Content-Type"                data-endpoint="GETapi-college-admin-courses"
                value="application/json"
                data-component="header">
     <br>
@@ -2733,7 +2499,131 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college-admin-course-edit--id-"
+                              name="Accept"                data-endpoint="GETapi-college-admin-courses"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="endpoints-GETapi-college-admin-courses--id-">GET api/college-admin/courses/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-college-admin-courses--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/college-admin/courses/architecto" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/college-admin/courses/architecto"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-college-admin-courses--id-">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-college-admin-courses--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-college-admin-courses--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-college-admin-courses--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-college-admin-courses--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-college-admin-courses--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-college-admin-courses--id-" data-method="GET"
+      data-path="api/college-admin/courses/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-courses--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-college-admin-courses--id-"
+                    onclick="tryItOut('GETapi-college-admin-courses--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-college-admin-courses--id-"
+                    onclick="cancelTryOut('GETapi-college-admin-courses--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-college-admin-courses--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/college-admin/courses/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-college-admin-courses--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-college-admin-courses--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -2745,28 +2635,28 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="id"                data-endpoint="GETapi-college-admin-course-edit--id-"
+                              name="id"                data-endpoint="GETapi-college-admin-courses--id-"
                value="architecto"
                data-component="url">
     <br>
-<p>The ID of the edit. Example: <code>architecto</code></p>
+<p>The ID of the course. Example: <code>architecto</code></p>
             </div>
                     </form>
 
-                    <h2 id="endpoints-POSTapi-college-admin-course-update--id-">POST api/college-admin/course/update/{id}</h2>
+                    <h2 id="endpoints-PUTapi-college-admin-courses--id-">PUT api/college-admin/courses/{id}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-POSTapi-college-admin-course-update--id-">
+<span id="example-requests-PUTapi-college-admin-courses--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/college-admin/course/update/architecto" \
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/college-admin/courses/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -2778,7 +2668,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/course/update/architecto"
+    "http://localhost:8000/api/college-admin/courses/architecto"
 );
 
 const headers = {
@@ -2792,60 +2682,60 @@ let body = {
 };
 
 fetch(url, {
-    method: "POST",
+    method: "PUT",
     headers,
     body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
 
-<span id="example-responses-POSTapi-college-admin-course-update--id-">
+<span id="example-responses-PUTapi-college-admin-courses--id-">
 </span>
-<span id="execution-results-POSTapi-college-admin-course-update--id-" hidden>
+<span id="execution-results-PUTapi-college-admin-courses--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-college-admin-course-update--id-"></span>:
+                id="execution-response-status-PUTapi-college-admin-courses--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-college-admin-course-update--id-"
+    <pre class="json"><code id="execution-response-content-PUTapi-college-admin-courses--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-college-admin-course-update--id-" hidden>
+<span id="execution-error-PUTapi-college-admin-courses--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-college-admin-course-update--id-">
+    <pre><code id="execution-error-message-PUTapi-college-admin-courses--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-college-admin-course-update--id-" data-method="POST"
-      data-path="api/college-admin/course/update/{id}"
+<form id="form-PUTapi-college-admin-courses--id-" data-method="PUT"
+      data-path="api/college-admin/courses/{id}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-college-admin-course-update--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-college-admin-courses--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-college-admin-course-update--id-"
-                    onclick="tryItOut('POSTapi-college-admin-course-update--id-');">Try it out ⚡
+                    id="btn-tryout-PUTapi-college-admin-courses--id-"
+                    onclick="tryItOut('PUTapi-college-admin-courses--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-college-admin-course-update--id-"
-                    onclick="cancelTryOut('POSTapi-college-admin-course-update--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-PUTapi-college-admin-courses--id-"
+                    onclick="cancelTryOut('PUTapi-college-admin-courses--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-college-admin-course-update--id-"
+                    id="btn-executetryout-PUTapi-college-admin-courses--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
             </button>
             </h3>
             <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/college-admin/course/update/{id}</code></b>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/college-admin/courses/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -2853,7 +2743,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-college-admin-course-update--id-"
+                              name="Content-Type"                data-endpoint="PUTapi-college-admin-courses--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -2864,7 +2754,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-college-admin-course-update--id-"
+                              name="Accept"                data-endpoint="PUTapi-college-admin-courses--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -2876,11 +2766,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="id"                data-endpoint="POSTapi-college-admin-course-update--id-"
+                              name="id"                data-endpoint="PUTapi-college-admin-courses--id-"
                value="architecto"
                data-component="url">
     <br>
-<p>The ID of the update. Example: <code>architecto</code></p>
+<p>The ID of the course. Example: <code>architecto</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2888,7 +2778,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="course_name"                data-endpoint="POSTapi-college-admin-course-update--id-"
+                              name="course_name"                data-endpoint="PUTapi-college-admin-courses--id-"
                value="architecto"
                data-component="body">
     <br>
@@ -2899,7 +2789,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="course_duration"                data-endpoint="POSTapi-college-admin-course-update--id-"
+                              name="course_duration"                data-endpoint="PUTapi-college-admin-courses--id-"
                value="architecto"
                data-component="body">
     <br>
@@ -2907,27 +2797,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </div>
         </form>
 
-                    <h2 id="endpoints-GETapi-college-admin-course-list">GET api/college-admin/course/list</h2>
+                    <h2 id="endpoints-GETapi-college-leads">GET api/college/leads</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college-admin-course-list">
+<span id="example-requests-GETapi-college-leads">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college-admin/course/list" \
+    --get "http://localhost:8000/api/college/leads" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college-admin/course/list"
+    "http://localhost:8000/api/college/leads"
 );
 
 const headers = {
@@ -2942,162 +2832,7 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college-admin-course-list">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: true,
-    &quot;college_faculty&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;course_name&quot;: &quot;B. Tech&quot;,
-            &quot;course_slug&quot;: &quot;b-tech&quot;,
-            &quot;course_duration&quot;: &quot;4&quot;,
-            &quot;course_category_id&quot;: null,
-            &quot;created_at&quot;: &quot;2024-11-28T23:29:31.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-11-29T00:08:09.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 2,
-            &quot;course_name&quot;: &quot;M. Tech&quot;,
-            &quot;course_slug&quot;: &quot;m-tech&quot;,
-            &quot;course_duration&quot;: &quot;3&quot;,
-            &quot;course_category_id&quot;: null,
-            &quot;created_at&quot;: &quot;2024-11-28T23:35:09.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-11-29T00:07:47.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 4,
-            &quot;course_name&quot;: &quot;MCA&quot;,
-            &quot;course_slug&quot;: &quot;mca&quot;,
-            &quot;course_duration&quot;: &quot;2&quot;,
-            &quot;course_category_id&quot;: null,
-            &quot;created_at&quot;: &quot;2024-12-02T05:34:17.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-12-02T05:34:17.000000Z&quot;
-        }
-    ],
-    &quot;statusCode&quot;: 200,
-    &quot;message&quot;: &quot;Records fetch successfully&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-college-admin-course-list" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-college-admin-course-list"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college-admin-course-list"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETapi-college-admin-course-list" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college-admin-course-list">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-GETapi-college-admin-course-list" data-method="GET"
-      data-path="api/college-admin/course/list"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-admin-course-list', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college-admin-course-list"
-                    onclick="tryItOut('GETapi-college-admin-course-list');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college-admin-course-list"
-                    onclick="cancelTryOut('GETapi-college-admin-course-list');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college-admin-course-list"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/college-admin/course/list</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college-admin-course-list"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college-admin-course-list"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-GETapi-college-lead-list">GET api/college/lead/list</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-college-lead-list">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college/lead/list" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college/lead/list"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-college-lead-list">
+<span id="example-responses-GETapi-college-leads">
             <blockquote>
             <p>Example response (401):</p>
         </blockquote>
@@ -3115,43 +2850,43 @@ access-control-allow-origin: *
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college-lead-list" hidden>
+<span id="execution-results-GETapi-college-leads" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college-lead-list"></span>:
+                id="execution-response-status-GETapi-college-leads"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college-lead-list"
+    <pre class="json"><code id="execution-response-content-GETapi-college-leads"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college-lead-list" hidden>
+<span id="execution-error-GETapi-college-leads" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college-lead-list">
+    <pre><code id="execution-error-message-GETapi-college-leads">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college-lead-list" data-method="GET"
-      data-path="api/college/lead/list"
+<form id="form-GETapi-college-leads" data-method="GET"
+      data-path="api/college/leads"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-lead-list', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-leads', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college-lead-list"
-                    onclick="tryItOut('GETapi-college-lead-list');">Try it out ⚡
+                    id="btn-tryout-GETapi-college-leads"
+                    onclick="tryItOut('GETapi-college-leads');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college-lead-list"
-                    onclick="cancelTryOut('GETapi-college-lead-list');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-college-leads"
+                    onclick="cancelTryOut('GETapi-college-leads');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college-lead-list"
+                    id="btn-executetryout-GETapi-college-leads"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -3159,7 +2894,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college/lead/list</code></b>
+            <b><code>api/college/leads</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -3167,7 +2902,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college-lead-list"
+                              name="Content-Type"                data-endpoint="GETapi-college-leads"
                value="application/json"
                data-component="header">
     <br>
@@ -3178,7 +2913,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college-lead-list"
+                              name="Accept"                data-endpoint="GETapi-college-leads"
                value="application/json"
                data-component="header">
     <br>
@@ -3186,27 +2921,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-GETapi-college-lead-details--lead_id-">GET api/college/lead/details/{lead_id}</h2>
+                    <h2 id="endpoints-GETapi-college-leads--lead-">GET api/college/leads/{lead}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college-lead-details--lead_id-">
+<span id="example-requests-GETapi-college-leads--lead-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college/lead/details/architecto" \
+    --get "http://localhost:8000/api/college/leads/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college/lead/details/architecto"
+    "http://localhost:8000/api/college/leads/architecto"
 );
 
 const headers = {
@@ -3221,7 +2956,7 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college-lead-details--lead_id-">
+<span id="example-responses-GETapi-college-leads--lead-">
             <blockquote>
             <p>Example response (401):</p>
         </blockquote>
@@ -3239,43 +2974,43 @@ access-control-allow-origin: *
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college-lead-details--lead_id-" hidden>
+<span id="execution-results-GETapi-college-leads--lead-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college-lead-details--lead_id-"></span>:
+                id="execution-response-status-GETapi-college-leads--lead-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college-lead-details--lead_id-"
+    <pre class="json"><code id="execution-response-content-GETapi-college-leads--lead-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college-lead-details--lead_id-" hidden>
+<span id="execution-error-GETapi-college-leads--lead-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college-lead-details--lead_id-">
+    <pre><code id="execution-error-message-GETapi-college-leads--lead-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college-lead-details--lead_id-" data-method="GET"
-      data-path="api/college/lead/details/{lead_id}"
+<form id="form-GETapi-college-leads--lead-" data-method="GET"
+      data-path="api/college/leads/{lead}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-lead-details--lead_id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-leads--lead-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college-lead-details--lead_id-"
-                    onclick="tryItOut('GETapi-college-lead-details--lead_id-');">Try it out ⚡
+                    id="btn-tryout-GETapi-college-leads--lead-"
+                    onclick="tryItOut('GETapi-college-leads--lead-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college-lead-details--lead_id-"
-                    onclick="cancelTryOut('GETapi-college-lead-details--lead_id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-college-leads--lead-"
+                    onclick="cancelTryOut('GETapi-college-leads--lead-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college-lead-details--lead_id-"
+                    id="btn-executetryout-GETapi-college-leads--lead-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -3283,7 +3018,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college/lead/details/{lead_id}</code></b>
+            <b><code>api/college/leads/{lead}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -3291,7 +3026,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college-lead-details--lead_id-"
+                              name="Content-Type"                data-endpoint="GETapi-college-leads--lead-"
                value="application/json"
                data-component="header">
     <br>
@@ -3302,7 +3037,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college-lead-details--lead_id-"
+                              name="Accept"                data-endpoint="GETapi-college-leads--lead-"
                value="application/json"
                data-component="header">
     <br>
@@ -3310,39 +3045,175 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>lead_id</code></b>&nbsp;&nbsp;
+                <b style="line-height: 2;"><code>lead</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="lead_id"                data-endpoint="GETapi-college-lead-details--lead_id-"
+                              name="lead"                data-endpoint="GETapi-college-leads--lead-"
                value="architecto"
                data-component="url">
     <br>
-<p>The ID of the lead. Example: <code>architecto</code></p>
+<p>The lead. Example: <code>architecto</code></p>
             </div>
                     </form>
 
-                    <h2 id="endpoints-POSTapi-college-lead-remark-submit">POST api/college/lead/remark/submit</h2>
+                    <h2 id="endpoints-GETapi-college-leads--lead--remarks">GET api/college/leads/{lead}/remarks</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-POSTapi-college-lead-remark-submit">
+<span id="example-requests-GETapi-college-leads--lead--remarks">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/college/lead/remark/submit" \
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/college/leads/architecto/remarks" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college/lead/remark/submit"
+    "http://localhost:8000/api/college/leads/architecto/remarks"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-college-leads--lead--remarks">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-college-leads--lead--remarks" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-college-leads--lead--remarks"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-college-leads--lead--remarks"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-college-leads--lead--remarks" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-college-leads--lead--remarks">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-college-leads--lead--remarks" data-method="GET"
+      data-path="api/college/leads/{lead}/remarks"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-leads--lead--remarks', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-college-leads--lead--remarks"
+                    onclick="tryItOut('GETapi-college-leads--lead--remarks');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-college-leads--lead--remarks"
+                    onclick="cancelTryOut('GETapi-college-leads--lead--remarks');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-college-leads--lead--remarks"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/college/leads/{lead}/remarks</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-college-leads--lead--remarks"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-college-leads--lead--remarks"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>lead</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="lead"                data-endpoint="GETapi-college-leads--lead--remarks"
+               value="architecto"
+               data-component="url">
+    <br>
+<p>The lead. Example: <code>architecto</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="endpoints-POSTapi-college-leads--lead--remarks">POST api/college/leads/{lead}/remarks</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-college-leads--lead--remarks">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/college/leads/architecto/remarks" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/college/leads/architecto/remarks"
 );
 
 const headers = {
@@ -3357,45 +3228,45 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-POSTapi-college-lead-remark-submit">
+<span id="example-responses-POSTapi-college-leads--lead--remarks">
 </span>
-<span id="execution-results-POSTapi-college-lead-remark-submit" hidden>
+<span id="execution-results-POSTapi-college-leads--lead--remarks" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-college-lead-remark-submit"></span>:
+                id="execution-response-status-POSTapi-college-leads--lead--remarks"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-college-lead-remark-submit"
+    <pre class="json"><code id="execution-response-content-POSTapi-college-leads--lead--remarks"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-college-lead-remark-submit" hidden>
+<span id="execution-error-POSTapi-college-leads--lead--remarks" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-college-lead-remark-submit">
+    <pre><code id="execution-error-message-POSTapi-college-leads--lead--remarks">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-college-lead-remark-submit" data-method="POST"
-      data-path="api/college/lead/remark/submit"
+<form id="form-POSTapi-college-leads--lead--remarks" data-method="POST"
+      data-path="api/college/leads/{lead}/remarks"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-college-lead-remark-submit', this);">
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-college-leads--lead--remarks', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-college-lead-remark-submit"
-                    onclick="tryItOut('POSTapi-college-lead-remark-submit');">Try it out ⚡
+                    id="btn-tryout-POSTapi-college-leads--lead--remarks"
+                    onclick="tryItOut('POSTapi-college-leads--lead--remarks');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-college-lead-remark-submit"
-                    onclick="cancelTryOut('POSTapi-college-lead-remark-submit');" hidden>Cancel 🛑
+                    id="btn-canceltryout-POSTapi-college-leads--lead--remarks"
+                    onclick="cancelTryOut('POSTapi-college-leads--lead--remarks');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-college-lead-remark-submit"
+                    id="btn-executetryout-POSTapi-college-leads--lead--remarks"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -3403,7 +3274,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
-            <b><code>api/college/lead/remark/submit</code></b>
+            <b><code>api/college/leads/{lead}/remarks</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -3411,7 +3282,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-college-lead-remark-submit"
+                              name="Content-Type"                data-endpoint="POSTapi-college-leads--lead--remarks"
                value="application/json"
                data-component="header">
     <br>
@@ -3422,131 +3293,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-college-lead-remark-submit"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-GETapi-college-lead-remark-list--lead_id-">GET api/college/lead/remark/list/{lead_id}</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-college-lead-remark-list--lead_id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college/lead/remark/list/architecto" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college/lead/remark/list/architecto"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-college-lead-remark-list--lead_id-">
-            <blockquote>
-            <p>Example response (401):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-college-lead-remark-list--lead_id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-college-lead-remark-list--lead_id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college-lead-remark-list--lead_id-"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETapi-college-lead-remark-list--lead_id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college-lead-remark-list--lead_id-">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-GETapi-college-lead-remark-list--lead_id-" data-method="GET"
-      data-path="api/college/lead/remark/list/{lead_id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-lead-remark-list--lead_id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college-lead-remark-list--lead_id-"
-                    onclick="tryItOut('GETapi-college-lead-remark-list--lead_id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college-lead-remark-list--lead_id-"
-                    onclick="cancelTryOut('GETapi-college-lead-remark-list--lead_id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college-lead-remark-list--lead_id-"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/college/lead/remark/list/{lead_id}</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college-lead-remark-list--lead_id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college-lead-remark-list--lead_id-"
+                              name="Accept"                data-endpoint="POSTapi-college-leads--lead--remarks"
                value="application/json"
                data-component="header">
     <br>
@@ -3554,32 +3301,32 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>lead_id</code></b>&nbsp;&nbsp;
+                <b style="line-height: 2;"><code>lead</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="lead_id"                data-endpoint="GETapi-college-lead-remark-list--lead_id-"
+                              name="lead"                data-endpoint="POSTapi-college-leads--lead--remarks"
                value="architecto"
                data-component="url">
     <br>
-<p>The ID of the lead. Example: <code>architecto</code></p>
+<p>The lead. Example: <code>architecto</code></p>
             </div>
                     </form>
 
-                    <h2 id="endpoints-POSTapi-college-submit">POST api/college/submit</h2>
+                    <h2 id="endpoints-POSTapi-colleges-submit">POST api/colleges/submit</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-POSTapi-college-submit">
+<span id="example-requests-POSTapi-colleges-submit">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/college/submit" \
+    "http://localhost:8000/api/colleges/submit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -3595,7 +3342,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college/submit"
+    "http://localhost:8000/api/colleges/submit"
 );
 
 const headers = {
@@ -3620,45 +3367,45 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-POSTapi-college-submit">
+<span id="example-responses-POSTapi-colleges-submit">
 </span>
-<span id="execution-results-POSTapi-college-submit" hidden>
+<span id="execution-results-POSTapi-colleges-submit" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-college-submit"></span>:
+                id="execution-response-status-POSTapi-colleges-submit"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-college-submit"
+    <pre class="json"><code id="execution-response-content-POSTapi-colleges-submit"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-college-submit" hidden>
+<span id="execution-error-POSTapi-colleges-submit" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-college-submit">
+    <pre><code id="execution-error-message-POSTapi-colleges-submit">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-college-submit" data-method="POST"
-      data-path="api/college/submit"
+<form id="form-POSTapi-colleges-submit" data-method="POST"
+      data-path="api/colleges/submit"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-college-submit', this);">
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-colleges-submit', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-college-submit"
-                    onclick="tryItOut('POSTapi-college-submit');">Try it out ⚡
+                    id="btn-tryout-POSTapi-colleges-submit"
+                    onclick="tryItOut('POSTapi-colleges-submit');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-college-submit"
-                    onclick="cancelTryOut('POSTapi-college-submit');" hidden>Cancel 🛑
+                    id="btn-canceltryout-POSTapi-colleges-submit"
+                    onclick="cancelTryOut('POSTapi-colleges-submit');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-college-submit"
+                    id="btn-executetryout-POSTapi-colleges-submit"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -3666,7 +3413,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
-            <b><code>api/college/submit</code></b>
+            <b><code>api/colleges/submit</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -3674,7 +3421,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-college-submit"
+                              name="Content-Type"                data-endpoint="POSTapi-colleges-submit"
                value="application/json"
                data-component="header">
     <br>
@@ -3685,7 +3432,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-college-submit"
+                              name="Accept"                data-endpoint="POSTapi-colleges-submit"
                value="application/json"
                data-component="header">
     <br>
@@ -3697,7 +3444,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="college_id"                data-endpoint="POSTapi-college-submit"
+                              name="college_id"                data-endpoint="POSTapi-colleges-submit"
                value="architecto"
                data-component="body">
     <br>
@@ -3708,7 +3455,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="student_name"                data-endpoint="POSTapi-college-submit"
+                              name="student_name"                data-endpoint="POSTapi-colleges-submit"
                value="architecto"
                data-component="body">
     <br>
@@ -3719,7 +3466,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="student_email"                data-endpoint="POSTapi-college-submit"
+                              name="student_email"                data-endpoint="POSTapi-colleges-submit"
                value="architecto"
                data-component="body">
     <br>
@@ -3730,7 +3477,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="phone"                data-endpoint="POSTapi-college-submit"
+                              name="phone"                data-endpoint="POSTapi-colleges-submit"
                value="architecto"
                data-component="body">
     <br>
@@ -3741,7 +3488,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="course_id"                data-endpoint="POSTapi-college-submit"
+                              name="course_id"                data-endpoint="POSTapi-colleges-submit"
                value="architecto"
                data-component="body">
     <br>
@@ -3752,7 +3499,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="state_id"                data-endpoint="POSTapi-college-submit"
+                              name="state_id"                data-endpoint="POSTapi-colleges-submit"
                value="architecto"
                data-component="body">
     <br>
@@ -3760,20 +3507,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </div>
         </form>
 
-                    <h2 id="endpoints-POSTapi-college-claim">POST api/college/claim</h2>
+                    <h2 id="endpoints-POSTapi-colleges-claim">POST api/colleges/claim</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-POSTapi-college-claim">
+<span id="example-requests-POSTapi-colleges-claim">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/college/claim" \
+    "http://localhost:8000/api/colleges/claim" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -3788,7 +3535,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college/claim"
+    "http://localhost:8000/api/colleges/claim"
 );
 
 const headers = {
@@ -3812,45 +3559,45 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-POSTapi-college-claim">
+<span id="example-responses-POSTapi-colleges-claim">
 </span>
-<span id="execution-results-POSTapi-college-claim" hidden>
+<span id="execution-results-POSTapi-colleges-claim" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-college-claim"></span>:
+                id="execution-response-status-POSTapi-colleges-claim"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-college-claim"
+    <pre class="json"><code id="execution-response-content-POSTapi-colleges-claim"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-college-claim" hidden>
+<span id="execution-error-POSTapi-colleges-claim" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-college-claim">
+    <pre><code id="execution-error-message-POSTapi-colleges-claim">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-college-claim" data-method="POST"
-      data-path="api/college/claim"
+<form id="form-POSTapi-colleges-claim" data-method="POST"
+      data-path="api/colleges/claim"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-college-claim', this);">
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-colleges-claim', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-college-claim"
-                    onclick="tryItOut('POSTapi-college-claim');">Try it out ⚡
+                    id="btn-tryout-POSTapi-colleges-claim"
+                    onclick="tryItOut('POSTapi-colleges-claim');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-college-claim"
-                    onclick="cancelTryOut('POSTapi-college-claim');" hidden>Cancel 🛑
+                    id="btn-canceltryout-POSTapi-colleges-claim"
+                    onclick="cancelTryOut('POSTapi-colleges-claim');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-college-claim"
+                    id="btn-executetryout-POSTapi-colleges-claim"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -3858,7 +3605,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
-            <b><code>api/college/claim</code></b>
+            <b><code>api/colleges/claim</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -3866,7 +3613,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-college-claim"
+                              name="Content-Type"                data-endpoint="POSTapi-colleges-claim"
                value="application/json"
                data-component="header">
     <br>
@@ -3877,7 +3624,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-college-claim"
+                              name="Accept"                data-endpoint="POSTapi-colleges-claim"
                value="application/json"
                data-component="header">
     <br>
@@ -3889,7 +3636,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="college_id"                data-endpoint="POSTapi-college-claim"
+                              name="college_id"                data-endpoint="POSTapi-colleges-claim"
                value="architecto"
                data-component="body">
     <br>
@@ -3900,7 +3647,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="name"                data-endpoint="POSTapi-college-claim"
+                              name="name"                data-endpoint="POSTapi-colleges-claim"
                value="architecto"
                data-component="body">
     <br>
@@ -3911,7 +3658,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="official_email"                data-endpoint="POSTapi-college-claim"
+                              name="official_email"                data-endpoint="POSTapi-colleges-claim"
                value="architecto"
                data-component="body">
     <br>
@@ -3922,7 +3669,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="phone"                data-endpoint="POSTapi-college-claim"
+                              name="phone"                data-endpoint="POSTapi-colleges-claim"
                value="architecto"
                data-component="body">
     <br>
@@ -3933,7 +3680,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="designation"                data-endpoint="POSTapi-college-claim"
+                              name="designation"                data-endpoint="POSTapi-colleges-claim"
                value="architecto"
                data-component="body">
     <br>
@@ -3941,27 +3688,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </div>
         </form>
 
-                    <h2 id="endpoints-GETapi-college-search--key-">GET api/college/search/{key}</h2>
+                    <h2 id="endpoints-GETapi-colleges-search--key-">GET api/colleges/search/{key}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college-search--key-">
+<span id="example-requests-GETapi-colleges-search--key-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college/search/architecto" \
+    --get "http://localhost:8000/api/colleges/search/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college/search/architecto"
+    "http://localhost:8000/api/colleges/search/architecto"
 );
 
 const headers = {
@@ -3976,7 +3723,7 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college-search--key-">
+<span id="example-responses-GETapi-colleges-search--key-">
             <blockquote>
             <p>Example response (200):</p>
         </blockquote>
@@ -3990,49 +3737,49 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;is_success&quot;: true,
+    &quot;success&quot;: true,
     &quot;data&quot;: [],
     &quot;message&quot;: &quot;College List&quot;
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college-search--key-" hidden>
+<span id="execution-results-GETapi-colleges-search--key-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college-search--key-"></span>:
+                id="execution-response-status-GETapi-colleges-search--key-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college-search--key-"
+    <pre class="json"><code id="execution-response-content-GETapi-colleges-search--key-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college-search--key-" hidden>
+<span id="execution-error-GETapi-colleges-search--key-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college-search--key-">
+    <pre><code id="execution-error-message-GETapi-colleges-search--key-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college-search--key-" data-method="GET"
-      data-path="api/college/search/{key}"
+<form id="form-GETapi-colleges-search--key-" data-method="GET"
+      data-path="api/colleges/search/{key}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college-search--key-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-colleges-search--key-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college-search--key-"
-                    onclick="tryItOut('GETapi-college-search--key-');">Try it out ⚡
+                    id="btn-tryout-GETapi-colleges-search--key-"
+                    onclick="tryItOut('GETapi-colleges-search--key-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college-search--key-"
-                    onclick="cancelTryOut('GETapi-college-search--key-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-colleges-search--key-"
+                    onclick="cancelTryOut('GETapi-colleges-search--key-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college-search--key-"
+                    id="btn-executetryout-GETapi-colleges-search--key-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -4040,7 +3787,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college/search/{key}</code></b>
+            <b><code>api/colleges/search/{key}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -4048,7 +3795,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college-search--key-"
+                              name="Content-Type"                data-endpoint="GETapi-colleges-search--key-"
                value="application/json"
                data-component="header">
     <br>
@@ -4059,7 +3806,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college-search--key-"
+                              name="Accept"                data-endpoint="GETapi-colleges-search--key-"
                value="application/json"
                data-component="header">
     <br>
@@ -4071,7 +3818,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="key"                data-endpoint="GETapi-college-search--key-"
+                              name="key"                data-endpoint="GETapi-colleges-search--key-"
                value="architecto"
                data-component="url">
     <br>
@@ -4092,14 +3839,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/colleges" \
+    --get "http://localhost:8000/api/colleges" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/colleges"
+    "http://localhost:8000/api/colleges"
 );
 
 const headers = {
@@ -4128,7 +3875,7 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;is_success&quot;: true,
+    &quot;success&quot;: true,
     &quot;data&quot;: [
         {
             &quot;id&quot;: 1,
@@ -4141,6 +3888,7 @@ access-control-allow-origin: *
             &quot;lead_model&quot;: 1,
             &quot;created_at&quot;: &quot;2024-12-09T04:25:32.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-01-21T23:33:27.000000Z&quot;,
+            &quot;logo_image_path&quot;: &quot;http://localhost:8000/storage/logo/iXBcBLpH2ZIRJeEM47wlBkEncgH2QGdsImDks9AU.png&quot;,
             &quot;college_address&quot;: [
                 {
                     &quot;id&quot;: 10,
@@ -4178,6 +3926,7 @@ access-control-allow-origin: *
             &quot;lead_model&quot;: 1,
             &quot;created_at&quot;: &quot;2024-12-11T04:17:23.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-01-24T00:25:37.000000Z&quot;,
+            &quot;logo_image_path&quot;: &quot;http://localhost:8000/storage/logo/WAzFCDpg1HO3X8rp7CVzqSN69TE5fdMxNZ0L1jCB.png&quot;,
             &quot;college_address&quot;: [
                 {
                     &quot;id&quot;: 4,
@@ -4205,6 +3954,7 @@ access-control-allow-origin: *
             &quot;lead_model&quot;: 1,
             &quot;created_at&quot;: &quot;2024-12-12T02:13:15.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2024-12-12T02:13:15.000000Z&quot;,
+            &quot;logo_image_path&quot;: &quot;http://localhost:8000/storage/logo/BgX9rHoDfQAoWnyeDPl1EejxNtHiSBc4LQnJNDZG.svg&quot;,
             &quot;college_address&quot;: [
                 {
                     &quot;id&quot;: 6,
@@ -4242,6 +3992,7 @@ access-control-allow-origin: *
             &quot;lead_model&quot;: 1,
             &quot;created_at&quot;: &quot;2024-12-14T02:39:39.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-01-21T23:33:39.000000Z&quot;,
+            &quot;logo_image_path&quot;: &quot;http://localhost:8000/storage/logo/WQsDHNC7RdfQvbQEBIjd9DjzJTKVtwZrqaQX9nfa.png&quot;,
             &quot;college_address&quot;: [
                 {
                     &quot;id&quot;: 8,
@@ -4279,6 +4030,7 @@ access-control-allow-origin: *
             &quot;lead_model&quot;: 1,
             &quot;created_at&quot;: &quot;2024-12-16T01:17:11.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2024-12-16T01:17:11.000000Z&quot;,
+            &quot;logo_image_path&quot;: &quot;http://localhost:8000/storage/logo/S3VNETOVQNLebjmWJEDLeZsINhhW85uFRJQTuMQZ.png&quot;,
             &quot;college_address&quot;: [],
             &quot;college_course_department&quot;: []
         },
@@ -4293,6 +4045,7 @@ access-control-allow-origin: *
             &quot;lead_model&quot;: 1,
             &quot;created_at&quot;: &quot;2025-01-16T01:25:06.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-01-21T23:33:47.000000Z&quot;,
+            &quot;logo_image_path&quot;: &quot;http://localhost:8000/storage/logo/fBb3VYya2iq1XHYSRur0a0ogKCWKpFaVMXLriguj.png&quot;,
             &quot;college_address&quot;: [
                 {
                     &quot;id&quot;: 9,
@@ -4330,6 +4083,7 @@ access-control-allow-origin: *
             &quot;lead_model&quot;: 2,
             &quot;created_at&quot;: &quot;2025-01-22T01:12:03.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-01-22T01:12:03.000000Z&quot;,
+            &quot;logo_image_path&quot;: &quot;http://localhost:8000/storage&quot;,
             &quot;college_address&quot;: [
                 {
                     &quot;id&quot;: 5,
@@ -4367,6 +4121,7 @@ access-control-allow-origin: *
             &quot;lead_model&quot;: 2,
             &quot;created_at&quot;: &quot;2025-01-24T01:11:32.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-02-14T23:44:17.000000Z&quot;,
+            &quot;logo_image_path&quot;: &quot;http://localhost:8000/storage&quot;,
             &quot;college_address&quot;: [],
             &quot;college_course_department&quot;: [
                 {
@@ -4418,6 +4173,7 @@ access-control-allow-origin: *
             &quot;lead_model&quot;: 2,
             &quot;created_at&quot;: &quot;2025-01-24T23:36:30.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-01-24T23:36:30.000000Z&quot;,
+            &quot;logo_image_path&quot;: &quot;http://localhost:8000/storage&quot;,
             &quot;college_address&quot;: [],
             &quot;college_course_department&quot;: []
         },
@@ -4432,6 +4188,7 @@ access-control-allow-origin: *
             &quot;lead_model&quot;: 2,
             &quot;created_at&quot;: &quot;2025-01-26T23:38:55.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-01-26T23:38:55.000000Z&quot;,
+            &quot;logo_image_path&quot;: &quot;http://localhost:8000/storage&quot;,
             &quot;college_address&quot;: [],
             &quot;college_course_department&quot;: [
                 {
@@ -4474,6 +4231,7 @@ access-control-allow-origin: *
             &quot;lead_model&quot;: 1,
             &quot;created_at&quot;: &quot;2025-02-18T05:22:20.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-02-18T05:22:20.000000Z&quot;,
+            &quot;logo_image_path&quot;: &quot;http://localhost:8000/storage&quot;,
             &quot;college_address&quot;: [],
             &quot;college_course_department&quot;: []
         },
@@ -4488,8 +4246,47 @@ access-control-allow-origin: *
             &quot;lead_model&quot;: 1,
             &quot;created_at&quot;: &quot;2025-02-19T02:18:25.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-02-19T02:18:25.000000Z&quot;,
+            &quot;logo_image_path&quot;: &quot;http://localhost:8000/storage&quot;,
             &quot;college_address&quot;: [],
             &quot;college_course_department&quot;: []
+        },
+        {
+            &quot;id&quot;: 14,
+            &quot;name&quot;: &quot;test &quot;,
+            &quot;slug&quot;: &quot;test&quot;,
+            &quot;college_logo&quot;: &quot;logo/JNocMD9rL4colvS5gGT46vnSUj9FI7t90zYFqNEN.webp&quot;,
+            &quot;college_about&quot;: &quot;scsc&quot;,
+            &quot;institute_type&quot;: 1,
+            &quot;is_verify&quot;: 0,
+            &quot;lead_model&quot;: 1,
+            &quot;created_at&quot;: &quot;2025-02-24T11:21:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-25T07:34:31.000000Z&quot;,
+            &quot;logo_image_path&quot;: &quot;http://localhost:8000/storage/logo/JNocMD9rL4colvS5gGT46vnSUj9FI7t90zYFqNEN.webp&quot;,
+            &quot;college_address&quot;: [
+                {
+                    &quot;id&quot;: 11,
+                    &quot;college_address&quot;: &quot;cscsc&quot;,
+                    &quot;pincode&quot;: &quot;123456&quot;,
+                    &quot;college_id&quot;: 14,
+                    &quot;state_id&quot;: 16,
+                    &quot;district_id&quot;: 403,
+                    &quot;city&quot;: &quot;Hyderbad&quot;,
+                    &quot;email&quot;: &quot;sssddsbsb@ssdsd.dd&quot;,
+                    &quot;created_at&quot;: &quot;2025-02-24T11:22:01.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-24T11:22:01.000000Z&quot;
+                }
+            ],
+            &quot;college_course_department&quot;: [
+                {
+                    &quot;id&quot;: 14,
+                    &quot;college_id&quot;: 14,
+                    &quot;department_id&quot;: 2,
+                    &quot;course_id&quot;: 1,
+                    &quot;eligibility&quot;: &quot;fe&quot;,
+                    &quot;created_at&quot;: &quot;2025-02-24T11:22:15.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-24T11:22:15.000000Z&quot;
+                }
+            ]
         }
     ],
     &quot;message&quot;: &quot;College List&quot;
@@ -4567,27 +4364,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-GETapi-college--college_id--info">GET api/college/{college_id}/info</h2>
+                    <h2 id="endpoints-GETapi-colleges--college_slug-">GET api/colleges/{college_slug}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college--college_id--info">
+<span id="example-requests-GETapi-colleges--college_slug-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college/1/info" \
+    --get "http://localhost:8000/api/colleges/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college/1/info"
+    "http://localhost:8000/api/colleges/1"
 );
 
 const headers = {
@@ -4602,9 +4399,9 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college--college_id--info">
+<span id="example-responses-GETapi-colleges--college_slug-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (404):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -4616,60 +4413,48 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: {
-        &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;fghfg&quot;,
-        &quot;slug&quot;: &quot;fghfg&quot;,
-        &quot;college_logo&quot;: &quot;logo/iXBcBLpH2ZIRJeEM47wlBkEncgH2QGdsImDks9AU.png&quot;,
-        &quot;college_about&quot;: &quot;dfftfjfyjuk&quot;,
-        &quot;institute_type&quot;: 1,
-        &quot;is_verify&quot;: 1,
-        &quot;lead_model&quot;: 1,
-        &quot;created_at&quot;: &quot;2024-12-09T04:25:32.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-01-21T23:33:27.000000Z&quot;
-    },
-    &quot;message&quot;: &quot;College details fetched successfully&quot;
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;College not found&quot;
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college--college_id--info" hidden>
+<span id="execution-results-GETapi-colleges--college_slug-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college--college_id--info"></span>:
+                id="execution-response-status-GETapi-colleges--college_slug-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college--college_id--info"
+    <pre class="json"><code id="execution-response-content-GETapi-colleges--college_slug-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college--college_id--info" hidden>
+<span id="execution-error-GETapi-colleges--college_slug-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college--college_id--info">
+    <pre><code id="execution-error-message-GETapi-colleges--college_slug-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college--college_id--info" data-method="GET"
-      data-path="api/college/{college_id}/info"
+<form id="form-GETapi-colleges--college_slug-" data-method="GET"
+      data-path="api/colleges/{college_slug}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college--college_id--info', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-colleges--college_slug-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college--college_id--info"
-                    onclick="tryItOut('GETapi-college--college_id--info');">Try it out ⚡
+                    id="btn-tryout-GETapi-colleges--college_slug-"
+                    onclick="tryItOut('GETapi-colleges--college_slug-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college--college_id--info"
-                    onclick="cancelTryOut('GETapi-college--college_id--info');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-colleges--college_slug-"
+                    onclick="cancelTryOut('GETapi-colleges--college_slug-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college--college_id--info"
+                    id="btn-executetryout-GETapi-colleges--college_slug-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -4677,7 +4462,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college/{college_id}/info</code></b>
+            <b><code>api/colleges/{college_slug}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -4685,7 +4470,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college--college_id--info"
+                              name="Content-Type"                data-endpoint="GETapi-colleges--college_slug-"
                value="application/json"
                data-component="header">
     <br>
@@ -4696,7 +4481,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college--college_id--info"
+                              name="Accept"                data-endpoint="GETapi-colleges--college_slug-"
                value="application/json"
                data-component="header">
     <br>
@@ -4704,39 +4489,39 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>college_id</code></b>&nbsp;&nbsp;
+                <b style="line-height: 2;"><code>college_slug</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
-               step="any"               name="college_id"                data-endpoint="GETapi-college--college_id--info"
+               step="any"               name="college_slug"                data-endpoint="GETapi-colleges--college_slug-"
                value="1"
                data-component="url">
     <br>
-<p>The ID of the college. Example: <code>1</code></p>
+<p>The slug of the college. Example: <code>1</code></p>
             </div>
                     </form>
 
-                    <h2 id="endpoints-GETapi-college--college_id--address">GET api/college/{college_id}/address</h2>
+                    <h2 id="endpoints-GETapi-colleges--college_id--address">GET api/colleges/{college_id}/address</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college--college_id--address">
+<span id="example-requests-GETapi-colleges--college_id--address">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college/1/address" \
+    --get "http://localhost:8000/api/colleges/1/address" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college/1/address"
+    "http://localhost:8000/api/colleges/1/address"
 );
 
 const headers = {
@@ -4751,7 +4536,7 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college--college_id--address">
+<span id="example-responses-GETapi-colleges--college_id--address">
             <blockquote>
             <p>Example response (200):</p>
         </blockquote>
@@ -4782,43 +4567,43 @@ access-control-allow-origin: *
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college--college_id--address" hidden>
+<span id="execution-results-GETapi-colleges--college_id--address" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college--college_id--address"></span>:
+                id="execution-response-status-GETapi-colleges--college_id--address"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college--college_id--address"
+    <pre class="json"><code id="execution-response-content-GETapi-colleges--college_id--address"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college--college_id--address" hidden>
+<span id="execution-error-GETapi-colleges--college_id--address" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college--college_id--address">
+    <pre><code id="execution-error-message-GETapi-colleges--college_id--address">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college--college_id--address" data-method="GET"
-      data-path="api/college/{college_id}/address"
+<form id="form-GETapi-colleges--college_id--address" data-method="GET"
+      data-path="api/colleges/{college_id}/address"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college--college_id--address', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-colleges--college_id--address', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college--college_id--address"
-                    onclick="tryItOut('GETapi-college--college_id--address');">Try it out ⚡
+                    id="btn-tryout-GETapi-colleges--college_id--address"
+                    onclick="tryItOut('GETapi-colleges--college_id--address');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college--college_id--address"
-                    onclick="cancelTryOut('GETapi-college--college_id--address');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-colleges--college_id--address"
+                    onclick="cancelTryOut('GETapi-colleges--college_id--address');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college--college_id--address"
+                    id="btn-executetryout-GETapi-colleges--college_id--address"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -4826,7 +4611,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college/{college_id}/address</code></b>
+            <b><code>api/colleges/{college_id}/address</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -4834,7 +4619,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college--college_id--address"
+                              name="Content-Type"                data-endpoint="GETapi-colleges--college_id--address"
                value="application/json"
                data-component="header">
     <br>
@@ -4845,7 +4630,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college--college_id--address"
+                              name="Accept"                data-endpoint="GETapi-colleges--college_id--address"
                value="application/json"
                data-component="header">
     <br>
@@ -4857,7 +4642,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
-               step="any"               name="college_id"                data-endpoint="GETapi-college--college_id--address"
+               step="any"               name="college_id"                data-endpoint="GETapi-colleges--college_id--address"
                value="1"
                data-component="url">
     <br>
@@ -4865,27 +4650,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-GETapi-college--college_id--course-department">GET api/college/{college_id}/course-department</h2>
+                    <h2 id="endpoints-GETapi-colleges--college_id--course-fees-department">GET api/colleges/{college_id}/course-fees-department</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college--college_id--course-department">
+<span id="example-requests-GETapi-colleges--college_id--course-fees-department">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college/1/course-department" \
+    --get "http://localhost:8000/api/colleges/1/course-fees-department" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college/1/course-department"
+    "http://localhost:8000/api/colleges/1/course-fees-department"
 );
 
 const headers = {
@@ -4900,7 +4685,7 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college--college_id--course-department">
+<span id="example-responses-GETapi-colleges--college_id--course-fees-department">
             <blockquote>
             <p>Example response (200):</p>
         </blockquote>
@@ -4963,43 +4748,43 @@ access-control-allow-origin: *
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college--college_id--course-department" hidden>
+<span id="execution-results-GETapi-colleges--college_id--course-fees-department" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college--college_id--course-department"></span>:
+                id="execution-response-status-GETapi-colleges--college_id--course-fees-department"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college--college_id--course-department"
+    <pre class="json"><code id="execution-response-content-GETapi-colleges--college_id--course-fees-department"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college--college_id--course-department" hidden>
+<span id="execution-error-GETapi-colleges--college_id--course-fees-department" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college--college_id--course-department">
+    <pre><code id="execution-error-message-GETapi-colleges--college_id--course-fees-department">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college--college_id--course-department" data-method="GET"
-      data-path="api/college/{college_id}/course-department"
+<form id="form-GETapi-colleges--college_id--course-fees-department" data-method="GET"
+      data-path="api/colleges/{college_id}/course-fees-department"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college--college_id--course-department', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-colleges--college_id--course-fees-department', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college--college_id--course-department"
-                    onclick="tryItOut('GETapi-college--college_id--course-department');">Try it out ⚡
+                    id="btn-tryout-GETapi-colleges--college_id--course-fees-department"
+                    onclick="tryItOut('GETapi-colleges--college_id--course-fees-department');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college--college_id--course-department"
-                    onclick="cancelTryOut('GETapi-college--college_id--course-department');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-colleges--college_id--course-fees-department"
+                    onclick="cancelTryOut('GETapi-colleges--college_id--course-fees-department');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college--college_id--course-department"
+                    id="btn-executetryout-GETapi-colleges--college_id--course-fees-department"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -5007,7 +4792,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college/{college_id}/course-department</code></b>
+            <b><code>api/colleges/{college_id}/course-fees-department</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -5015,7 +4800,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college--college_id--course-department"
+                              name="Content-Type"                data-endpoint="GETapi-colleges--college_id--course-fees-department"
                value="application/json"
                data-component="header">
     <br>
@@ -5026,7 +4811,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college--college_id--course-department"
+                              name="Accept"                data-endpoint="GETapi-colleges--college_id--course-fees-department"
                value="application/json"
                data-component="header">
     <br>
@@ -5038,7 +4823,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
-               step="any"               name="college_id"                data-endpoint="GETapi-college--college_id--course-department"
+               step="any"               name="college_id"                data-endpoint="GETapi-colleges--college_id--course-fees-department"
                value="1"
                data-component="url">
     <br>
@@ -5046,27 +4831,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-GETapi-college--college_id--faculty">GET api/college/{college_id}/faculty</h2>
+                    <h2 id="endpoints-GETapi-colleges--college_id--faculty">GET api/colleges/{college_id}/faculty</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-GETapi-college--college_id--faculty">
+<span id="example-requests-GETapi-colleges--college_id--faculty">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/college/1/faculty" \
+    --get "http://localhost:8000/api/colleges/1/faculty" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/college/1/faculty"
+    "http://localhost:8000/api/colleges/1/faculty"
 );
 
 const headers = {
@@ -5081,7 +4866,7 @@ fetch(url, {
 
 </span>
 
-<span id="example-responses-GETapi-college--college_id--faculty">
+<span id="example-responses-GETapi-colleges--college_id--faculty">
             <blockquote>
             <p>Example response (200):</p>
         </blockquote>
@@ -5118,43 +4903,43 @@ access-control-allow-origin: *
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-college--college_id--faculty" hidden>
+<span id="execution-results-GETapi-colleges--college_id--faculty" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-college--college_id--faculty"></span>:
+                id="execution-response-status-GETapi-colleges--college_id--faculty"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-college--college_id--faculty"
+    <pre class="json"><code id="execution-response-content-GETapi-colleges--college_id--faculty"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-GETapi-college--college_id--faculty" hidden>
+<span id="execution-error-GETapi-colleges--college_id--faculty" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-college--college_id--faculty">
+    <pre><code id="execution-error-message-GETapi-colleges--college_id--faculty">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-GETapi-college--college_id--faculty" data-method="GET"
-      data-path="api/college/{college_id}/faculty"
+<form id="form-GETapi-colleges--college_id--faculty" data-method="GET"
+      data-path="api/colleges/{college_id}/faculty"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-college--college_id--faculty', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-colleges--college_id--faculty', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-college--college_id--faculty"
-                    onclick="tryItOut('GETapi-college--college_id--faculty');">Try it out ⚡
+                    id="btn-tryout-GETapi-colleges--college_id--faculty"
+                    onclick="tryItOut('GETapi-colleges--college_id--faculty');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-college--college_id--faculty"
-                    onclick="cancelTryOut('GETapi-college--college_id--faculty');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-colleges--college_id--faculty"
+                    onclick="cancelTryOut('GETapi-colleges--college_id--faculty');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-college--college_id--faculty"
+                    id="btn-executetryout-GETapi-colleges--college_id--faculty"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
@@ -5162,7 +4947,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/college/{college_id}/faculty</code></b>
+            <b><code>api/colleges/{college_id}/faculty</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
@@ -5170,7 +4955,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-college--college_id--faculty"
+                              name="Content-Type"                data-endpoint="GETapi-colleges--college_id--faculty"
                value="application/json"
                data-component="header">
     <br>
@@ -5181,7 +4966,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-college--college_id--faculty"
+                              name="Accept"                data-endpoint="GETapi-colleges--college_id--faculty"
                value="application/json"
                data-component="header">
     <br>
@@ -5193,7 +4978,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
-               step="any"               name="college_id"                data-endpoint="GETapi-college--college_id--faculty"
+               step="any"               name="college_id"                data-endpoint="GETapi-colleges--college_id--faculty"
                value="1"
                data-component="url">
     <br>
