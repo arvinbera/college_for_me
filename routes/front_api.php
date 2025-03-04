@@ -9,6 +9,8 @@ Route::post('colleges/submit', [FrontApiController::class, 'submit_application']
 Route::post('colleges/claim', [FrontApiController::class, 'claim_application']);
 Route::get('colleges/search/{key}', [SearchController::class, 'header_search']);
 Route::get('colleges/', [SearchController::class, 'college_filter_search']);
+
+
 Route::get('colleges/{college_slug}', [FrontCollegeApiController::class, 'college_info_details']);
 Route::get('colleges/{college_id}/address', [FrontCollegeApiController::class, 'college_address_details']);
 Route::get('colleges/{college_id}/course-fees-department', [FrontCollegeApiController::class, 'course_fees_departmen']);
