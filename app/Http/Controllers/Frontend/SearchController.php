@@ -37,6 +37,7 @@ class SearchController extends Controller
         }
     }
 
+
     public function college_filter_search(Request $request)
     {
         $college_search_list = College::with('college_address', 'college_course_department');
@@ -74,6 +75,5 @@ class SearchController extends Controller
         }
 
         return ApiResponseCntroller::response_success(data: $college_search_list, message: 'College List', status: 200);
- 
     }
 }
